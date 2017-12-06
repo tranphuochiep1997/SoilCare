@@ -1,0 +1,13 @@
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\SoilCare.Android.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\SoilCare.Android.pdb
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\SoilCare.Android.SoilCare.Android.apk
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\SoilCare.Android.SoilCare.Android-Signed.apk
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\SoilCare.Android.csprojResolveAssemblyReference.cache
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\SoilCare.Android.csproj.CoreCompileInputs.cache
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\SoilCare.Android.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\SoilCare.Android.pdb
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\android\bin\SoilCare.Android.SoilCare.Android.apk
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\layout\main.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\values\strings.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\R.cs.flag
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\uploadflags.txt
