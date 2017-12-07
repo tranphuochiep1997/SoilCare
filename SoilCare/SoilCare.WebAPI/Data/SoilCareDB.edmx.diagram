@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="42b14cbfd38643c883d68b2926936d3f" Name="Diagram1">
+        <EntityTypeShape EntityType="SoilCareModel.Measurement" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SoilCareModel.Plant" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SoilCareModel.Soil" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SoilCareModel.Solution" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SoilCareModel.SolutionOffer" Width="1.5" PointX="7.5" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SoilCareModel.User" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SoilCareModel.UserLand" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="SoilCareModel.Measurement_fk1" ManuallyRouted="false" />
+        <AssociationConnector Association="SoilCareModel.Measurement_fk2" ManuallyRouted="false" />
+        <AssociationConnector Association="SoilCareModel.SolutionOffer_fk1" ManuallyRouted="false" />
+        <AssociationConnector Association="SoilCareModel.Plant_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="SoilCareModel.SolutionOffer_fk2" ManuallyRouted="false" />
+        <AssociationConnector Association="SoilCareModel.UserLand_fk" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

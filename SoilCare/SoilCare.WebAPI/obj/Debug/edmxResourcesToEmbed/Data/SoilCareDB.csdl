@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SoilCareModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Measurement">
+    <Key>
+      <PropertyRef Name="Measure_id" />
+    </Key>
+    <Property Name="Measure_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Measure_date" Type="DateTime" Precision="0" />
+    <Property Name="Land_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Plant_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Nutrient" Type="Double" />
+    <Property Name="Himidity" Type="Double" />
+    <Property Name="Acidity" Type="Double" />
+    <Property Name="Porosity" Type="Double" />
+    <Property Name="Water_retention" Type="Double" />
+    <Property Name="Salinity" Type="Double" />
+    <Property Name="Rate" Type="Int32" />
+    <NavigationProperty Name="UserLand" Relationship="Self.Measurement_fk1" FromRole="Measurement" ToRole="UserLand" />
+    <NavigationProperty Name="Plant" Relationship="Self.Measurement_fk2" FromRole="Measurement" ToRole="Plant" />
+    <NavigationProperty Name="SolutionOffers" Relationship="Self.SolutionOffer_fk1" FromRole="Measurement" ToRole="SolutionOffer" />
+  </EntityType>
+  <EntityType Name="Plant">
+    <Key>
+      <PropertyRef Name="Plant_id" />
+    </Key>
+    <Property Name="Plant_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Plant_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Plant_image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Plant_discription" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Soil_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Measurements" Relationship="Self.Measurement_fk2" FromRole="Plant" ToRole="Measurement" />
+    <NavigationProperty Name="Soil" Relationship="Self.Plant_fk" FromRole="Plant" ToRole="Soil" />
+  </EntityType>
+  <EntityType Name="Soil">
+    <Key>
+      <PropertyRef Name="Soil_id" />
+    </Key>
+    <Property Name="Soil_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Soil_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Min_nutrient" Type="Double" />
+    <Property Name="Max_nutrient" Type="Double" />
+    <Property Name="Min_humidity" Type="Double" />
+    <Property Name="Max_humidity" Type="Double" />
+    <Property Name="Min_acidity" Type="Double" />
+    <Property Name="Max_acidity" Type="Double" />
+    <Property Name="Min_porosity" Type="Double" />
+    <Property Name="Max_porosity" Type="Double" />
+    <Property Name="Min_water_retention" Type="Double" />
+    <Property Name="Max_water_retention" Type="Double" />
+    <Property Name="Min_salinity" Type="Double" />
+    <Property Name="Max_salinity" Type="Double" />
+    <NavigationProperty Name="Plants" Relationship="Self.Plant_fk" FromRole="Soil" ToRole="Plant" />
+  </EntityType>
+  <EntityType Name="Solution">
+    <Key>
+      <PropertyRef Name="Solution_id" />
+    </Key>
+    <Property Name="Solution_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Solution_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="Double" />
+    <Property Name="Unit" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Solution_purpose" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Solution_discription" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Owner" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SolutionOffers" Relationship="Self.SolutionOffer_fk2" FromRole="Solution" ToRole="SolutionOffer" />
+  </EntityType>
+  <EntityType Name="SolutionOffer">
+    <Key>
+      <PropertyRef Name="Measure_id" />
+      <PropertyRef Name="Solution_id" />
+    </Key>
+    <Property Name="Measure_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Solution_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Value_config" Type="Double" />
+    <Property Name="Unit_config" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Measurement" Relationship="Self.SolutionOffer_fk1" FromRole="SolutionOffer" ToRole="Measurement" />
+    <NavigationProperty Name="Solution" Relationship="Self.SolutionOffer_fk2" FromRole="SolutionOffer" ToRole="Solution" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="User_id" />
+    </Key>
+    <Property Name="User_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="User_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Region" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Created_at" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="UserLands" Relationship="Self.UserLand_fk" FromRole="User" ToRole="UserLand" />
+  </EntityType>
+  <EntityType Name="UserLand">
+    <Key>
+      <PropertyRef Name="Land_id" />
+    </Key>
+    <Property Name="Land_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Land_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Land_address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="User_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Created_at" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Measurements" Relationship="Self.Measurement_fk1" FromRole="UserLand" ToRole="Measurement" />
+    <NavigationProperty Name="User" Relationship="Self.UserLand_fk" FromRole="UserLand" ToRole="User" />
+  </EntityType>
+  <Association Name="Measurement_fk1">
+    <End Role="UserLand" Type="Self.UserLand" Multiplicity="0..1" />
+    <End Role="Measurement" Type="Self.Measurement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLand">
+        <PropertyRef Name="Land_id" />
+      </Principal>
+      <Dependent Role="Measurement">
+        <PropertyRef Name="Land_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Measurement_fk2">
+    <End Role="Plant" Type="Self.Plant" Multiplicity="0..1" />
+    <End Role="Measurement" Type="Self.Measurement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Plant">
+        <PropertyRef Name="Plant_id" />
+      </Principal>
+      <Dependent Role="Measurement">
+        <PropertyRef Name="Plant_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SolutionOffer_fk1">
+    <End Role="Measurement" Type="Self.Measurement" Multiplicity="1" />
+    <End Role="SolutionOffer" Type="Self.SolutionOffer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Measurement">
+        <PropertyRef Name="Measure_id" />
+      </Principal>
+      <Dependent Role="SolutionOffer">
+        <PropertyRef Name="Measure_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Plant_fk">
+    <End Role="Soil" Type="Self.Soil" Multiplicity="0..1" />
+    <End Role="Plant" Type="Self.Plant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Soil">
+        <PropertyRef Name="Soil_id" />
+      </Principal>
+      <Dependent Role="Plant">
+        <PropertyRef Name="Soil_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SolutionOffer_fk2">
+    <End Role="Solution" Type="Self.Solution" Multiplicity="1" />
+    <End Role="SolutionOffer" Type="Self.SolutionOffer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solution">
+        <PropertyRef Name="Solution_id" />
+      </Principal>
+      <Dependent Role="SolutionOffer">
+        <PropertyRef Name="Solution_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserLand_fk">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="UserLand" Type="Self.UserLand" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="User_id" />
+      </Principal>
+      <Dependent Role="UserLand">
+        <PropertyRef Name="User_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SoilCareEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Measurements" EntityType="Self.Measurement" />
+    <EntitySet Name="Plants" EntityType="Self.Plant" />
+    <EntitySet Name="Soils" EntityType="Self.Soil" />
+    <EntitySet Name="Solutions" EntityType="Self.Solution" />
+    <EntitySet Name="SolutionOffers" EntityType="Self.SolutionOffer" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="UserLands" EntityType="Self.UserLand" />
+    <AssociationSet Name="Measurement_fk1" Association="Self.Measurement_fk1">
+      <End Role="UserLand" EntitySet="UserLands" />
+      <End Role="Measurement" EntitySet="Measurements" />
+    </AssociationSet>
+    <AssociationSet Name="Measurement_fk2" Association="Self.Measurement_fk2">
+      <End Role="Plant" EntitySet="Plants" />
+      <End Role="Measurement" EntitySet="Measurements" />
+    </AssociationSet>
+    <AssociationSet Name="SolutionOffer_fk1" Association="Self.SolutionOffer_fk1">
+      <End Role="Measurement" EntitySet="Measurements" />
+      <End Role="SolutionOffer" EntitySet="SolutionOffers" />
+    </AssociationSet>
+    <AssociationSet Name="Plant_fk" Association="Self.Plant_fk">
+      <End Role="Soil" EntitySet="Soils" />
+      <End Role="Plant" EntitySet="Plants" />
+    </AssociationSet>
+    <AssociationSet Name="SolutionOffer_fk2" Association="Self.SolutionOffer_fk2">
+      <End Role="Solution" EntitySet="Solutions" />
+      <End Role="SolutionOffer" EntitySet="SolutionOffers" />
+    </AssociationSet>
+    <AssociationSet Name="UserLand_fk" Association="Self.UserLand_fk">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserLand" EntitySet="UserLands" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SoilCareModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Measurement">
+    <Key>
+      <PropertyRef Name="Measure_id" />
+    </Key>
+    <Property Name="Measure_id" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Measure_date" Type="date" />
+    <Property Name="Land_id" Type="nvarchar" MaxLength="200" />
+    <Property Name="Plant_id" Type="nvarchar" MaxLength="200" />
+    <Property Name="Nutrient" Type="float" />
+    <Property Name="Himidity" Type="float" />
+    <Property Name="Acidity" Type="float" />
+    <Property Name="Porosity" Type="float" />
+    <Property Name="Water_retention" Type="float" />
+    <Property Name="Salinity" Type="float" />
+    <Property Name="Rate" Type="int" />
+  </EntityType>
+  <EntityType Name="Plant">
+    <Key>
+      <PropertyRef Name="Plant_id" />
+    </Key>
+    <Property Name="Plant_id" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Plant_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Plant_image" Type="nvarchar" MaxLength="200" />
+    <Property Name="Plant_discription" Type="nvarchar" MaxLength="200" />
+    <Property Name="Soil_id" Type="nvarchar" MaxLength="200" />
+    <Property Name="Status" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Soil">
+    <Key>
+      <PropertyRef Name="Soil_id" />
+    </Key>
+    <Property Name="Soil_id" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Soil_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Min_nutrient" Type="float" />
+    <Property Name="Max_nutrient" Type="float" />
+    <Property Name="Min_humidity" Type="float" />
+    <Property Name="Max_humidity" Type="float" />
+    <Property Name="Min_acidity" Type="float" />
+    <Property Name="Max_acidity" Type="float" />
+    <Property Name="Min_porosity" Type="float" />
+    <Property Name="Max_porosity" Type="float" />
+    <Property Name="Min_water_retention" Type="float" />
+    <Property Name="Max_water_retention" Type="float" />
+    <Property Name="Min_salinity" Type="float" />
+    <Property Name="Max_salinity" Type="float" />
+  </EntityType>
+  <EntityType Name="Solution">
+    <Key>
+      <PropertyRef Name="Solution_id" />
+    </Key>
+    <Property Name="Solution_id" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Solution_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Value" Type="float" />
+    <Property Name="Unit" Type="nvarchar" MaxLength="200" />
+    <Property Name="Solution_purpose" Type="nvarchar" MaxLength="200" />
+    <Property Name="Solution_discription" Type="nvarchar" MaxLength="200" />
+    <Property Name="Owner" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="SolutionOffer">
+    <Key>
+      <PropertyRef Name="Measure_id" />
+      <PropertyRef Name="Solution_id" />
+    </Key>
+    <Property Name="Measure_id" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Solution_id" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Value_config" Type="float" />
+    <Property Name="Unit_config" Type="nvarchar" MaxLength="200" />
+    <Property Name="Status" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="User_id" />
+    </Key>
+    <Property Name="User_id" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="User_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="200" />
+    <Property Name="Region" Type="nvarchar" MaxLength="200" />
+    <Property Name="Created_at" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserLand">
+    <Key>
+      <PropertyRef Name="Land_id" />
+    </Key>
+    <Property Name="Land_id" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Land_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Land_address" Type="nvarchar" MaxLength="200" />
+    <Property Name="User_id" Type="nvarchar" MaxLength="200" />
+    <Property Name="Created_at" Type="datetime" />
+    <Property Name="Status" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <Association Name="Measurement_fk1">
+    <End Role="UserLand" Type="Self.UserLand" Multiplicity="0..1" />
+    <End Role="Measurement" Type="Self.Measurement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLand">
+        <PropertyRef Name="Land_id" />
+      </Principal>
+      <Dependent Role="Measurement">
+        <PropertyRef Name="Land_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Measurement_fk2">
+    <End Role="Plant" Type="Self.Plant" Multiplicity="0..1" />
+    <End Role="Measurement" Type="Self.Measurement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Plant">
+        <PropertyRef Name="Plant_id" />
+      </Principal>
+      <Dependent Role="Measurement">
+        <PropertyRef Name="Plant_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Plant_fk">
+    <End Role="Soil" Type="Self.Soil" Multiplicity="0..1" />
+    <End Role="Plant" Type="Self.Plant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Soil">
+        <PropertyRef Name="Soil_id" />
+      </Principal>
+      <Dependent Role="Plant">
+        <PropertyRef Name="Soil_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SolutionOffer_fk1">
+    <End Role="Measurement" Type="Self.Measurement" Multiplicity="1" />
+    <End Role="SolutionOffer" Type="Self.SolutionOffer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Measurement">
+        <PropertyRef Name="Measure_id" />
+      </Principal>
+      <Dependent Role="SolutionOffer">
+        <PropertyRef Name="Measure_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SolutionOffer_fk2">
+    <End Role="Solution" Type="Self.Solution" Multiplicity="1" />
+    <End Role="SolutionOffer" Type="Self.SolutionOffer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solution">
+        <PropertyRef Name="Solution_id" />
+      </Principal>
+      <Dependent Role="SolutionOffer">
+        <PropertyRef Name="Solution_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserLand_fk">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="UserLand" Type="Self.UserLand" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="User_id" />
+      </Principal>
+      <Dependent Role="UserLand">
+        <PropertyRef Name="User_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SoilCareModelStoreContainer">
+    <EntitySet Name="Measurement" EntityType="Self.Measurement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Plant" EntityType="Self.Plant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Soil" EntityType="Self.Soil" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Solution" EntityType="Self.Solution" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SolutionOffer" EntityType="Self.SolutionOffer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserLand" EntityType="Self.UserLand" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Measurement_fk1" Association="Self.Measurement_fk1">
+      <End Role="UserLand" EntitySet="UserLand" />
+      <End Role="Measurement" EntitySet="Measurement" />
+    </AssociationSet>
+    <AssociationSet Name="Measurement_fk2" Association="Self.Measurement_fk2">
+      <End Role="Plant" EntitySet="Plant" />
+      <End Role="Measurement" EntitySet="Measurement" />
+    </AssociationSet>
+    <AssociationSet Name="Plant_fk" Association="Self.Plant_fk">
+      <End Role="Soil" EntitySet="Soil" />
+      <End Role="Plant" EntitySet="Plant" />
+    </AssociationSet>
+    <AssociationSet Name="SolutionOffer_fk1" Association="Self.SolutionOffer_fk1">
+      <End Role="Measurement" EntitySet="Measurement" />
+      <End Role="SolutionOffer" EntitySet="SolutionOffer" />
+    </AssociationSet>
+    <AssociationSet Name="SolutionOffer_fk2" Association="Self.SolutionOffer_fk2">
+      <End Role="Solution" EntitySet="Solution" />
+      <End Role="SolutionOffer" EntitySet="SolutionOffer" />
+    </AssociationSet>
+    <AssociationSet Name="UserLand_fk" Association="Self.UserLand_fk">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserLand" EntitySet="UserLand" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

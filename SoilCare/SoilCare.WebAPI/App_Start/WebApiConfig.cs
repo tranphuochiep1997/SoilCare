@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Formatting;
+using System.Net.Http.Headers;
 using System.Web.Http;
 
 namespace SoilCare.WebAPI
@@ -19,6 +21,10 @@ namespace SoilCare.WebAPI
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            JsonMediaTypeFormatter jsonFormatter = config.Formatters.JsonFormatter;
+            jsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
+            jsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/json"));
+            jsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
         }
     }
 }
