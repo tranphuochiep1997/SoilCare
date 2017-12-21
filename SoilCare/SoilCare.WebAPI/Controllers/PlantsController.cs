@@ -3,10 +3,12 @@ using SoiCare.API.Models;
 using SoilCare.WebAPI.Data;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace SoiCare.API.Controllers
 {
@@ -14,44 +16,39 @@ namespace SoiCare.API.Controllers
     {
 
         // Get: api/Plants
-        public IHttpActionResult GetAllPlants()
+        public IList<PlantModel> GetAllPlants()
         {
-            List<PlantViewModel> plantList = new List<PlantViewModel>();
+            IList<PlantModel> plantList = null;
             using (SoilCareEntities db = new SoilCareEntities())
             {
-
-                plantList = db.Plants.Where(s => s.Status.Equals("Approved"))
-                                     .Select(s => new PlantViewModel()
+                plantList = db.Plants.Where(s => s.Status.ToLower().Equals("approved"))
+                                     .Select(s => new PlantModel()
                                      {
                                          Plant_id = s.Plant_id,
                                          Plant_name = s.Plant_name,
                                          Plant_image = s.Plant_image,
                                          Plant_discription = s.Plant_discription,
                                          Soil_id = s.Soil_id,
-
                                      }).ToList();
             }
-            
-
-            if (plantList.Count == 0) return NotFound();
-            return Ok(plantList);
+            return plantList;
         }
 
         // Get: api/Plants/id
-        public IHttpActionResult GetPlant(string id)
+        public IHttpActionResult GetPlantById(string id)
         {
-            PlantViewModel plant = new PlantViewModel();
+            PlantModel plant = null;
             using (SoilCareEntities db = new SoilCareEntities())
             {
-                plant = db.Plants.Include("Soil").Where(s => s.Plant_id.Equals(id))
-                             .Select(s => new PlantViewModel
+                plant = db.Plants.Where(s => s.Plant_id.Equals(id))
+                             .Select(s => new PlantModel
                              {
                                  Plant_id = s.Plant_id,
                                  Plant_name = s.Plant_name,
                                  Plant_image = s.Plant_image,
                                  Plant_discription = s.Plant_discription,
                                  Soil_id = s.Soil_id,
-                                 Soil = new SoilViewModel()
+                                 Soil = new SoilModel()
                                  {
                                      Soil_id = s.Soil.Soil_id,
                                      Soil_name = s.Soil.Soil_name,
@@ -68,12 +65,51 @@ namespace SoiCare.API.Controllers
                                      Min_salinity = (double)s.Soil.Min_salinity,
                                      Max_salinity = (double)s.Soil.Max_salinity,
                                  },
-                             }).FirstOrDefault<PlantViewModel>();
+                             }).FirstOrDefault<PlantModel>();
             }
-            
-
             if (plant == null) return NotFound();
             return Ok(plant);
+        }
+        // POST: api/Plants
+        [ResponseType(typeof(Plant))]
+        public IHttpActionResult PostPlant(AddPlantModel plant)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            string initId = Guid.NewGuid().ToString("N");
+            Plant _plant = new Plant
+            {
+                Plant_id = initId,
+                Plant_name = plant.Plant_name,
+                Plant_image = plant.Plant_image,
+                Plant_discription = plant.Plant_discription,
+                Status = "Pending",
+                Soil_id = null,
+                Soil = null,
+            };
+            using (SoilCareEntities db = new SoilCareEntities())
+            {
+                db.Plants.Add(_plant);
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (DbUpdateException)
+                {
+                    if (PlantExists(db, _plant.Plant_id))
+                    {
+                        return Conflict();
+                    }
+                    throw;
+                }
+            }
+            return CreatedAtRoute("DefaultApi", new { id = _plant.Plant_id }, _plant);
+        }
+        private bool PlantExists(SoilCareEntities db, string id)
+        {
+            return db.Plants.Count(e => e.Plant_id.Equals(id)) > 0;
         }
     }
 }

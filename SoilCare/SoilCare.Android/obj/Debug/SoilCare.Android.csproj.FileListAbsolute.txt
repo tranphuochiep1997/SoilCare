@@ -11,3 +11,5 @@ E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\layout\main.xml
 E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\values\strings.xml
 E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\R.cs.flag
 E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\uploadflags.txt
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\SoilCare.Android.dll.mdb
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\android\assets\SoilCare.Android.dll.mdb

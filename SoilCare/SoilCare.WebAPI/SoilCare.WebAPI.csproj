@@ -105,9 +105,16 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\LandsController.cs" />
+    <Compile Include="Controllers\MeasuresController.cs" />
+    <Compile Include="Controllers\MicrosoftsController.cs" />
+    <Compile Include="Controllers\SolutionOffersController.cs" />
     <Compile Include="Controllers\PlantsController.cs" />
     <Compile Include="Controllers\SoilsController.cs" />
+    <Compile Include="Controllers\SolutionsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Data\Land.cs">
+      <DependentUpon>SoilCareDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\Measurement.cs">
       <DependentUpon>SoilCareDB.tt</DependentUpon>
     </Compile>
@@ -141,16 +148,16 @@
     <Compile Include="Data\User.cs">
       <DependentUpon>SoilCareDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\UserLand.cs">
-      <DependentUpon>SoilCareDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\LandViewModel.cs" />
-    <Compile Include="Models\PlantViewModel.cs" />
-    <Compile Include="Models\SoilViewModel.cs" />
-    <Compile Include="Models\UserViewModel.cs" />
+    <Compile Include="Models\LandModel.cs" />
+    <Compile Include="Models\MeasureModel.cs" />
+    <Compile Include="Models\PlantModel.cs" />
+    <Compile Include="Models\SoilModel.cs" />
+    <Compile Include="Models\SolutionOfferModel.cs" />
+    <Compile Include="Models\SolutionModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

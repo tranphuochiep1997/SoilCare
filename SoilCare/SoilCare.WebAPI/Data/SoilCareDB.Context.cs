@@ -25,12 +25,12 @@ namespace SoilCare.WebAPI.Data
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Land> Lands { get; set; }
         public virtual DbSet<Measurement> Measurements { get; set; }
         public virtual DbSet<Plant> Plants { get; set; }
         public virtual DbSet<Soil> Soils { get; set; }
         public virtual DbSet<Solution> Solutions { get; set; }
         public virtual DbSet<SolutionOffer> SolutionOffers { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<UserLand> UserLands { get; set; }
     }
 }

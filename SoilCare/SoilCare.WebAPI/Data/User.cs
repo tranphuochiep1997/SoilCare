@@ -17,16 +17,17 @@ namespace SoilCare.WebAPI.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            this.UserLands = new HashSet<UserLand>();
+            this.Lands = new HashSet<Land>();
         }
     
         public string User_id { get; set; }
         public string User_name { get; set; }
         public string Telephone { get; set; }
         public string Region { get; set; }
+        public string User_image { get; set; }
         public Nullable<System.DateTime> Created_at { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserLand> UserLands { get; set; }
+        public virtual ICollection<Land> Lands { get; set; }
     }
 }

@@ -4,17 +4,29 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SoilCareModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SoilCareModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Land">
+          <Key>
+            <PropertyRef Name="Land_id" />
+          </Key>
+          <Property Name="Land_id" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Land_name" Type="nvarchar" MaxLength="200" />
+          <Property Name="Land_address" Type="nvarchar" MaxLength="200" />
+          <Property Name="Land_image" Type="nvarchar" MaxLength="200" />
+          <Property Name="User_id" Type="nvarchar" MaxLength="200" />
+          <Property Name="Created_at" Type="datetime" />
+          <Property Name="Status" Type="nvarchar" MaxLength="200" />
+        </EntityType>
         <EntityType Name="Measurement">
           <Key>
             <PropertyRef Name="Measure_id" />
           </Key>
           <Property Name="Measure_id" Type="nvarchar" MaxLength="200" Nullable="false" />
-          <Property Name="Measure_date" Type="date" />
+          <Property Name="Created_at" Type="datetime" />
           <Property Name="Land_id" Type="nvarchar" MaxLength="200" />
           <Property Name="Plant_id" Type="nvarchar" MaxLength="200" />
           <Property Name="Nutrient" Type="float" />
-          <Property Name="Himidity" Type="float" />
+          <Property Name="Humidity" Type="float" />
           <Property Name="Acidity" Type="float" />
           <Property Name="Porosity" Type="float" />
           <Property Name="Water_retention" Type="float" />
@@ -58,7 +70,9 @@
           <Property Name="Solution_id" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="Solution_name" Type="nvarchar" MaxLength="200" />
           <Property Name="Value" Type="float" />
-          <Property Name="Unit" Type="nvarchar" MaxLength="200" />
+          <Property Name="Unit_name" Type="nvarchar" MaxLength="200" />
+          <Property Name="Unit_symbol" Type="nvarchar" MaxLength="200" />
+          <Property Name="Quantity" Type="nvarchar" MaxLength="200" />
           <Property Name="Solution_purpose" Type="nvarchar" MaxLength="200" />
           <Property Name="Solution_discription" Type="nvarchar" MaxLength="200" />
           <Property Name="Owner" Type="nvarchar" MaxLength="200" />
@@ -71,8 +85,10 @@
           <Property Name="Measure_id" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="Solution_id" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="Value_config" Type="float" />
-          <Property Name="Unit_config" Type="nvarchar" MaxLength="200" />
           <Property Name="Status" Type="nvarchar" MaxLength="200" />
+          <Property Name="Unit_symbol_config" Type="nvarchar" MaxLength="200" />
+          <Property Name="Unit_name_config" Type="nvarchar" MaxLength="200" />
+          <Property Name="Quantity_config" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -82,24 +98,26 @@
           <Property Name="User_name" Type="nvarchar" MaxLength="200" />
           <Property Name="Telephone" Type="nvarchar" MaxLength="200" />
           <Property Name="Region" Type="nvarchar" MaxLength="200" />
+          <Property Name="User_image" Type="nvarchar" MaxLength="200" />
           <Property Name="Created_at" Type="datetime" />
         </EntityType>
-        <EntityType Name="UserLand">
-          <Key>
-            <PropertyRef Name="Land_id" />
-          </Key>
-          <Property Name="Land_id" Type="nvarchar" MaxLength="200" Nullable="false" />
-          <Property Name="Land_name" Type="nvarchar" MaxLength="200" />
-          <Property Name="Land_address" Type="nvarchar" MaxLength="200" />
-          <Property Name="User_id" Type="nvarchar" MaxLength="200" />
-          <Property Name="Created_at" Type="datetime" />
-          <Property Name="Status" Type="nvarchar" MaxLength="200" />
-        </EntityType>
+        <Association Name="Land_fk">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Land" Type="Self.Land" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_id" />
+            </Principal>
+            <Dependent Role="Land">
+              <PropertyRef Name="User_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="Measurement_fk1">
-          <End Role="UserLand" Type="Self.UserLand" Multiplicity="0..1" />
+          <End Role="Land" Type="Self.Land" Multiplicity="0..1" />
           <End Role="Measurement" Type="Self.Measurement" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="UserLand">
+            <Principal Role="Land">
               <PropertyRef Name="Land_id" />
             </Principal>
             <Dependent Role="Measurement">
@@ -155,28 +173,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="UserLand_fk">
-          <End Role="User" Type="Self.User" Multiplicity="0..1" />
-          <End Role="UserLand" Type="Self.UserLand" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="User_id" />
-            </Principal>
-            <Dependent Role="UserLand">
-              <PropertyRef Name="User_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="SoilCareModelStoreContainer">
+          <EntitySet Name="Land" EntityType="Self.Land" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Measurement" EntityType="Self.Measurement" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Plant" EntityType="Self.Plant" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Soil" EntityType="Self.Soil" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Solution" EntityType="Self.Solution" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SolutionOffer" EntityType="Self.SolutionOffer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="UserLand" EntityType="Self.UserLand" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="Land_fk" Association="Self.Land_fk">
+            <End Role="User" EntitySet="User" />
+            <End Role="Land" EntitySet="Land" />
+          </AssociationSet>
           <AssociationSet Name="Measurement_fk1" Association="Self.Measurement_fk1">
-            <End Role="UserLand" EntitySet="UserLand" />
+            <End Role="Land" EntitySet="Land" />
             <End Role="Measurement" EntitySet="Measurement" />
           </AssociationSet>
           <AssociationSet Name="Measurement_fk2" Association="Self.Measurement_fk2">
@@ -195,53 +205,95 @@
             <End Role="Solution" EntitySet="Solution" />
             <End Role="SolutionOffer" EntitySet="SolutionOffer" />
           </AssociationSet>
-          <AssociationSet Name="UserLand_fk" Association="Self.UserLand_fk">
-            <End Role="User" EntitySet="User" />
-            <End Role="UserLand" EntitySet="UserLand" />
-          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SoilCareModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SoilCareEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Lands" EntityType="SoilCareModel.Land" />
+          <EntitySet Name="Measurements" EntityType="SoilCareModel.Measurement" />
+          <EntitySet Name="Plants" EntityType="SoilCareModel.Plant" />
+          <EntitySet Name="Soils" EntityType="SoilCareModel.Soil" />
+          <EntitySet Name="Solutions" EntityType="SoilCareModel.Solution" />
+          <EntitySet Name="SolutionOffers" EntityType="SoilCareModel.SolutionOffer" />
+          <EntitySet Name="Users" EntityType="SoilCareModel.User" />
+          <AssociationSet Name="Land_fk" Association="SoilCareModel.Land_fk">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Land" EntitySet="Lands" />
+          </AssociationSet>
+          <AssociationSet Name="Measurement_fk1" Association="SoilCareModel.Measurement_fk1">
+            <End Role="Land" EntitySet="Lands" />
+            <End Role="Measurement" EntitySet="Measurements" />
+          </AssociationSet>
+          <AssociationSet Name="Measurement_fk2" Association="SoilCareModel.Measurement_fk2">
+            <End Role="Plant" EntitySet="Plants" />
+            <End Role="Measurement" EntitySet="Measurements" />
+          </AssociationSet>
+          <AssociationSet Name="SolutionOffer_fk1" Association="SoilCareModel.SolutionOffer_fk1">
+            <End Role="Measurement" EntitySet="Measurements" />
+            <End Role="SolutionOffer" EntitySet="SolutionOffers" />
+          </AssociationSet>
+          <AssociationSet Name="Plant_fk" Association="SoilCareModel.Plant_fk">
+            <End Role="Soil" EntitySet="Soils" />
+            <End Role="Plant" EntitySet="Plants" />
+          </AssociationSet>
+          <AssociationSet Name="SolutionOffer_fk2" Association="SoilCareModel.SolutionOffer_fk2">
+            <End Role="Solution" EntitySet="Solutions" />
+            <End Role="SolutionOffer" EntitySet="SolutionOffers" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Land">
+          <Key>
+            <PropertyRef Name="Land_id" />
+          </Key>
+          <Property Name="Land_id" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Land_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Land_address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Land_image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="User_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Created_at" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="User" Relationship="SoilCareModel.Land_fk" FromRole="Land" ToRole="User" />
+          <NavigationProperty Name="Measurements" Relationship="SoilCareModel.Measurement_fk1" FromRole="Land" ToRole="Measurement" />
+        </EntityType>
         <EntityType Name="Measurement">
           <Key>
             <PropertyRef Name="Measure_id" />
           </Key>
-          <Property Name="Measure_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Measure_date" Type="DateTime" Precision="0" />
+          <Property Name="Measure_id" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Created_at" Type="DateTime" Precision="3" />
           <Property Name="Land_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Plant_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Nutrient" Type="Double" />
-          <Property Name="Himidity" Type="Double" />
+          <Property Name="Humidity" Type="Double" />
           <Property Name="Acidity" Type="Double" />
           <Property Name="Porosity" Type="Double" />
           <Property Name="Water_retention" Type="Double" />
           <Property Name="Salinity" Type="Double" />
           <Property Name="Rate" Type="Int32" />
-          <NavigationProperty Name="UserLand" Relationship="Self.Measurement_fk1" FromRole="Measurement" ToRole="UserLand" />
-          <NavigationProperty Name="Plant" Relationship="Self.Measurement_fk2" FromRole="Measurement" ToRole="Plant" />
-          <NavigationProperty Name="SolutionOffers" Relationship="Self.SolutionOffer_fk1" FromRole="Measurement" ToRole="SolutionOffer" />
+          <NavigationProperty Name="Land" Relationship="SoilCareModel.Measurement_fk1" FromRole="Measurement" ToRole="Land" />
+          <NavigationProperty Name="Plant" Relationship="SoilCareModel.Measurement_fk2" FromRole="Measurement" ToRole="Plant" />
+          <NavigationProperty Name="SolutionOffers" Relationship="SoilCareModel.SolutionOffer_fk1" FromRole="Measurement" ToRole="SolutionOffer" />
         </EntityType>
         <EntityType Name="Plant">
           <Key>
             <PropertyRef Name="Plant_id" />
           </Key>
-          <Property Name="Plant_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Plant_id" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Plant_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Plant_image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Plant_discription" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Soil_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Measurements" Relationship="Self.Measurement_fk2" FromRole="Plant" ToRole="Measurement" />
-          <NavigationProperty Name="Soil" Relationship="Self.Plant_fk" FromRole="Plant" ToRole="Soil" />
+          <NavigationProperty Name="Measurements" Relationship="SoilCareModel.Measurement_fk2" FromRole="Plant" ToRole="Measurement" />
+          <NavigationProperty Name="Soil" Relationship="SoilCareModel.Plant_fk" FromRole="Plant" ToRole="Soil" />
         </EntityType>
         <EntityType Name="Soil">
           <Key>
             <PropertyRef Name="Soil_id" />
           </Key>
-          <Property Name="Soil_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Soil_id" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Soil_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Min_nutrient" Type="Double" />
           <Property Name="Max_nutrient" Type="Double" />
@@ -255,63 +307,67 @@
           <Property Name="Max_water_retention" Type="Double" />
           <Property Name="Min_salinity" Type="Double" />
           <Property Name="Max_salinity" Type="Double" />
-          <NavigationProperty Name="Plants" Relationship="Self.Plant_fk" FromRole="Soil" ToRole="Plant" />
+          <NavigationProperty Name="Plants" Relationship="SoilCareModel.Plant_fk" FromRole="Soil" ToRole="Plant" />
         </EntityType>
         <EntityType Name="Solution">
           <Key>
             <PropertyRef Name="Solution_id" />
           </Key>
-          <Property Name="Solution_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Solution_id" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Solution_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Value" Type="Double" />
-          <Property Name="Unit" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Unit_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Unit_symbol" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Solution_purpose" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Solution_discription" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Owner" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="SolutionOffers" Relationship="Self.SolutionOffer_fk2" FromRole="Solution" ToRole="SolutionOffer" />
+          <NavigationProperty Name="SolutionOffers" Relationship="SoilCareModel.SolutionOffer_fk2" FromRole="Solution" ToRole="SolutionOffer" />
         </EntityType>
         <EntityType Name="SolutionOffer">
           <Key>
             <PropertyRef Name="Measure_id" />
             <PropertyRef Name="Solution_id" />
           </Key>
-          <Property Name="Measure_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Solution_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Measure_id" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Solution_id" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Value_config" Type="Double" />
-          <Property Name="Unit_config" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Measurement" Relationship="Self.SolutionOffer_fk1" FromRole="SolutionOffer" ToRole="Measurement" />
-          <NavigationProperty Name="Solution" Relationship="Self.SolutionOffer_fk2" FromRole="SolutionOffer" ToRole="Solution" />
+          <NavigationProperty Name="Measurement" Relationship="SoilCareModel.SolutionOffer_fk1" FromRole="SolutionOffer" ToRole="Measurement" />
+          <NavigationProperty Name="Solution" Relationship="SoilCareModel.SolutionOffer_fk2" FromRole="SolutionOffer" ToRole="Solution" />
+          <Property Name="Unit_symbol_config" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Unit_name_config" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity_config" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="User_id" />
           </Key>
-          <Property Name="User_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="User_id" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="User_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Telephone" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Region" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="User_image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Created_at" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="UserLands" Relationship="Self.UserLand_fk" FromRole="User" ToRole="UserLand" />
+          <NavigationProperty Name="Lands" Relationship="SoilCareModel.Land_fk" FromRole="User" ToRole="Land" />
         </EntityType>
-        <EntityType Name="UserLand">
-          <Key>
-            <PropertyRef Name="Land_id" />
-          </Key>
-          <Property Name="Land_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Land_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Land_address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="User_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Created_at" Type="DateTime" Precision="3" />
-          <Property Name="Status" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Measurements" Relationship="Self.Measurement_fk1" FromRole="UserLand" ToRole="Measurement" />
-          <NavigationProperty Name="User" Relationship="Self.UserLand_fk" FromRole="UserLand" ToRole="User" />
-        </EntityType>
-        <Association Name="Measurement_fk1">
-          <End Role="UserLand" Type="Self.UserLand" Multiplicity="0..1" />
-          <End Role="Measurement" Type="Self.Measurement" Multiplicity="*" />
+        <Association Name="Land_fk">
+          <End Type="SoilCareModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="SoilCareModel.Land" Role="Land" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="UserLand">
+            <Principal Role="User">
+              <PropertyRef Name="User_id" />
+            </Principal>
+            <Dependent Role="Land">
+              <PropertyRef Name="User_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Measurement_fk1">
+          <End Type="SoilCareModel.Land" Role="Land" Multiplicity="0..1" />
+          <End Type="SoilCareModel.Measurement" Role="Measurement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Land">
               <PropertyRef Name="Land_id" />
             </Principal>
             <Dependent Role="Measurement">
@@ -320,8 +376,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="Measurement_fk2">
-          <End Role="Plant" Type="Self.Plant" Multiplicity="0..1" />
-          <End Role="Measurement" Type="Self.Measurement" Multiplicity="*" />
+          <End Type="SoilCareModel.Plant" Role="Plant" Multiplicity="0..1" />
+          <End Type="SoilCareModel.Measurement" Role="Measurement" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Plant">
               <PropertyRef Name="Plant_id" />
@@ -332,8 +388,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="SolutionOffer_fk1">
-          <End Role="Measurement" Type="Self.Measurement" Multiplicity="1" />
-          <End Role="SolutionOffer" Type="Self.SolutionOffer" Multiplicity="*" />
+          <End Type="SoilCareModel.Measurement" Role="Measurement" Multiplicity="1" />
+          <End Type="SoilCareModel.SolutionOffer" Role="SolutionOffer" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Measurement">
               <PropertyRef Name="Measure_id" />
@@ -344,8 +400,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="Plant_fk">
-          <End Role="Soil" Type="Self.Soil" Multiplicity="0..1" />
-          <End Role="Plant" Type="Self.Plant" Multiplicity="*" />
+          <End Type="SoilCareModel.Soil" Role="Soil" Multiplicity="0..1" />
+          <End Type="SoilCareModel.Plant" Role="Plant" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Soil">
               <PropertyRef Name="Soil_id" />
@@ -356,8 +412,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="SolutionOffer_fk2">
-          <End Role="Solution" Type="Self.Solution" Multiplicity="1" />
-          <End Role="SolutionOffer" Type="Self.SolutionOffer" Multiplicity="*" />
+          <End Type="SoilCareModel.Solution" Role="Solution" Multiplicity="1" />
+          <End Type="SoilCareModel.SolutionOffer" Role="SolutionOffer" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Solution">
               <PropertyRef Name="Solution_id" />
@@ -367,150 +423,111 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="UserLand_fk">
-          <End Role="User" Type="Self.User" Multiplicity="0..1" />
-          <End Role="UserLand" Type="Self.UserLand" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="User_id" />
-            </Principal>
-            <Dependent Role="UserLand">
-              <PropertyRef Name="User_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="SoilCareEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Measurements" EntityType="Self.Measurement" />
-          <EntitySet Name="Plants" EntityType="Self.Plant" />
-          <EntitySet Name="Soils" EntityType="Self.Soil" />
-          <EntitySet Name="Solutions" EntityType="Self.Solution" />
-          <EntitySet Name="SolutionOffers" EntityType="Self.SolutionOffer" />
-          <EntitySet Name="Users" EntityType="Self.User" />
-          <EntitySet Name="UserLands" EntityType="Self.UserLand" />
-          <AssociationSet Name="Measurement_fk1" Association="Self.Measurement_fk1">
-            <End Role="UserLand" EntitySet="UserLands" />
-            <End Role="Measurement" EntitySet="Measurements" />
-          </AssociationSet>
-          <AssociationSet Name="Measurement_fk2" Association="Self.Measurement_fk2">
-            <End Role="Plant" EntitySet="Plants" />
-            <End Role="Measurement" EntitySet="Measurements" />
-          </AssociationSet>
-          <AssociationSet Name="SolutionOffer_fk1" Association="Self.SolutionOffer_fk1">
-            <End Role="Measurement" EntitySet="Measurements" />
-            <End Role="SolutionOffer" EntitySet="SolutionOffers" />
-          </AssociationSet>
-          <AssociationSet Name="Plant_fk" Association="Self.Plant_fk">
-            <End Role="Soil" EntitySet="Soils" />
-            <End Role="Plant" EntitySet="Plants" />
-          </AssociationSet>
-          <AssociationSet Name="SolutionOffer_fk2" Association="Self.SolutionOffer_fk2">
-            <End Role="Solution" EntitySet="Solutions" />
-            <End Role="SolutionOffer" EntitySet="SolutionOffers" />
-          </AssociationSet>
-          <AssociationSet Name="UserLand_fk" Association="Self.UserLand_fk">
-            <End Role="User" EntitySet="Users" />
-            <End Role="UserLand" EntitySet="UserLands" />
-          </AssociationSet>
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="SoilCareModelStoreContainer" CdmEntityContainer="SoilCareEntities">
+          <EntitySetMapping Name="Lands">
+            <EntityTypeMapping TypeName="SoilCareModel.Land">
+              <MappingFragment StoreEntitySet="Land">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
+                <ScalarProperty Name="User_id" ColumnName="User_id" />
+                <ScalarProperty Name="Land_image" ColumnName="Land_image" />
+                <ScalarProperty Name="Land_address" ColumnName="Land_address" />
+                <ScalarProperty Name="Land_name" ColumnName="Land_name" />
+                <ScalarProperty Name="Land_id" ColumnName="Land_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Measurements">
             <EntityTypeMapping TypeName="SoilCareModel.Measurement">
               <MappingFragment StoreEntitySet="Measurement">
-                <ScalarProperty Name="Measure_id" ColumnName="Measure_id" />
-                <ScalarProperty Name="Measure_date" ColumnName="Measure_date" />
-                <ScalarProperty Name="Land_id" ColumnName="Land_id" />
-                <ScalarProperty Name="Plant_id" ColumnName="Plant_id" />
-                <ScalarProperty Name="Nutrient" ColumnName="Nutrient" />
-                <ScalarProperty Name="Himidity" ColumnName="Himidity" />
-                <ScalarProperty Name="Acidity" ColumnName="Acidity" />
-                <ScalarProperty Name="Porosity" ColumnName="Porosity" />
-                <ScalarProperty Name="Water_retention" ColumnName="Water_retention" />
-                <ScalarProperty Name="Salinity" ColumnName="Salinity" />
                 <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="Salinity" ColumnName="Salinity" />
+                <ScalarProperty Name="Water_retention" ColumnName="Water_retention" />
+                <ScalarProperty Name="Porosity" ColumnName="Porosity" />
+                <ScalarProperty Name="Acidity" ColumnName="Acidity" />
+                <ScalarProperty Name="Humidity" ColumnName="Humidity" />
+                <ScalarProperty Name="Nutrient" ColumnName="Nutrient" />
+                <ScalarProperty Name="Plant_id" ColumnName="Plant_id" />
+                <ScalarProperty Name="Land_id" ColumnName="Land_id" />
+                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
+                <ScalarProperty Name="Measure_id" ColumnName="Measure_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Plants">
             <EntityTypeMapping TypeName="SoilCareModel.Plant">
               <MappingFragment StoreEntitySet="Plant">
-                <ScalarProperty Name="Plant_id" ColumnName="Plant_id" />
-                <ScalarProperty Name="Plant_name" ColumnName="Plant_name" />
-                <ScalarProperty Name="Plant_image" ColumnName="Plant_image" />
-                <ScalarProperty Name="Plant_discription" ColumnName="Plant_discription" />
-                <ScalarProperty Name="Soil_id" ColumnName="Soil_id" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Soil_id" ColumnName="Soil_id" />
+                <ScalarProperty Name="Plant_discription" ColumnName="Plant_discription" />
+                <ScalarProperty Name="Plant_image" ColumnName="Plant_image" />
+                <ScalarProperty Name="Plant_name" ColumnName="Plant_name" />
+                <ScalarProperty Name="Plant_id" ColumnName="Plant_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Soils">
             <EntityTypeMapping TypeName="SoilCareModel.Soil">
               <MappingFragment StoreEntitySet="Soil">
-                <ScalarProperty Name="Soil_id" ColumnName="Soil_id" />
-                <ScalarProperty Name="Soil_name" ColumnName="Soil_name" />
-                <ScalarProperty Name="Min_nutrient" ColumnName="Min_nutrient" />
-                <ScalarProperty Name="Max_nutrient" ColumnName="Max_nutrient" />
-                <ScalarProperty Name="Min_humidity" ColumnName="Min_humidity" />
-                <ScalarProperty Name="Max_humidity" ColumnName="Max_humidity" />
-                <ScalarProperty Name="Min_acidity" ColumnName="Min_acidity" />
-                <ScalarProperty Name="Max_acidity" ColumnName="Max_acidity" />
-                <ScalarProperty Name="Min_porosity" ColumnName="Min_porosity" />
-                <ScalarProperty Name="Max_porosity" ColumnName="Max_porosity" />
-                <ScalarProperty Name="Min_water_retention" ColumnName="Min_water_retention" />
-                <ScalarProperty Name="Max_water_retention" ColumnName="Max_water_retention" />
-                <ScalarProperty Name="Min_salinity" ColumnName="Min_salinity" />
                 <ScalarProperty Name="Max_salinity" ColumnName="Max_salinity" />
+                <ScalarProperty Name="Min_salinity" ColumnName="Min_salinity" />
+                <ScalarProperty Name="Max_water_retention" ColumnName="Max_water_retention" />
+                <ScalarProperty Name="Min_water_retention" ColumnName="Min_water_retention" />
+                <ScalarProperty Name="Max_porosity" ColumnName="Max_porosity" />
+                <ScalarProperty Name="Min_porosity" ColumnName="Min_porosity" />
+                <ScalarProperty Name="Max_acidity" ColumnName="Max_acidity" />
+                <ScalarProperty Name="Min_acidity" ColumnName="Min_acidity" />
+                <ScalarProperty Name="Max_humidity" ColumnName="Max_humidity" />
+                <ScalarProperty Name="Min_humidity" ColumnName="Min_humidity" />
+                <ScalarProperty Name="Max_nutrient" ColumnName="Max_nutrient" />
+                <ScalarProperty Name="Min_nutrient" ColumnName="Min_nutrient" />
+                <ScalarProperty Name="Soil_name" ColumnName="Soil_name" />
+                <ScalarProperty Name="Soil_id" ColumnName="Soil_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Solutions">
             <EntityTypeMapping TypeName="SoilCareModel.Solution">
               <MappingFragment StoreEntitySet="Solution">
-                <ScalarProperty Name="Solution_id" ColumnName="Solution_id" />
-                <ScalarProperty Name="Solution_name" ColumnName="Solution_name" />
-                <ScalarProperty Name="Value" ColumnName="Value" />
-                <ScalarProperty Name="Unit" ColumnName="Unit" />
-                <ScalarProperty Name="Solution_purpose" ColumnName="Solution_purpose" />
-                <ScalarProperty Name="Solution_discription" ColumnName="Solution_discription" />
                 <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="Solution_discription" ColumnName="Solution_discription" />
+                <ScalarProperty Name="Solution_purpose" ColumnName="Solution_purpose" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Unit_symbol" ColumnName="Unit_symbol" />
+                <ScalarProperty Name="Unit_name" ColumnName="Unit_name" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Solution_name" ColumnName="Solution_name" />
+                <ScalarProperty Name="Solution_id" ColumnName="Solution_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SolutionOffers">
             <EntityTypeMapping TypeName="SoilCareModel.SolutionOffer">
               <MappingFragment StoreEntitySet="SolutionOffer">
-                <ScalarProperty Name="Measure_id" ColumnName="Measure_id" />
-                <ScalarProperty Name="Solution_id" ColumnName="Solution_id" />
-                <ScalarProperty Name="Value_config" ColumnName="Value_config" />
-                <ScalarProperty Name="Unit_config" ColumnName="Unit_config" />
+                <ScalarProperty Name="Quantity_config" ColumnName="Quantity_config" />
+                <ScalarProperty Name="Unit_name_config" ColumnName="Unit_name_config" />
+                <ScalarProperty Name="Unit_symbol_config" ColumnName="Unit_symbol_config" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Value_config" ColumnName="Value_config" />
+                <ScalarProperty Name="Solution_id" ColumnName="Solution_id" />
+                <ScalarProperty Name="Measure_id" ColumnName="Measure_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="SoilCareModel.User">
               <MappingFragment StoreEntitySet="User">
-                <ScalarProperty Name="User_id" ColumnName="User_id" />
-                <ScalarProperty Name="User_name" ColumnName="User_name" />
-                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
+                <ScalarProperty Name="User_image" ColumnName="User_image" />
                 <ScalarProperty Name="Region" ColumnName="Region" />
-                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="UserLands">
-            <EntityTypeMapping TypeName="SoilCareModel.UserLand">
-              <MappingFragment StoreEntitySet="UserLand">
-                <ScalarProperty Name="Land_id" ColumnName="Land_id" />
-                <ScalarProperty Name="Land_name" ColumnName="Land_name" />
-                <ScalarProperty Name="Land_address" ColumnName="Land_address" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="User_name" ColumnName="User_name" />
                 <ScalarProperty Name="User_id" ColumnName="User_id" />
-                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

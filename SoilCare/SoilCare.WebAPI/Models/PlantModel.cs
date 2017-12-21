@@ -4,14 +4,17 @@ using System.Web;
 
 namespace SoiCare.API.Models
 {
-    public class PlantViewModel
+    public class AddPlantModel
     {
-        public string Plant_id { get; set; }
+        
         public string Plant_name { get; set; }
         public string Plant_image { get; set; }
         public string Plant_discription { get; set; }
+    }
+    public class PlantModel : AddPlantModel
+    {
+        public string Plant_id { get; set; }
         public string Soil_id { get; set; }
-
-        public SoilViewModel Soil { get; set; }
+        public SoilModel Soil { get; set; }
     }
 }

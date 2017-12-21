@@ -14,57 +14,59 @@ namespace SoilCare.WebAPI.Controllers
         // Get: api/Soils
         public IHttpActionResult GetAllSoils()
         {
-            List<SoilViewModel> listSoil = new List<SoilViewModel>();
+            IList<SoilModel> listSoil = null;
             using (SoilCareEntities db = new SoilCareEntities())
             {
-                listSoil = db.Soils.Select(s => new SoilViewModel
+                listSoil = db.Soils.Select(s => new SoilModel
                 {
                     Soil_id = s.Soil_id,
                     Soil_name = s.Soil_name,
-                    Min_nutrient = (double)s.Min_nutrient,
-                    Max_nutrient = (double)s.Max_nutrient,
-                    Min_acidity = (double)s.Min_acidity,
-                    Max_acidity = (double)s.Max_acidity,
-                    Min_humidity = (double)s.Min_humidity,
-                    Max_humidity = (double)s.Max_humidity,
-                    Min_porosity = (double)s.Min_porosity,
-                    Max_porosity = (double)s.Max_porosity,
-                    Min_salinity = (double)s.Min_salinity,
-                    Max_salinity = (double)s.Max_salinity,
-                    Min_water_retention = (double)s.Min_water_retention,
-                    Max_water_retention = (double)s.Max_water_retention,
-                }).ToList<SoilViewModel>();
+                    Min_nutrient = s.Min_nutrient,
+                    Max_nutrient = s.Max_nutrient,
+                    Min_acidity = s.Min_acidity,
+                    Max_acidity = s.Max_acidity,
+                    Min_humidity = s.Min_humidity,
+                    Max_humidity = s.Max_humidity,
+                    Min_porosity = s.Min_porosity,
+                    Max_porosity = s.Max_porosity,
+                    Min_salinity = s.Min_salinity,
+                    Max_salinity = s.Max_salinity,
+                    Min_water_retention = s.Min_water_retention,
+                    Max_water_retention = s.Max_water_retention,
+                }).ToList();
             }
             if (listSoil.Count == 0) return NotFound();
             return Ok(listSoil);
         }
         // Get: api/Soils/id
-        public IHttpActionResult GetSoil(string id)
+        public IHttpActionResult GetSoilById(string id)
         {
-            SoilViewModel listSoil = new SoilViewModel();
+            SoilModel Soil = null;
             using (SoilCareEntities db = new SoilCareEntities())
             {
-                listSoil = db.Soils.Where(s => s.Soil_id.Equals(id))
-                                   .Select(s => new SoilViewModel
+                Soil = db.Soils.Include("Plants")
+                                   .Where(s => s.Soil_id.Equals(id))
+                                   .Select(s => new SoilModel
                                    {
                                        Soil_id = s.Soil_id,
                                        Soil_name = s.Soil_name,
-                                       Min_nutrient = (double)s.Min_nutrient,
-                                       Max_nutrient = (double)s.Max_nutrient,
-                                       Min_acidity = (double)s.Min_acidity,
-                                       Max_acidity = (double)s.Max_acidity,
-                                       Min_humidity = (double)s.Min_humidity,
-                                       Max_humidity = (double)s.Max_humidity,
-                                       Min_porosity = (double)s.Min_porosity,
-                                       Max_porosity = (double)s.Max_porosity,
-                                       Min_salinity = (double)s.Min_salinity,
-                                       Max_salinity = (double)s.Max_salinity,
-                                       Min_water_retention = (double)s.Min_water_retention,
-                                       Max_water_retention = (double)s.Max_water_retention,
-                                   }).FirstOrDefault<SoilViewModel>();
+                                       Min_nutrient = s.Min_nutrient,
+                                       Max_nutrient = s.Max_nutrient,
+                                       Min_acidity = s.Min_acidity,
+                                       Max_acidity = s.Max_acidity,
+                                       Min_humidity = s.Min_humidity,
+                                       Max_humidity = s.Max_humidity,
+                                       Min_porosity = s.Min_porosity,
+                                       Max_porosity = s.Max_porosity,
+                                       Min_salinity = s.Min_salinity,
+                                       Max_salinity = s.Max_salinity,
+                                       Min_water_retention = s.Min_water_retention,
+                                       Max_water_retention = s.Max_water_retention,
+                                       Plants = s.Plants.Select(p => p.Plant_id).ToList(),
+                                   }).FirstOrDefault<SoilModel>();
             }
-            if (listSoil == null) return NotFound();
-            return Ok(listSoil);
+            if (Soil == null) return NotFound();
+            return Ok(Soil);
         }
     }
 }
