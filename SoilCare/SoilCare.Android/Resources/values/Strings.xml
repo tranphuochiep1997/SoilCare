@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">SoilCare.Android</string>
+  <string name="app_name">SoilCare - IMC 2018</string>
+  <string name="fragment1">This is the Home tab.</string>
+  <string name="fragment2">This is the Library tab.</string>
+  <string name="fragment3">This is the Account tab.</string>
+  <string name="fragment4">This is the Q and A tab.</string>
+  <string name="tab1_title">Home</string>
+  <string name="tab2_title">Library</string>
+  <string name="tab3_title">Account</string>
+  <string name="tab4_title">Settings</string>
 </resources>
