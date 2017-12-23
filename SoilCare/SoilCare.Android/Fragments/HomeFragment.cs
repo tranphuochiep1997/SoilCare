@@ -30,6 +30,11 @@ namespace SoilCare.Android.Fragments
             base.OnCreate(savedInstanceState);
         }
 
+        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+        {
+            return inflater.Inflate(Resource.Layout.HomeFragment, container, false);
+        }
+
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
             base.OnActivityCreated(savedInstanceState);
@@ -43,7 +48,19 @@ namespace SoilCare.Android.Fragments
 
         private void Fab_Click(object sender, EventArgs e)
         {
-            Toast.MakeText(this.Activity, "clicked CC ", ToastLength.Short).Show();
+            ShowCustomAlertDialog();
+        }
+        private void ShowCustomAlertDialog()
+        {
+            //Inflate layout
+            //View view = LayoutInflater.Inflate(Resource.Layout.NewLand_AlertDialog, null);
+            //Android.Support.V7.App.AlertDialog builder = new Android.Support.V7.App.AlertDialog.Builder(this).Create();
+            //builder.SetView(view);
+            //builder.SetCanceledOnTouchOutside(false);
+
+            FragmentTransaction transaction = FragmentManager.BeginTransaction();
+            NewLandFragment newLand = new NewLandFragment();
+            newLand.Show(transaction, "dialog fragment");
         }
 
         // just testing the data 
@@ -67,9 +84,6 @@ namespace SoilCare.Android.Fragments
             
         }
         
-        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-        {
-            return inflater.Inflate(Resource.Layout.HomeFragment, container, false);
-        }
+      
     }
 }

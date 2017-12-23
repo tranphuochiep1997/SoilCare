@@ -8,7 +8,7 @@ using SoilCare.Android.Fragments;
 
 namespace SoilCare.Android
 {
-    [Activity(Label = "@string/app_name", MainLauncher = true, Theme = "@style/Theme.AppCompat.Light.DarkActionBar")]
+    [Activity(Label = "@string/app_name", MainLauncher = true, Theme = "@style/Theme.AppCompat.Light")]
     public class MainActivity : AppCompatActivity
     {
         BottomNavigationView bottomNavigation;
@@ -33,6 +33,7 @@ namespace SoilCare.Android
             bottomNavigation.NavigationItemSelected += BottomNavigation_NavigationItemSelected;
 
             LoadFragment(Resource.Id.menu_home);
+            
         }
 
         private void BottomNavigation_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)

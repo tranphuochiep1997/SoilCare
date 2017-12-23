@@ -14,6 +14,10 @@ SoilCare.Android.Fragments.LibraryFragment, SoilCare.Android;md5410f867cd43e87b7
 SoilCare.Android.Fragments.LibraryFragment, SoilCare.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5410f867cd43e87b7ebd103139d5f80e0.LibraryFragment
 SoilCare.Android.Fragments.LibraryFragment;md5410f867cd43e87b7ebd103139d5f80e0.LibraryFragment
 soilcare.android.fragments.LibraryFragment;md5410f867cd43e87b7ebd103139d5f80e0.LibraryFragment
+SoilCare.Android.Fragments.NewLandFragment, SoilCare.Android;md5410f867cd43e87b7ebd103139d5f80e0.NewLandFragment
+SoilCare.Android.Fragments.NewLandFragment, SoilCare.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5410f867cd43e87b7ebd103139d5f80e0.NewLandFragment
+SoilCare.Android.Fragments.NewLandFragment;md5410f867cd43e87b7ebd103139d5f80e0.NewLandFragment
+soilcare.android.fragments.NewLandFragment;md5410f867cd43e87b7ebd103139d5f80e0.NewLandFragment
 SoilCare.Android.Fragments.SettingsFragment, SoilCare.Android;md5410f867cd43e87b7ebd103139d5f80e0.SettingsFragment
 SoilCare.Android.Fragments.SettingsFragment, SoilCare.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5410f867cd43e87b7ebd103139d5f80e0.SettingsFragment
 SoilCare.Android.Fragments.SettingsFragment;md5410f867cd43e87b7ebd103139d5f80e0.SettingsFragment

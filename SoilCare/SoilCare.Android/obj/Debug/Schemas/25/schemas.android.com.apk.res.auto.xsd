@@ -2,7 +2,7 @@
 <xs:schema xmlns:app="http://schemas.android.com/apk/res-auto" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res-auto" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>12/21/2017 10:44:11 PM</xs:documentation>
+    <xs:documentation>12/23/2017 10:09:22 PM</xs:documentation>
   </xs:annotation>
   <xs:attribute name="allowStacking">
     <xs:annotation>
@@ -397,6 +397,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -860,6 +861,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -1211,6 +1213,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -1562,6 +1565,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -3419,6 +3423,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -3770,6 +3775,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -4210,6 +4216,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -4823,6 +4830,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -5174,6 +5182,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -6618,6 +6627,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -7030,6 +7040,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -7381,6 +7392,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -7732,6 +7744,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -8083,6 +8096,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -8479,6 +8493,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -8830,6 +8845,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -9271,6 +9287,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -9867,6 +9884,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -10297,6 +10315,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -10851,6 +10870,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -11405,6 +11425,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -11756,6 +11777,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -12196,6 +12218,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -13091,6 +13114,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -13531,6 +13555,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -13971,6 +13996,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -14588,6 +14614,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -15144,6 +15171,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -16065,6 +16093,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -16416,6 +16445,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -16947,6 +16977,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -17501,6 +17532,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -17941,6 +17973,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -18495,6 +18528,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -19256,6 +19290,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -19607,6 +19642,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -22239,6 +22275,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -24507,6 +24544,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -25061,6 +25099,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -25412,6 +25451,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
@@ -26030,6 +26070,7 @@
             <xs:enumeration value="@drawable/fab_shadow_mini" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_home" />
+            <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_library" />
             <xs:enumeration value="@drawable/icon_plus" />
             <xs:enumeration value="@drawable/icon_plus2" />
