@@ -12,6 +12,7 @@ public class NewLandFragment
 		__md_methods = 
 			"n_onCreateView:(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;:GetOnCreateView_Landroid_view_LayoutInflater_Landroid_view_ViewGroup_Landroid_os_Bundle_Handler\n" +
 			"n_onActivityCreated:(Landroid/os/Bundle;)V:GetOnActivityCreated_Landroid_os_Bundle_Handler\n" +
+			"n_onActivityResult:(IILandroid/content/Intent;)V:GetOnActivityResult_IILandroid_content_Intent_Handler\n" +
 			"n_onCreateDialog:(Landroid/os/Bundle;)Landroid/app/Dialog;:GetOnCreateDialog_Landroid_os_Bundle_Handler\n" +
 			"";
 		mono.android.Runtime.register ("SoilCare.Android.Fragments.NewLandFragment, SoilCare.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", NewLandFragment.class, __md_methods);
@@ -40,6 +41,14 @@ public class NewLandFragment
 	}
 
 	private native void n_onActivityCreated (android.os.Bundle p0);
+
+
+	public void onActivityResult (int p0, int p1, android.content.Intent p2)
+	{
+		n_onActivityResult (p0, p1, p2);
+	}
+
+	private native void n_onActivityResult (int p0, int p1, android.content.Intent p2);
 
 
 	public android.app.Dialog onCreateDialog (android.os.Bundle p0)

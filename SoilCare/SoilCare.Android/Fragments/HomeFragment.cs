@@ -43,7 +43,6 @@ namespace SoilCare.Android.Fragments
 
             fab.Click += Fab_Click;
 
-
         }
 
         private void Fab_Click(object sender, EventArgs e)
@@ -52,12 +51,6 @@ namespace SoilCare.Android.Fragments
         }
         private void ShowCustomAlertDialog()
         {
-            //Inflate layout
-            //View view = LayoutInflater.Inflate(Resource.Layout.NewLand_AlertDialog, null);
-            //Android.Support.V7.App.AlertDialog builder = new Android.Support.V7.App.AlertDialog.Builder(this).Create();
-            //builder.SetView(view);
-            //builder.SetCanceledOnTouchOutside(false);
-
             FragmentTransaction transaction = FragmentManager.BeginTransaction();
             NewLandFragment newLand = new NewLandFragment();
             newLand.Show(transaction, "dialog fragment");
@@ -72,18 +65,14 @@ namespace SoilCare.Android.Fragments
                 list.Add(new UserLand("User Land "+i, "User Land Description "+i, Resource.Drawable.icon_profilepicture));
             }
 
-            listView.Adapter = new UserLandAdapter(this.Activity, list);
-            
+            listView.Adapter = new UserLandAdapter(this.Activity, list);           
             
         }
         private void FindViews()
         {
             listView = this.View.FindViewById<ListView>(Resource.Id.listViewLandList);
             fab = this.View.FindViewById<FloatingActionButton>(Resource.Id.fab1);
-            fab.AttachToListView(listView);
-            
-        }
-        
-      
+            fab.AttachToListView(listView);        
+        }            
     }
 }

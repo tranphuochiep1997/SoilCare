@@ -9,11 +9,14 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Provider;
+using Android.Graphics;
 
 namespace SoilCare.Android.Fragments
 {
     public class NewLandFragment: DialogFragment
     {
+        private ImageButton ib;
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             return inflater.Inflate(Resource.Layout.NewLand_AlertDialog,container, false);
@@ -28,7 +31,7 @@ namespace SoilCare.Android.Fragments
             // finding views
             EditText edtName = this.View.FindViewById<EditText>(Resource.Id.editViewManhDatName);
             EditText edtDes = this.View.FindViewById<EditText>(Resource.Id.editViewDescription);
-            ImageButton ib = this.View.FindViewById<ImageButton>(Resource.Id.imageButtonLandImage);
+            ib = this.View.FindViewById<ImageButton>(Resource.Id.imageButtonLandImage);
             Button buttonSave = this.View.FindViewById<Button>(Resource.Id.buttonSave);
             Button buttonCancel = this.View.FindViewById<Button>(Resource.Id.buttonCancle);
 
@@ -38,15 +41,30 @@ namespace SoilCare.Android.Fragments
                 
                 Toast.MakeText(this.Activity, "Saved", ToastLength.Short).Show();
             };
+            
 
             buttonCancel.Click += delegate
             {
                 Dismiss();
                 Toast.MakeText(this.Activity, "Canceled", ToastLength.Short).Show();
             };
+
+            ib.Click += delegate
+            {
+                Toast.MakeText(this.Activity, "Camera Clicked !!!!", ToastLength.Short).Show();
+                Intent intent = new Intent(MediaStore.ActionImageCapture);
+                StartActivityForResult(intent, 0);
+            };
             
         }
 
+        public override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+            Bitmap bitmap = (Bitmap)data.Extras.Get("data");
+            ib.SetImageBitmap(bitmap);
+            
+        }
         public override Dialog OnCreateDialog(Bundle savedInstanceState)
         {
             Dialog dialog = base.OnCreateDialog(savedInstanceState);
