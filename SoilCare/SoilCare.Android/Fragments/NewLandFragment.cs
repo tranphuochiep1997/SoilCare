@@ -11,9 +11,21 @@ using Android.Views;
 using Android.Widget;
 using Android.Provider;
 using Android.Graphics;
+using Java.IO;
+using Environment = Android.OS.Environment;
+using Uri = Android.Net.Uri;
+using Android.Content.PM;
 
 namespace SoilCare.Android.Fragments
 {
+    public static class CameraApp
+    {
+        public static File _file;
+        public static File _dir;
+        public static Bitmap bitmap;
+    }
+
+
     public class NewLandFragment: DialogFragment
     {
         private ImageButton ib;
@@ -29,11 +41,11 @@ namespace SoilCare.Android.Fragments
 
 
             // finding views
-            EditText edtName = this.View.FindViewById<EditText>(Resource.Id.editViewManhDatName);
-            EditText edtDes = this.View.FindViewById<EditText>(Resource.Id.editViewDescription);
+            var edtName = this.View.FindViewById<EditText>(Resource.Id.editViewManhDatName);
+            var edtDes = this.View.FindViewById<EditText>(Resource.Id.editViewDescription);
             ib = this.View.FindViewById<ImageButton>(Resource.Id.imageButtonLandImage);
-            Button buttonSave = this.View.FindViewById<Button>(Resource.Id.buttonSave);
-            Button buttonCancel = this.View.FindViewById<Button>(Resource.Id.buttonCancle);
+            var buttonSave = this.View.FindViewById<Button>(Resource.Id.buttonSave);
+            var buttonCancel = this.View.FindViewById<Button>(Resource.Id.buttonCancle);
 
 
             buttonSave.Click += delegate
@@ -62,15 +74,17 @@ namespace SoilCare.Android.Fragments
         {
             base.OnActivityResult(requestCode, resultCode, data);
             Bitmap bitmap = (Bitmap)data.Extras.Get("data");
+           
             ib.SetImageBitmap(bitmap);
-            
         }
+
         public override Dialog OnCreateDialog(Bundle savedInstanceState)
         {
             Dialog dialog = base.OnCreateDialog(savedInstanceState);
-            dialog.SetTitle("Add Your New Land");
+            dialog.SetTitle(" Add Your New Land");
             return dialog;
         }
+
 
     }
 }
