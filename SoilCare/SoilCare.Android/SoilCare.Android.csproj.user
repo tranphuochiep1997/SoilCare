@@ -4,5 +4,6 @@
     <SelectedDevice>OPPO A33w</SelectedDevice>
     <DefaultDevice>Android_ARM_Nougat</DefaultDevice>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
+    <AndroidDesignerPreferredTheme>Theme.DeviceDefault</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>

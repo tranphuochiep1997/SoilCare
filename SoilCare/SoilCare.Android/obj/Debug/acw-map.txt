@@ -1,3 +1,7 @@
+SoilCare.Android.Activity1, SoilCare.Android;md5ba50a4524fe383aa42943e8189f31479.Activity1
+SoilCare.Android.Activity1, SoilCare.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5ba50a4524fe383aa42943e8189f31479.Activity1
+SoilCare.Android.Activity1;md5ba50a4524fe383aa42943e8189f31479.Activity1
+soilcare.android.Activity1;md5ba50a4524fe383aa42943e8189f31479.Activity1
 SoilCare.Android.MainActivity, SoilCare.Android;md5ba50a4524fe383aa42943e8189f31479.MainActivity
 SoilCare.Android.MainActivity, SoilCare.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5ba50a4524fe383aa42943e8189f31479.MainActivity
 SoilCare.Android.MainActivity;md5ba50a4524fe383aa42943e8189f31479.MainActivity

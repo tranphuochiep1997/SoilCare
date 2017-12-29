@@ -15,17 +15,10 @@ using Java.IO;
 using Environment = Android.OS.Environment;
 using Uri = Android.Net.Uri;
 using Android.Content.PM;
+using Android.Graphics.Drawables;
 
 namespace SoilCare.Android.Fragments
 {
-    public static class CameraApp
-    {
-        public static File _file;
-        public static File _dir;
-        public static Bitmap bitmap;
-    }
-
-
     public class NewLandFragment: DialogFragment
     {
         private ImageButton ib;
@@ -38,6 +31,7 @@ namespace SoilCare.Android.Fragments
             base.OnActivityCreated(savedInstanceState);
            // Dialog.Window.RequestFeature(WindowFeatures.NoTitle);
             Dialog.Window.Attributes.WindowAnimations = Resource.Style.dialog_animation;
+            Dialog.Window.SetBackgroundDrawable(new ColorDrawable(Color.AliceBlue));
 
 
             // finding views
@@ -81,7 +75,7 @@ namespace SoilCare.Android.Fragments
         public override Dialog OnCreateDialog(Bundle savedInstanceState)
         {
             Dialog dialog = base.OnCreateDialog(savedInstanceState);
-            dialog.SetTitle(" Add Your New Land");
+            dialog.SetTitle(" Add Your New Land");        
             return dialog;
         }
 

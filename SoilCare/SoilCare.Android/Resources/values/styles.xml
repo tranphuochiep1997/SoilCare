@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
   <style name="Theme.MyTheme" parent="Theme.MyTheme.Base">
+    
   </style>
   <!-- Base theme applied no matter what API -->
   <style name="Theme.MyTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
-    <item name="windowNoTitle">true</item>
+    <item name="windowNoTitle">false</item>
     <!--We will be using the toolbar so no need to show ActionBar-->
     <item name="windowActionBar">false</item>
 
@@ -18,24 +19,48 @@
     <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
     <item name="colorAccent">@color/accent</item>
-    <!-- You can also set colorControlNormal, colorControlActivated
-         colorControlHighlight and colorSwitchThumbNormal. -->
-
-    
-    <!-- Option to hide the drop shadow here
-    
-      <item name="actionBarStyle">@style/MyTheme.ActionBar</item>
-      <item name="android:windowContentOverlay">@null</item>
-    -->
   </style>
 
-  <style name="Theme.MyTheme.ActionBar" parent="style/Widget.AppCompat.Light.ActionBar.Solid">
-    <!-- remove shadow below action bar -->
-    <!-- <item name="android:elevation">0dp</item> -->
+  <style name="CustomActionBarTheme"
+    parent="@style/Theme.AppCompat.Light.DarkActionBar">
+
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowActionBar">false</item>
+    
+    <item name="android:actionBarStyle">@style/MyActionBar</item>
+    <item name="android:actionBarTabTextStyle">@style/MyActionBarTabText</item>
+    <item name="android:actionMenuTextColor">@android:color/white</item>
+
     <!-- Support library compatibility -->
-    <item name="elevation">0dp</item>
+    <item name="actionBarStyle">@style/MyActionBar</item>
+    <item name="actionBarTabTextStyle">@style/MyActionBarTabText</item>
+    <item name="actionMenuTextColor">@android:color/white</item>
   </style>
 
+  <!-- ActionBar styles -->
+  <style name="MyActionBar"
+  parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse" >
+    <item name="android:background">@color/color_action_bar</item>
+    <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+
+    <!-- Support library compatibility -->
+    <item name="background">@color/color_action_bar</item>
+    <item name="titleTextStyle">@style/MyActionBarTitleText</item>
+  </style>
+
+  <!-- ActionBar title text -->
+  <style name="MyActionBarTitleText"
+  parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+    <item name="android:textColor">@android:color/white</item>
+  </style>
+
+  <!-- ActionBar tabs text -->
+  <style name="MyActionBarTabText"
+  parent="@style/Widget.AppCompat.ActionBar.TabText">
+    <item name="android:textColor">@android:color/white</item>
+  </style>
+
+  
   <style name="dialog_animation">
     <item name="android:windowEnterAnimation">@anim/slide_up</item>
     <item name="android:windowExitAnimation">@anim/slide_right</item>

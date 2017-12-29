@@ -16,6 +16,6 @@
   <color name="colorGray">#CCCCCC</color>
   <color name="ripple">#F06292</color>
   <color name="primary_pressed">#C2185B</color>
-  
-  
+  <color name="colorGreen">#00DD00</color>
+  <color name="color_action_bar">#00DD00</color>
 </resources>

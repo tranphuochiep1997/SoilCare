@@ -37,7 +37,7 @@ namespace SoilCare.Android.AdapterClass
         {
             public TextView LandName;
             public TextView LandDescription;
-            public ImageView ImageView;
+            
         }
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
@@ -48,7 +48,7 @@ namespace SoilCare.Android.AdapterClass
                 viewHolder = new ViewHolder();
                 viewHolder.LandName = convertView.FindViewById<TextView>(Resource.Id.textViewLandName);
                 viewHolder.LandDescription = convertView.FindViewById<TextView>(Resource.Id.textViewDescription);
-                viewHolder.ImageView = convertView.FindViewById<ImageView>(Resource.Id.imageViewName);
+                
                 convertView.Tag = viewHolder;
             }
             else
@@ -57,8 +57,6 @@ namespace SoilCare.Android.AdapterClass
             }
 
             var item = items[position];
-
-            viewHolder.ImageView.SetImageResource(item.UserLandImage);
             viewHolder.LandName.Text = item.UserLandName;
             viewHolder.LandDescription.Text = item.UserLandDescription;
             

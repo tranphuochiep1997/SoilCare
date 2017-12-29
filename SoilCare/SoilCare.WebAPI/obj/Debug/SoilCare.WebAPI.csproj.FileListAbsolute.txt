@@ -36,7 +36,7 @@ C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.WebAPI\bi
 C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.WebAPI\bin\System.Net.Http.Formatting.xml
 C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.WebAPI\bin\System.Web.Http.xml
 C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.WebAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.WebAPI\obj\Debug\SoilCare.WebAPI.csprojResolveAssemblyReference.cache
 C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.WebAPI\obj\Debug\SoilCare.WebAPI.csproj.CoreCompileInputs.cache
 C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.WebAPI\obj\Debug\SoilCare.WebAPI.dll
 C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.WebAPI\obj\Debug\SoilCare.WebAPI.pdb
-C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.WebAPI\obj\Debug\SoilCare.WebAPI.csprojResolveAssemblyReference.cache

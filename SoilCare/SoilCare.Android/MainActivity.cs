@@ -5,10 +5,12 @@ using Android.Support.V7.App;
 using Android.Support.Design.Widget;
 using System;
 using SoilCare.Android.Fragments;
+using Android.Graphics.Drawables;
+using Android.Graphics;
 
 namespace SoilCare.Android
 {
-    [Activity(Label = "@string/app_name", MainLauncher = true, Theme = "@style/Theme.AppCompat.Light")]
+    [Activity(Label = "@string/app_name", MainLauncher = true, Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
     public class MainActivity : AppCompatActivity
     {
         BottomNavigationView bottomNavigation;
@@ -17,14 +19,6 @@ namespace SoilCare.Android
 
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
-            //var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
-            //if (toolbar != null)
-            //{
-            //    SetSupportActionBar(toolbar);
-            //    SupportActionBar.SetDisplayHomeAsUpEnabled(false);
-            //    SupportActionBar.SetHomeButtonEnabled(false);
-
-            //}
 
             bottomNavigation = FindViewById<BottomNavigationView>(Resource.Id.bottom_navigation);
 
@@ -33,7 +27,7 @@ namespace SoilCare.Android
             bottomNavigation.NavigationItemSelected += BottomNavigation_NavigationItemSelected;
 
             LoadFragment(Resource.Id.menu_home);
-            
+                       
         }
 
         private void BottomNavigation_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
@@ -65,9 +59,6 @@ namespace SoilCare.Android
             }
             if (fragment == null)
                 return;
-
-          
-
         }
 
         private void ReplaceFragment(Fragment fragment)
