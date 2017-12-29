@@ -64,9 +64,6 @@ namespace SoilCare.Android
             }
             if (fragment == null)
                 return;
-
-          
-
         }
 
         private void ReplaceFragment(Fragment fragment)

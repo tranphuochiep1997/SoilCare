@@ -26,7 +26,7 @@ namespace SoilCare.WebAPI.Data
         }
     
         public virtual DbSet<Land> Lands { get; set; }
-        public virtual DbSet<Measurement> Measurements { get; set; }
+        public virtual DbSet<Measure> Measures { get; set; }
         public virtual DbSet<Plant> Plants { get; set; }
         public virtual DbSet<Soil> Soils { get; set; }
         public virtual DbSet<Solution> Solutions { get; set; }

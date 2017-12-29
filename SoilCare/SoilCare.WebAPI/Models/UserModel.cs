@@ -16,7 +16,6 @@ namespace SoilCare.WebAPI.Models
     {
         public string User_id { get; set; }
         public Nullable<System.DateTime> Created_at { get; set; }
-        public ICollection<LandModel> Lands { get; set; }
+        public IEnumerable<LandModel> Lands { get; set; }
     }
-    
 }

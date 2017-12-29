@@ -1,4 +1,6 @@
-﻿using SoilCare.WebAPI.Data;
+﻿using SoilCare.WebAPI.AutomapperProfile;
+using AutoMapper;
+using SoilCare.WebAPI.Data;
 using SoilCare.WebAPI.Models;
 using System;
 using System.Collections.Generic;
@@ -13,25 +15,30 @@ namespace SoilCare.WebAPI.Controllers
 {
     public class UsersController : ApiController
     {
+
+        [Route("api/Users/{userId}/Lands")]
+        public IHttpActionResult GetLandsByUserId(string userId)
+        {
+            IList<LandModel> listLands = null;
+            using (SoilCareEntities db = new SoilCareEntities())
+            {
+                listLands = db.Lands.Where(s => s.User_id.Equals(userId))
+                                    .Select(AutoMapper.Mapper.Map<Land, LandModel>)
+                                    .ToList();
+            }
+            if (listLands.Count == 0) return NotFound();
+            return Ok(listLands);
+        }
         [Route("api/Users/telephone/{telephone}")]
         public IHttpActionResult GetUserByTelephone(string telephone)
         {
-            UserModel user = null;
+            User user = null;
             using (SoilCareEntities db = new SoilCareEntities())
             {
-                user = db.Users.Where(s => s.Telephone.Equals(telephone))
-                               .Select(s => new UserModel
-                               {
-                                   User_id = s.User_id,
-                                   User_name = s.User_name,
-                                   User_image = s.User_image,
-                                   Telephone = s.Telephone,
-                                   Region = s.Region,
-                                   Created_at = s.Created_at,
-                               }).FirstOrDefault<UserModel>();
+                user = db.Users.FirstOrDefault(s => s.Telephone.Equals(telephone));
             }
             if (user == null) return NotFound();
-            return Ok(user);
+            return Ok(user.User_id);
         }
         // Get: api/Users/id
         public IHttpActionResult GetUserById(string id)
@@ -41,24 +48,8 @@ namespace SoilCare.WebAPI.Controllers
             {
                 user = db.Users.Include("Lands")
                                .Where(s => s.User_id.Equals(id))
-                               .Select(s => new UserModel
-                               {
-                                   User_id = s.User_id,
-                                   User_name = s.User_name,
-                                   User_image = s.User_image,
-                                   Telephone = s.Telephone,
-                                   Region = s.Region,
-                                   Created_at = s.Created_at,
-                                   Lands = s.Lands.Where(l => l.Status.Equals("Active"))
-                                                      .Select(l => new LandModel
-                                                      {
-                                                          Land_id = l.Land_id,
-                                                          Land_name = l.Land_name,
-                                                          Land_address = l.Land_address,
-                                                          Land_image = l.Land_image,
-                                                          Created_at = l.Created_at,
-                                                      }).ToList(),
-                               }).FirstOrDefault<UserModel>();
+                               .Select(AutoMapper.Mapper.Map<User, UserModel>)
+                               .FirstOrDefault();
             }
             if (user == null) return NotFound();
             return Ok(user);
@@ -71,16 +62,11 @@ namespace SoilCare.WebAPI.Controllers
             {
                 return BadRequest(ModelState);
             }
-            string initId = Guid.NewGuid().ToString("N");
-            User _user = new User
-            {
-                User_id = initId,
-                User_name = user.User_name,
-                User_image = user.User_image,
-                Telephone = user.Telephone,
-                Region = user.Region,
-                Created_at = DateTime.Now,
-            };
+
+            User _user = Mapper.Map<AddUserModel, User>(user);
+            _user.User_id = Guid.NewGuid().ToString("N");
+            _user.Created_at = DateTime.Now;
+
             using (SoilCareEntities db = new SoilCareEntities())
             {
                 db.Users.Add(_user);

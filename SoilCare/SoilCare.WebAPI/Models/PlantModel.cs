@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Web;
 
-namespace SoiCare.API.Models
+namespace SoilCare.WebAPI.Models
 {
     public class AddPlantModel
     {

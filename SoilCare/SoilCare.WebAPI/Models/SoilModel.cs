@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace SoiCare.API.Models
+namespace SoilCare.WebAPI.Models
 {
     public class SoilModel
     {

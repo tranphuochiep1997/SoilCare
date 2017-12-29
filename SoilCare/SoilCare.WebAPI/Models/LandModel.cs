@@ -15,6 +15,7 @@ namespace SoilCare.WebAPI.Models
 
         public ICollection<MeasureModel> Measures { get; set; }
     }
+
     public class AddLandModel
     {
         public string Land_name { get; set; }

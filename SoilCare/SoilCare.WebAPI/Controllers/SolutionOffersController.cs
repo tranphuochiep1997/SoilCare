@@ -29,10 +29,6 @@ namespace SoilCare.WebAPI.Controllers
                     db.SolutionOffers.Add(new SolutionOffer {
                         Measure_id = measureId,
                         Solution_id = solutionId,
-                        Value_config = null,
-                        Unit_symbol_config = null,
-                        Unit_name_config = null,
-                        Quantity_config = null,
                         Status = "Unchanged",
                     });
                 }
@@ -61,8 +57,7 @@ namespace SoilCare.WebAPI.Controllers
             string solutionId = offer.Solution_id;
             using (SoilCareEntities db = new SoilCareEntities())
             {
-                _offer = db.SolutionOffers.Where(s => s.Measure_id.Equals(measureId))
-                                          .Where(s => s.Solution_id.Equals(solutionId))
+                _offer = db.SolutionOffers.Where(s => s.Measure_id.Equals(measureId) && s.Solution_id.Equals(solutionId))
                                           .FirstOrDefault<SolutionOffer>();
                 if (_offer == null)
                 {
@@ -70,8 +65,7 @@ namespace SoilCare.WebAPI.Controllers
                     return NotFound();
                 }
                 _offer.Status = "Deleted";
-                //_offer.Measurement = null;
-                //_offer.Solution = null;
+
                 try
                 {
                     db.SaveChanges();
@@ -98,12 +92,7 @@ namespace SoilCare.WebAPI.Controllers
 
                 if (_offer == null) return NotFound();
 
-                // Map model to entity
-                _offer.Solution_id = offer.Solution_id;
-                _offer.Value_config = offer.Value_config;
-                _offer.Unit_symbol_config = offer.Unit_symbol_config;
-                _offer.Unit_name_config = offer.Unit_name_config;
-                _offer.Quantity_config = offer.Quantity_config;
+                _offer = AutoMapper.Mapper.Map<SolutionOfferModel, SolutionOffer>(offer);
                 _offer.Status = "Modified";
 
                 try

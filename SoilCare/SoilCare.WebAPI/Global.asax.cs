@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoilCare.WebAPI.AutomapperProfile;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,7 @@ namespace SoilCare.WebAPI
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            AutoMapper.Mapper.Initialize(cfg => cfg.AddProfile<MappingProfile>());
         }
     }
 }

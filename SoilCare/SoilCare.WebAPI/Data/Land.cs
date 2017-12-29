@@ -17,7 +17,7 @@ namespace SoilCare.WebAPI.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Land()
         {
-            this.Measurements = new HashSet<Measurement>();
+            this.Measures = new HashSet<Measure>();
         }
     
         public string Land_id { get; set; }
@@ -30,6 +30,7 @@ namespace SoilCare.WebAPI.Data
     
         public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Measurement> Measurements { get; set; }
+        public ICollection<Measure> Measures { get; set; }
+        //public virtual ICollection<Measure> Measures { get; set; }
     }
 }

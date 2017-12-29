@@ -1,6 +1,7 @@
 ﻿using SoilCare.WebAPI.Data;
 using SoilCare.WebAPI.Models;
 using System;
+using AutoMapper;
 using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
@@ -13,31 +14,30 @@ namespace SoilCare.WebAPI.Controllers
 {
     public class LandsController : ApiController
     {
+        // Get: api/Lands/landId/Measures
+        [Route("api/Lands/{id}/Measures")]
+        public IHttpActionResult GetMeasuresByLandId(string id)
+        {
+            IList<MeasureModel> measures = null;
+            using (SoilCareEntities db = new SoilCareEntities())
+            {
+                measures = db.Measures.Where(s => s.Land_id.Equals(id))
+                                   .Select(AutoMapper.Mapper.Map<Measure, MeasureModel>)
+                                   .ToList();
+            }
+            if (measures.Count == 0) return NotFound();
+            return Ok(measures);
+        }
         // Get: api/Lands/id
         public IHttpActionResult GetLandById(string id)
         {
             LandModel land = null;
             using (SoilCareEntities db = new SoilCareEntities())
             {
-                land = db.Lands.Include("Measurements")
+                land = db.Lands.Include("Measures")
                                    .Where(s => s.Land_id.Equals(id))
-                                   .Select(s => new LandModel
-                                   {
-                                       Land_id = s.Land_id,
-                                       Land_name = s.Land_name,
-                                       Land_address = s.Land_address,
-                                       Land_image = s.Land_image,
-                                       Created_at = s.Created_at,
-                                       Measures = s.Measurements.Select(m =>
-                                       new MeasureModel
-                                       {
-                                           Measure_id = m.Measure_id,
-                                           Created_at = m.Created_at,
-                                           Plant_name = m.Plant.Plant_name,
-                                           HasSolution = m.SolutionOffers.Count > 0,
-                                           Rate = m.Rate,
-                                       }).OrderBy(m => m.Created_at).ToList(),
-                                   }).FirstOrDefault();
+                                   .Select(AutoMapper.Mapper.Map<Land, LandModel>)
+                                   .FirstOrDefault();
             }
             if (land == null) return NotFound();
             return Ok(land);
@@ -50,17 +50,11 @@ namespace SoilCare.WebAPI.Controllers
             {
                 return BadRequest(ModelState);
             }
-            string initId = Guid.NewGuid().ToString("N");
-            Land _land = new Land
-            {
-                Land_id = initId,
-                Land_name = land.Land_name,
-                Land_address = land.Land_address,
-                Land_image = land.Land_image,
-                User_id = land.User_id,
-                Created_at = DateTime.Now,
-                Status = "Active",
-            };
+
+            Land _land = Mapper.Map<AddLandModel, Land>(land);
+            _land.Land_id = Guid.NewGuid().ToString("N");
+            _land.Created_at = DateTime.Now;
+            _land.Status = "Active";
             
             using (SoilCareEntities db = new SoilCareEntities())
             {

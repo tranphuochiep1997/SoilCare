@@ -20,9 +20,8 @@ namespace SoilCare.WebAPI.Data
         public string Status { get; set; }
         public string Unit_symbol_config { get; set; }
         public string Unit_name_config { get; set; }
-        public string Quantity_config { get; set; }
     
-        public virtual Measurement Measurement { get; set; }
+        public virtual Measure Measure { get; set; }
         public virtual Solution Solution { get; set; }
     }
 }

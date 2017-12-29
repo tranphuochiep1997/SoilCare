@@ -12,7 +12,7 @@
     <Property Name="Created_at" Type="datetime" />
     <Property Name="Status" Type="nvarchar" MaxLength="200" />
   </EntityType>
-  <EntityType Name="Measurement">
+  <EntityType Name="Measure">
     <Key>
       <PropertyRef Name="Measure_id" />
     </Key>
@@ -83,7 +83,6 @@
     <Property Name="Status" Type="nvarchar" MaxLength="200" />
     <Property Name="Unit_symbol_config" Type="nvarchar" MaxLength="200" />
     <Property Name="Unit_name_config" Type="nvarchar" MaxLength="200" />
-    <Property Name="Quantity_config" Type="nvarchar" MaxLength="200" />
   </EntityType>
   <EntityType Name="User">
     <Key>
@@ -110,24 +109,24 @@
   </Association>
   <Association Name="Measurement_fk1">
     <End Role="Land" Type="Self.Land" Multiplicity="0..1" />
-    <End Role="Measurement" Type="Self.Measurement" Multiplicity="*" />
+    <End Role="Measure" Type="Self.Measure" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Land">
         <PropertyRef Name="Land_id" />
       </Principal>
-      <Dependent Role="Measurement">
+      <Dependent Role="Measure">
         <PropertyRef Name="Land_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="Measurement_fk2">
     <End Role="Plant" Type="Self.Plant" Multiplicity="0..1" />
-    <End Role="Measurement" Type="Self.Measurement" Multiplicity="*" />
+    <End Role="Measure" Type="Self.Measure" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Plant">
         <PropertyRef Name="Plant_id" />
       </Principal>
-      <Dependent Role="Measurement">
+      <Dependent Role="Measure">
         <PropertyRef Name="Plant_id" />
       </Dependent>
     </ReferentialConstraint>
@@ -145,10 +144,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="SolutionOffer_fk1">
-    <End Role="Measurement" Type="Self.Measurement" Multiplicity="1" />
+    <End Role="Measure" Type="Self.Measure" Multiplicity="1" />
     <End Role="SolutionOffer" Type="Self.SolutionOffer" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Measurement">
+      <Principal Role="Measure">
         <PropertyRef Name="Measure_id" />
       </Principal>
       <Dependent Role="SolutionOffer">
@@ -170,7 +169,7 @@
   </Association>
   <EntityContainer Name="SoilCareModelStoreContainer">
     <EntitySet Name="Land" EntityType="Self.Land" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Measurement" EntityType="Self.Measurement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Measure" EntityType="Self.Measure" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Plant" EntityType="Self.Plant" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Soil" EntityType="Self.Soil" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Solution" EntityType="Self.Solution" Schema="dbo" store:Type="Tables" />
@@ -182,18 +181,18 @@
     </AssociationSet>
     <AssociationSet Name="Measurement_fk1" Association="Self.Measurement_fk1">
       <End Role="Land" EntitySet="Land" />
-      <End Role="Measurement" EntitySet="Measurement" />
+      <End Role="Measure" EntitySet="Measure" />
     </AssociationSet>
     <AssociationSet Name="Measurement_fk2" Association="Self.Measurement_fk2">
       <End Role="Plant" EntitySet="Plant" />
-      <End Role="Measurement" EntitySet="Measurement" />
+      <End Role="Measure" EntitySet="Measure" />
     </AssociationSet>
     <AssociationSet Name="Plant_fk" Association="Self.Plant_fk">
       <End Role="Soil" EntitySet="Soil" />
       <End Role="Plant" EntitySet="Plant" />
     </AssociationSet>
     <AssociationSet Name="SolutionOffer_fk1" Association="Self.SolutionOffer_fk1">
-      <End Role="Measurement" EntitySet="Measurement" />
+      <End Role="Measure" EntitySet="Measure" />
       <End Role="SolutionOffer" EntitySet="SolutionOffer" />
     </AssociationSet>
     <AssociationSet Name="SolutionOffer_fk2" Association="Self.SolutionOffer_fk2">

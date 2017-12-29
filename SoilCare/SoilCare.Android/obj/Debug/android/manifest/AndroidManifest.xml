@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="SoilCare.Android.SoilCare.Android" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="SoilCare.Android.SoilCare.Android" android:versionCode="1" android:versionName="1.0" android:installLocation="preferExternal">
   <!--suppress UsesMinSdkAttributes-->
   <uses-sdk android:minSdkVersion="18" />
   <uses-permission android:name="android.permission.INTERNET" />
@@ -18,7 +18,7 @@
         <category android:name="mono.android.intent.category.SEPPUKU.SoilCare.Android.SoilCare.Android" />
       </intent-filter>
     </receiver>
-    <meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT" />
     <meta-data android:name="android.support.VERSION" android:value="26.1.0" />
+    <meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT" />
   </application>
 </manifest>

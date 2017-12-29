@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -91,8 +94,8 @@
   <ItemGroup>
     <Content Include="Data\SoilCareDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SoilCareDB.Context.cs</LastGenOutput>
       <DependentUpon>SoilCareDB.edmx</DependentUpon>
+      <LastGenOutput>SoilCareDB.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Data\SoilCareDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -104,18 +107,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="AutomapperProfile\MappingProfile.cs" />
     <Compile Include="Controllers\LandsController.cs" />
-    <Compile Include="Controllers\MeasuresController.cs" />
-    <Compile Include="Controllers\MicrosoftsController.cs" />
-    <Compile Include="Controllers\SolutionOffersController.cs" />
-    <Compile Include="Controllers\PlantsController.cs" />
-    <Compile Include="Controllers\SoilsController.cs" />
-    <Compile Include="Controllers\SolutionsController.cs" />
-    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Data\Land.cs">
       <DependentUpon>SoilCareDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\Measurement.cs">
+    <Compile Include="Data\Measure.cs">
       <DependentUpon>SoilCareDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Plant.cs">
@@ -148,6 +145,13 @@
     <Compile Include="Data\User.cs">
       <DependentUpon>SoilCareDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="MyMapper\Mapper.cs" />
+    <Compile Include="Controllers\MeasuresController.cs" />
+    <Compile Include="Controllers\SolutionOffersController.cs" />
+    <Compile Include="Controllers\PlantsController.cs" />
+    <Compile Include="Controllers\SoilsController.cs" />
+    <Compile Include="Controllers\SolutionsController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

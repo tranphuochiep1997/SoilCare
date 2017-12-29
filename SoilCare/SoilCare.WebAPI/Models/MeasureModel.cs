@@ -19,12 +19,9 @@ namespace SoilCare.WebAPI.Models
     {
         public string Measure_id { get; set; }
         public string Plant_name { get; set; }
-        public bool HasSolution { get; set; }
+        public bool HasSolution => Solution.Count > 0;
         public Nullable<DateTime> Created_at { get; set; }
         public Nullable<int> Rate { get; set; }
-    }
-    public class MeasureDetail : MeasureModel
-    {
         public Nullable<double> Nutrient { get; set; }
         public Nullable<double> Humidity { get; set; }
         public Nullable<double> Acidity { get; set; }

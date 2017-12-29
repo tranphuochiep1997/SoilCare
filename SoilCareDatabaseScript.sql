@@ -66,6 +66,7 @@ CREATE TABLE Land(
 	Land_name nvarchar(200),
 	Land_address nvarchar(200),
 	Land_image nvarchar(200),
+	Land_area float,
 	User_id nvarchar(200),
 	Created_at datetime,
 	[Status] nvarchar(200),
@@ -73,7 +74,7 @@ CREATE TABLE Land(
 	CONSTRAINT Land_fk FOREIGN KEY(User_id) REFERENCES [User](User_id),
 );
 
-CREATE TABLE Measurement(
+CREATE TABLE Measure(
 	Measure_id nvarchar(200),
 	Created_at datetime,
 	Land_id nvarchar(200),
@@ -85,9 +86,9 @@ CREATE TABLE Measurement(
 	Water_retention float,
 	Salinity float,
 	Rate int,
-	CONSTRAINT Measurement_pk PRIMARY KEY(Measure_id),
-	CONSTRAINT Measurement_fk1 FOREIGN KEY(Land_id) REFERENCES Land(Land_id),
-	CONSTRAINT Measurement_fk2 FOREIGN KEY(Plant_id) REFERENCES Plant(Plant_id),
+	CONSTRAINT Measure_pk PRIMARY KEY(Measure_id),
+	CONSTRAINT Measure_fk1 FOREIGN KEY(Land_id) REFERENCES Land(Land_id),
+	CONSTRAINT Measure_fk2 FOREIGN KEY(Plant_id) REFERENCES Plant(Plant_id),
 );
 
 CREATE TABLE Solution(
@@ -108,10 +109,9 @@ CREATE TABLE SolutionOffer(
 	Value_config float,
 	Unit_symbol_config nvarchar(200),
 	Unit_name_config nvarchar(200),
-	Quantity_config nvarchar(200),
 	[Status] nvarchar(200),
 	CONSTRAINT SolutionOffer_pk PRIMARY KEY(Measure_id, Solution_id),
-	CONSTRAINT SolutionOffer_fk1 FOREIGN KEY(Measure_id) REFERENCES Measurement(Measure_id),
+	CONSTRAINT SolutionOffer_fk1 FOREIGN KEY(Measure_id) REFERENCES Measure(Measure_id),
 	CONSTRAINT SolutionOffer_fk2 FOREIGN KEY(Solution_id) REFERENCES Solution(Solution_id),
 );
 

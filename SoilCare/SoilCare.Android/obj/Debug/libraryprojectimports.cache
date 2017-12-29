@@ -1,29 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
-  <Jars>obj\Debug\__library_projects__\Xamarin.Android.Arch.Core.Common\library_project_imports\arch-core-common.jar;obj\Debug\__library_projects__\Xamarin.Android.Arch.Lifecycle.Common\library_project_imports\arch-lifecycle-common.jar;obj\Debug\__library_projects__\Xamarin.Android.Support.Annotations\library_project_imports\support-annotations.jar;C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Arch.Core.Common\library_project_imports\arch-core-common.jar;C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Arch.Lifecycle.Common\library_project_imports\arch-lifecycle-common.jar;C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Arch.Lifecycle.Runtime\library_project_imports\bin\classes.jar;C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Animated.Vector.Drawable\library_project_imports\bin\classes.jar;C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Annotations\library_project_imports\support-annotations.jar;C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Compat\library_project_imports\bin\classes.jar;C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Core.UI\library_project_imports\bin\classes.jar;C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Core.Utils\library_project_imports\bin\classes.jar;C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Design\library_project_imports\bin\classes.jar;C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Fragment\library_project_imports\bin\classes.jar;C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Media.Compat\library_project_imports\bin\classes.jar;C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Transition\library_project_imports\bin\classes.jar;C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v4\library_project_imports\bin\classes.jar;C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.AppCompat\library_project_imports\bin\classes.jar;C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.RecyclerView\library_project_imports\bin\classes.jar;C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Vector.Drawable\library_project_imports\bin\classes.jar</Jars>
+  <Jars>
+    <Jar>obj\Debug\lp\2\jl\arch-core-common.jar</Jar>
+    <Jar>obj\Debug\lp\3\jl\arch-lifecycle-common.jar</Jar>
+    <Jar>obj\Debug\lp\6\jl\support-annotations.jar</Jar>
+    <Jar>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\10\jl\bin\classes.jar</Jar>
+    <Jar>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\11\jl\bin\classes.jar</Jar>
+    <Jar>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\12\jl\bin\classes.jar</Jar>
+    <Jar>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\13\jl\bin\classes.jar</Jar>
+    <Jar>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\14\jl\bin\classes.jar</Jar>
+    <Jar>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\15\jl\bin\classes.jar</Jar>
+    <Jar>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\16\jl\bin\classes.jar</Jar>
+    <Jar>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\17\jl\bin\classes.jar</Jar>
+    <Jar>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\2\jl\arch-core-common.jar</Jar>
+    <Jar>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\3\jl\arch-lifecycle-common.jar</Jar>
+    <Jar>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\4\jl\bin\classes.jar</Jar>
+    <Jar>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\5\jl\bin\classes.jar</Jar>
+    <Jar>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\6\jl\support-annotations.jar</Jar>
+    <Jar>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\7\jl\bin\classes.jar</Jar>
+    <Jar>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\8\jl\bin\classes.jar</Jar>
+    <Jar>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\9\jl\bin\classes.jar</Jar>
+  </Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Refractored.Fab\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Compat\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Design\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Media.Compat\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Transition\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v4\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.AppCompat\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.RecyclerView\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\0\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\7\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\10\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\12\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\13\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\14\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\15\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\16\jl\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
-    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Refractored.Fab\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Xamarin.Android.Support.v4\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\lp\0\jl\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\lp\14\jl\assets</ResolvedAssetDirectory>
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Refractored.Fab.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Compat.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Design.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Media.Compat.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Transition.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v4.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.AppCompat.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.RecyclerView.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\0.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\7.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\10.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\12.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\13.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\14.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\15.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\lp\16.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

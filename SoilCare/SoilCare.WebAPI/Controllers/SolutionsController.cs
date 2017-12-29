@@ -1,6 +1,7 @@
 ﻿using SoilCare.WebAPI.Data;
 using SoilCare.WebAPI.Models;
 using System;
+using AutoMapper;
 using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
@@ -19,18 +20,9 @@ namespace SoilCare.WebAPI.Controllers
             IList<SolutionModel> listSolution = null;
             using (SoilCareEntities db = new SoilCareEntities())
             {
-                listSolution = db.Solutions.Select(s => new SolutionModel
-                {
-                    Solution_id = s.Solution_id,
-                    Solution_name = s.Solution_name,
-                    Value = s.Value,
-                    Unit_symbol = s.Unit_symbol,
-                    Unit_name = s.Unit_name,
-                    Quantity = s.Quantity,
-                    Solution_purpose = s.Solution_purpose,
-                    Solution_discription = s.Solution_discription,
-                    Owner = s.Owner,
-                }).ToList();
+                listSolution = db.Solutions.Where(s => s.Owner.ToLower().Equals("system"))
+                                           .Select(AutoMapper.Mapper.Map<Solution, SolutionModel>)
+                                           .ToList();
             }
             if (listSolution.Count == 0) return NotFound();
             return Ok(listSolution);
@@ -41,28 +33,17 @@ namespace SoilCare.WebAPI.Controllers
             SolutionModel _solution = null;
             using (SoilCareEntities db = new SoilCareEntities())
             {
-                Solution s = db.Solutions.Find(id);
-                if (s == null)
+                Solution solution = db.Solutions.Find(id);
+                if (solution == null)
                 {
                     db.Dispose();
                     return NotFound();
                 }
-                _solution = new SolutionModel
-                {
-                    Solution_id = s.Solution_id,
-                    Solution_name = s.Solution_name,
-                    Value = s.Value,
-                    Unit_symbol = s.Unit_symbol,
-                    Unit_name = s.Unit_name,
-                    Quantity = s.Quantity,
-                    Solution_purpose = s.Solution_purpose,
-                    Solution_discription = s.Solution_discription,
-                    Owner = s.Owner,
-                };
+                _solution = Mapper.Map<Solution, SolutionModel>(solution);
             }
             return Ok(_solution);
         }
-        
+
         // POST: api/Solutions/
         [ResponseType(typeof(Solution))]
         public IHttpActionResult PostSolution([FromBody]AddSolutionModel solution)
@@ -75,18 +56,10 @@ namespace SoilCare.WebAPI.Controllers
             using (SoilCareEntities db = new SoilCareEntities())
             {
                 string initSolutionId = Guid.NewGuid().ToString("N");
-                _solution = new Solution
-                {
-                    Solution_id = initSolutionId,
-                    Solution_name = solution.Solution_name,
-                    Value = solution.Value,
-                    Unit_symbol = solution.Unit_symbol,
-                    Unit_name = solution.Unit_name,
-                    Quantity = solution.Quantity,
-                    Solution_purpose = solution.Solution_purpose,
-                    Solution_discription = solution.Solution_discription,
-                    Owner = "User",
-                };
+                _solution = new Solution();
+                _solution = Mapper.Map<AddSolutionModel, Solution>(solution);
+                _solution.Solution_id = initSolutionId;
+                _solution.Owner = "User";
                 db.Solutions.Add(_solution);
                 try
                 {
