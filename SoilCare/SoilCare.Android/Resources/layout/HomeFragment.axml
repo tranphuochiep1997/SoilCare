@@ -1,41 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin">
-    <TextView
-        android:id="@+id/textViewLandCollectionName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Your Land Collection"
-        android:textSize="20sp"
-        android:textColor="@color/primary"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true" />
-    <ListView
-        android:id="@+id/listViewLandList"
-        android:layout_below="@id/textViewLandCollectionName"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent">
+    
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true" />
-<!--<android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
-        android:layout_marginRight="16dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:clickable="true"
-        android:backgroundTint="@color/accent"
-        android:src="@drawable/icons_plus_white"
-        app:elevation="4dp" />-->
-    <Refractored.Fab.FloatingActionButton
+        android:layout_height="match_parent"        >
+      <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+      <ImageView
+          android:id="@+id/imageview"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_alignParentStart="true"
+          android:layout_alignTop="@+id/textViewLandCollectionName"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginStart="18dp"
+          android:adjustViewBounds="true"
+          android:background="@drawable/icon_soilcare" />
+      <TextView
+          android:id="@+id/textViewLandCollectionName"
+          android:layout_marginTop="10dp"
+          android:layout_below="@+id/toolbar"
+          android:layout_toEndOf="@+id/imageview"
+          android:layout_marginStart="5dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Your Land Collection"
+          android:textSize="15sp"
+          android:textColor="@color/accent"
+          android:textStyle="bold"
+          android:layout_centerHorizontal="true" />
+        <ListView
+            android:id="@+id/listViewLandList"
+            android:layout_below="@id/textViewLandCollectionName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"/>
+    <!--<Refractored.Fab.FloatingActionButton
         android:id="@+id/fab1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,5 +54,6 @@
         android:src="@drawable/icons_plus_white"
         app:elevation="4dp"
         app:fab_colorPressed="@color/primary_pressed"
-        app:fab_colorRipple="@color/ripple" />
-</RelativeLayout>
+        app:fab_colorRipple="@color/ripple" />-->
+    </RelativeLayout>
+</ScrollView>

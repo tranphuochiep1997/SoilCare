@@ -2,9 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="SoilCare.Android.SoilCare.Android" android:versionCode="1" android:versionName="1.0" android:installLocation="preferExternal">
   <!--suppress UsesMinSdkAttributes-->
   <uses-sdk android:minSdkVersion="18" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.INTERNET" />
   <application android:allowBackup="true" android:label="@string/app_name" android:name="android.app.Application" android:debuggable="true">
-    <activity android:label="@string/app_name" android:theme="@style/Theme.AppCompat.Light.DarkActionBar" android:name="md5ba50a4524fe383aa42943e8189f31479.MainActivity">
+    <activity android:label="Activity1" android:name="md5ba50a4524fe383aa42943e8189f31479.Activity1" />
+    <activity android:label="@string/app_name" android:theme="@style/Theme.AppCompat.Light.NoActionBar" android:name="md5ba50a4524fe383aa42943e8189f31479.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
