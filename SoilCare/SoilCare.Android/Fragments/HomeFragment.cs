@@ -16,7 +16,7 @@ using Refractored.Fab;
 
 namespace SoilCare.Android.Fragments
 {
-    public class HomeFragment : Fragment
+    public class HomeFragment : global::Android.Support.V4.App.Fragment
     {
         private ListView listView;
         private List<UserLand> list;
@@ -27,7 +27,7 @@ namespace SoilCare.Android.Fragments
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetHasOptionsMenu(true);
+            HasOptionsMenu = true;
             
         }
 
@@ -50,9 +50,14 @@ namespace SoilCare.Android.Fragments
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
+            Toast.MakeText(this.Activity, "Action selected: " + item.TitleFormatted,
                 ToastLength.Short).Show();
             // Start a new Activity Here
+
+            var activity2 = new Intent(this.Activity, typeof(NewUserLandActivity));
+            activity2.PutExtra("MyData", "Data from Activity1");
+            StartActivity(activity2);
+
             return base.OnOptionsItemSelected(item);
         }
 
@@ -89,8 +94,6 @@ namespace SoilCare.Android.Fragments
         //    newLand.Show(transaction, "dialog fragment");
         //}
 
-
-
         // just testing the data 
         private void TestData()
         {
@@ -99,11 +102,8 @@ namespace SoilCare.Android.Fragments
             {
                 list.Add(new UserLand("User Land "+i, "User Land Description "+i, Resource.Drawable.icon_profilepicture));
             }
-
             listView.Adapter = new UserLandAdapter(this.Activity, list);
             GetListViewSize(listView);
-
-
         }
 
         private void GetListViewSize(ListView myListView)

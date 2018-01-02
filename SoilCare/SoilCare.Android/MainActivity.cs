@@ -7,74 +7,64 @@ using System;
 using SoilCare.Android.Fragments;
 using Android.Graphics.Drawables;
 using Android.Graphics;
+using Android.Support.V4.View;
+using SoilCare.Android.AdapterClass;
+using Android.Views;
+using Android.Support.V4.App;
 
 namespace SoilCare.Android
 {
-    [Activity(Label = "@string/app_name", MainLauncher = true, Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
-    public class MainActivity : AppCompatActivity
+    [Activity(Label = "@string/app_name", MainLauncher = true, Theme = "@style/CustomActionBarTheme")]
+    public class MainActivity : FragmentActivity
     {
         BottomNavigationView bottomNavigation;
+        ViewPager viewPager;
+
+        HomeFragment homeFragment;
+        LibraryFragment libraryFragment;
+        AccountFragment accountFragment;
+        SettingsFragment settingsFragment;
+
         protected override void OnCreate(Bundle bundle)
         {
-
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
-
             bottomNavigation = FindViewById<BottomNavigationView>(Resource.Id.bottom_navigation);
-
             bottomNavigation.SetShiftMode(false, false);
-
             bottomNavigation.NavigationItemSelected += BottomNavigation_NavigationItemSelected;
-
-            LoadFragment(Resource.Id.menu_home);
-                       
+            viewPager = FindViewById<ViewPager>(Resource.Id.viewpager);
+            viewPager.PageSelected += ViewPager_PageSelected;
+            SetUpViewPager(viewPager);       
+                      
         }
+
+        private void ViewPager_PageSelected(object sender, ViewPager.PageSelectedEventArgs e)
+        {
+            var item = bottomNavigation.Menu.GetItem(e.Position);
+            bottomNavigation.SelectedItemId = item.ItemId;
+        }     
 
         private void BottomNavigation_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
         {
-            LoadFragment(e.Item.ItemId);
+            viewPager.SetCurrentItem(e.Item.Order, true);
+            
         }
 
-        private void LoadFragment(int id)
+        private void SetUpViewPager(ViewPager viewPager)
         {
-            Fragment fragment = null;   
-            switch (id)
-            {
-                case Resource.Id.menu_home:
-                    fragment = new HomeFragment();
-                    ReplaceFragment(fragment);
-                    break;
-                case Resource.Id.menu_library:
-                    fragment = new LibraryFragment();
-                    ReplaceFragment(fragment);
-                    break;
-                case Resource.Id.menu_account:
-                    fragment = new AccountFragment();
-                    ReplaceFragment(fragment);
-                    break;
-                case Resource.Id.menu_settings:
-                    fragment = new SettingsFragment();
-                    ReplaceFragment(fragment);
-                    break;
-            }
-            if (fragment == null)
-                return;
+            ViewPagerAdapter adapter = new ViewPagerAdapter(SupportFragmentManager);
+            homeFragment = new HomeFragment();
+            libraryFragment = new LibraryFragment();
+            accountFragment = new AccountFragment();
+            settingsFragment = new SettingsFragment();
+
+            adapter.AddFragment(homeFragment);
+            adapter.AddFragment(libraryFragment);
+            adapter.AddFragment(accountFragment);
+            adapter.AddFragment(settingsFragment);
+            viewPager.Adapter = adapter;
         }
 
-        private void ReplaceFragment(Fragment fragment)
-        {
-            // Create a new fragment and a transaction.
-            FragmentTransaction fragmentTx = this.FragmentManager.BeginTransaction();
-
-            // Replace the fragment that is in the View fragment_container (if applicable).
-            fragmentTx.Replace(Resource.Id.content_frame, fragment);
-
-            // Add the transaction to the back stack.
-            fragmentTx.AddToBackStack(null);
-
-            // Commit the transaction.
-            fragmentTx.Commit();
-        }
 
 
     }

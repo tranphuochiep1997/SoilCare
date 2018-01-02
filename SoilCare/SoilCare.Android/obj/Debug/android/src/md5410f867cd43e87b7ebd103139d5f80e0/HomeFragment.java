@@ -2,7 +2,7 @@ package md5410f867cd43e87b7ebd103139d5f80e0;
 
 
 public class HomeFragment
-	extends android.app.Fragment
+	extends android.support.v4.app.Fragment
 	implements
 		mono.android.IGCUserPeer
 {
@@ -13,6 +13,7 @@ public class HomeFragment
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
 			"n_onCreateView:(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;:GetOnCreateView_Landroid_view_LayoutInflater_Landroid_view_ViewGroup_Landroid_os_Bundle_Handler\n" +
 			"n_onCreateOptionsMenu:(Landroid/view/Menu;Landroid/view/MenuInflater;)V:GetOnCreateOptionsMenu_Landroid_view_Menu_Landroid_view_MenuInflater_Handler\n" +
+			"n_onOptionsItemSelected:(Landroid/view/MenuItem;)Z:GetOnOptionsItemSelected_Landroid_view_MenuItem_Handler\n" +
 			"n_onActivityCreated:(Landroid/os/Bundle;)V:GetOnActivityCreated_Landroid_os_Bundle_Handler\n" +
 			"";
 		mono.android.Runtime.register ("SoilCare.Android.Fragments.HomeFragment, SoilCare.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", HomeFragment.class, __md_methods);
@@ -49,6 +50,14 @@ public class HomeFragment
 	}
 
 	private native void n_onCreateOptionsMenu (android.view.Menu p0, android.view.MenuInflater p1);
+
+
+	public boolean onOptionsItemSelected (android.view.MenuItem p0)
+	{
+		return n_onOptionsItemSelected (p0);
+	}
+
+	private native boolean n_onOptionsItemSelected (android.view.MenuItem p0);
 
 
 	public void onActivityCreated (android.os.Bundle p0)

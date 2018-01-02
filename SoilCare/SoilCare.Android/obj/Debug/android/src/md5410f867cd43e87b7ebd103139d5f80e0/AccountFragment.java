@@ -2,7 +2,7 @@ package md5410f867cd43e87b7ebd103139d5f80e0;
 
 
 public class AccountFragment
-	extends android.app.Fragment
+	extends android.support.v4.app.Fragment
 	implements
 		mono.android.IGCUserPeer
 {

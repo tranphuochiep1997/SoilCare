@@ -24,7 +24,7 @@ namespace SoilCare.Android.Fragments
         private ImageButton ib;
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            return inflater.Inflate(Resource.Layout.NewLand_AlertDialog,container, false);
+            return inflater.Inflate(Resource.Layout.NewUserLand,container, false);
         }
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
@@ -35,9 +35,9 @@ namespace SoilCare.Android.Fragments
 
 
             // finding views
-            var edtName = this.View.FindViewById<EditText>(Resource.Id.editViewManhDatName);
-            var edtDes = this.View.FindViewById<EditText>(Resource.Id.editViewDescription);
-            ib = this.View.FindViewById<ImageButton>(Resource.Id.imageButtonLandImage);
+            var edtName = this.View.FindViewById<EditText>(Resource.Id.editTextNewLandName);
+            var edtDes = this.View.FindViewById<EditText>(Resource.Id.editTextNewLandLocation);
+            ib = this.View.FindViewById<ImageButton>(Resource.Id.imageButtonNewUserLand);
             var buttonSave = this.View.FindViewById<Button>(Resource.Id.buttonSave);
             var buttonCancel = this.View.FindViewById<Button>(Resource.Id.buttonCancle);
 

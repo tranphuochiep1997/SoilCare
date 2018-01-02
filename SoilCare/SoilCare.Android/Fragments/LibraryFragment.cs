@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace SoilCare.Android.Fragments
 {
-    public class LibraryFragment : Fragment
+    public class LibraryFragment : global::Android.Support.V4.App.Fragment
     {
         public override void OnCreate(Bundle savedInstanceState)
         {

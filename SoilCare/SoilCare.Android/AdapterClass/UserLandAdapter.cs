@@ -44,7 +44,7 @@ namespace SoilCare.Android.AdapterClass
             ViewHolder viewHolder;
             if(convertView == null)
             {
-                convertView = LayoutInflater.FromContext(context).Inflate(Resource.Layout.land_row_view, parent,false);
+                convertView = LayoutInflater.FromContext(context).Inflate(Resource.Layout.user_land_row_view, parent,false);
                 viewHolder = new ViewHolder();
                 viewHolder.LandName = convertView.FindViewById<TextView>(Resource.Id.textViewLandName);
                 viewHolder.LandDescription = convertView.FindViewById<TextView>(Resource.Id.textViewDescription);
