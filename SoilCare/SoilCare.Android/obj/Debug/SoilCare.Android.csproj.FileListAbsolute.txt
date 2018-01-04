@@ -1,0 +1,178 @@
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\SoilCare.Android.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\SoilCare.Android.pdb
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\SoilCare.Android.SoilCare.Android.apk
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\SoilCare.Android.SoilCare.Android-Signed.apk
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Refractored.Fab.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Arch.Core.Common.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Arch.Lifecycle.Common.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Arch.Lifecycle.Runtime.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Annotations.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Compat.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Core.UI.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Core.Utils.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Design.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Fragment.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Media.Compat.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Transition.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.v4.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Refractored.Fab.pdb
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Refractored.Fab.dll.mdb
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\SoilCare.Android.csproj.CoreCompileInputs.cache
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\SoilCare.Android.dll
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\SoilCare.Android.pdb
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\android\bin\SoilCare.Android.SoilCare.Android.apk
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\menu\bottom_navigation_main.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\layout\homefragment.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\layout\libraryfragment.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\layout\accountfragment.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\layout\settingsfragment.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\layout\user_land_row_view.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\layout\main.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\values\strings.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\values\styles.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\values\dimens.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\values\colors.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\nav_item_colors.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_settings.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_home.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_library.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_account.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_plus2.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_plus.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_profilepicture.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icons_plus_white.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\background.jpg
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_image.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\anim\slide_up.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\anim\slide_right.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\settings.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_update.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_star.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_rating.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_team.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_feedback.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_about.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_nextpage.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_notificaton.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_language.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_privacy.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\rounded_button.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_soilcare.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_add.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\menu\add_new_land_toolbar.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\layout\toolbar.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_soilcare2.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_plantonsoil.png
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\R.cs.flag
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\uploadflags.txt
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\res\layout\newuserland.xml
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\SoilCare.Android.dll.mdb
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\android\assets\Refractored.Fab.dll.mdb
+C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\android\assets\SoilCare.Android.dll.mdb
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\SoilCare.Android.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\SoilCare.Android.pdb
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\SoilCare.Android.SoilCare.Android.apk
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\SoilCare.Android.SoilCare.Android-Signed.apk
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Refractored.Fab.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Arch.Core.Common.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Arch.Lifecycle.Common.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Arch.Lifecycle.Runtime.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Annotations.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Compat.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Core.UI.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Core.Utils.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Design.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Fragment.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Media.Compat.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Transition.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.v4.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Refractored.Fab.pdb
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\Refractored.Fab.dll.mdb
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\SoilCare.Android.csprojResolveAssemblyReference.cache
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\SoilCare.Android.csproj.CoreCompileInputs.cache
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\SoilCare.Android.dll
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\SoilCare.Android.pdb
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\android\bin\SoilCare.Android.SoilCare.Android.apk
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\menu\bottom_navigation_main.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\layout\homefragment.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\layout\libraryfragment.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\layout\accountfragment.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\layout\settingsfragment.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\layout\user_land_row_view.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\layout\newuserland.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\layout\main.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\values\strings.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\values\styles.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\values\dimens.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\values\colors.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\nav_item_colors.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_settings.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_home.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_library.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_account.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_plus2.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_plus.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_profilepicture.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icons_plus_white.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\background.jpg
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_image.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\anim\slide_up.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\anim\slide_right.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\settings.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_update.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_star.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_rating.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_team.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_feedback.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_about.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_nextpage.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_notificaton.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_language.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_privacy.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\rounded_button.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_soilcare.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_add.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\menu\add_new_land_toolbar.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\layout\toolbar.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_soilcare2.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_plantonsoil.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\drawable\icon_search.png
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\res\menu\search_toolbar.xml
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\R.cs.flag
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\uploadflags.txt
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\SoilCare.Android.dll.mdb
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\android\assets\Refractored.Fab.dll.mdb
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\obj\Debug\android\assets\SoilCare.Android.dll.mdb
+E:\SoilCare Project\Git\SoilCare\SoilCare.Android\bin\Debug\SoilCare.Android.dll
+bin\Debug\Mono.Android.pdb
+bin\Debug\mscorlib.pdb
+bin\Debug\System.Core.pdb
+bin\Debug\System.pdb
+bin\Debug\System.Xml.pdb
+bin\Debug\System.Net.Http.pdb
+bin\Debug\System.Runtime.Serialization.pdb
+bin\Debug\System.ServiceModel.Internals.pdb
+bin\Debug\Mono.Security.pdb
+bin\Debug\System.ComponentModel.Composition.pdb
+obj\Debug\linksrc\SoilCare.Android.dll.mdb
+obj\Debug\linksrc\Refractored.Fab.dll.mdb
+obj\Debug\linksrc\Mono.Android.pdb
+obj\Debug\linksrc\mscorlib.pdb
+obj\Debug\linksrc\System.Core.pdb
+obj\Debug\linksrc\System.pdb
+obj\Debug\linksrc\System.Xml.pdb
+obj\Debug\linksrc\System.Net.Http.pdb
+obj\Debug\linksrc\System.Runtime.Serialization.pdb
+obj\Debug\linksrc\System.ServiceModel.Internals.pdb
+obj\Debug\linksrc\Mono.Security.pdb
+obj\Debug\linksrc\System.ComponentModel.Composition.pdb
