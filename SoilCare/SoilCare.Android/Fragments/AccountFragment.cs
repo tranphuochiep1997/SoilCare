@@ -24,8 +24,12 @@ namespace SoilCare.Android.Fragments
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            
-            return inflater.Inflate(Resource.Layout.AccountFragment, container, false);
+
+            View view = inflater.Inflate(Resource.Layout.AccountFragment, container, false);
+            Toolbar toolbar = view.FindViewById<Toolbar>(Resource.Id.toolbar);
+            Activity.SetActionBar(toolbar);
+            toolbar.Title = "PERSONAL INFORMATION";
+            return view;
         }
     }
 }

@@ -2752,14 +2752,14 @@ namespace SoilCare.Android
 			// aapt resource value: 0x7f070038
 			public const int collapseActionView = 2131165240;
 			
-			// aapt resource value: 0x7f07008d
-			public const int container = 2131165325;
+			// aapt resource value: 0x7f07008e
+			public const int container = 2131165326;
 			
 			// aapt resource value: 0x7f070065
 			public const int contentPanel = 2131165285;
 			
-			// aapt resource value: 0x7f07008e
-			public const int coordinator = 2131165326;
+			// aapt resource value: 0x7f07008f
+			public const int coordinator = 2131165327;
 			
 			// aapt resource value: 0x7f07006c
 			public const int custom = 2131165292;
@@ -2773,20 +2773,20 @@ namespace SoilCare.Android
 			// aapt resource value: 0x7f07005f
 			public const int default_activity_button = 2131165279;
 			
-			// aapt resource value: 0x7f070090
-			public const int design_bottom_sheet = 2131165328;
+			// aapt resource value: 0x7f070091
+			public const int design_bottom_sheet = 2131165329;
+			
+			// aapt resource value: 0x7f070098
+			public const int design_menu_item_action_area = 2131165336;
 			
 			// aapt resource value: 0x7f070097
-			public const int design_menu_item_action_area = 2131165335;
+			public const int design_menu_item_action_area_stub = 2131165335;
 			
 			// aapt resource value: 0x7f070096
-			public const int design_menu_item_action_area_stub = 2131165334;
+			public const int design_menu_item_text = 2131165334;
 			
 			// aapt resource value: 0x7f070095
-			public const int design_menu_item_text = 2131165333;
-			
-			// aapt resource value: 0x7f070094
-			public const int design_navigation_view = 2131165332;
+			public const int design_navigation_view = 2131165333;
 			
 			// aapt resource value: 0x7f07001f
 			public const int disableHome = 2131165215;
@@ -2878,8 +2878,8 @@ namespace SoilCare.Android
 			// aapt resource value: 0x7f070000
 			public const int item_touch_helper_previous_elevation = 2131165184;
 			
-			// aapt resource value: 0x7f07008c
-			public const int largeLabel = 2131165324;
+			// aapt resource value: 0x7f07008d
+			public const int largeLabel = 2131165325;
 			
 			// aapt resource value: 0x7f0700a4
 			public const int layoutButton = 2131165348;
@@ -2938,8 +2938,8 @@ namespace SoilCare.Android
 			// aapt resource value: 0x7f070026
 			public const int multiply = 2131165222;
 			
-			// aapt resource value: 0x7f070093
-			public const int navigation_header_container = 2131165331;
+			// aapt resource value: 0x7f070094
+			public const int navigation_header_container = 2131165332;
 			
 			// aapt resource value: 0x7f07003a
 			public const int never = 2131165242;
@@ -3061,14 +3061,14 @@ namespace SoilCare.Android
 			// aapt resource value: 0x7f070024
 			public const int showTitle = 2131165220;
 			
-			// aapt resource value: 0x7f07008b
-			public const int smallLabel = 2131165323;
+			// aapt resource value: 0x7f07008c
+			public const int smallLabel = 2131165324;
+			
+			// aapt resource value: 0x7f070093
+			public const int snackbar_action = 2131165331;
 			
 			// aapt resource value: 0x7f070092
-			public const int snackbar_action = 2131165330;
-			
-			// aapt resource value: 0x7f070091
-			public const int snackbar_text = 2131165329;
+			public const int snackbar_text = 2131165330;
 			
 			// aapt resource value: 0x7f070042
 			public const int snap = 2131165250;
@@ -3115,8 +3115,8 @@ namespace SoilCare.Android
 			// aapt resource value: 0x7f070068
 			public const int textSpacerNoTitle = 2131165288;
 			
-			// aapt resource value: 0x7f07008a
-			public const int textView1 = 2131165322;
+			// aapt resource value: 0x7f07008b
+			public const int textView1 = 2131165323;
 			
 			// aapt resource value: 0x7f0700bc
 			public const int textViewAppVersion = 2131165372;
@@ -3136,8 +3136,8 @@ namespace SoilCare.Android
 			// aapt resource value: 0x7f0700bb
 			public const int textViewTeamName = 2131165371;
 			
-			// aapt resource value: 0x7f070098
-			public const int text_input_password_toggle = 2131165336;
+			// aapt resource value: 0x7f070099
+			public const int text_input_password_toggle = 2131165337;
 			
 			// aapt resource value: 0x7f070014
 			public const int textinput_counter = 2131165204;
@@ -3157,8 +3157,8 @@ namespace SoilCare.Android
 			// aapt resource value: 0x7f07006e
 			public const int title_template = 2131165294;
 			
-			// aapt resource value: 0x7f070099
-			public const int toolbar = 2131165337;
+			// aapt resource value: 0x7f07008a
+			public const int toolbar = 2131165322;
 			
 			// aapt resource value: 0x7f07003d
 			public const int top = 2131165245;
@@ -3166,8 +3166,8 @@ namespace SoilCare.Android
 			// aapt resource value: 0x7f07006d
 			public const int topPanel = 2131165293;
 			
-			// aapt resource value: 0x7f07008f
-			public const int touch_outside = 2131165327;
+			// aapt resource value: 0x7f070090
+			public const int touch_outside = 2131165328;
 			
 			// aapt resource value: 0x7f07000f
 			public const int transition_current_scene = 2131165199;

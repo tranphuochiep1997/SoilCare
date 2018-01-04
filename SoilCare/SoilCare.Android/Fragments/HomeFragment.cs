@@ -36,7 +36,7 @@ namespace SoilCare.Android.Fragments
             View view = inflater.Inflate(Resource.Layout.HomeFragment, container, false);
             Toolbar toolbar = view.FindViewById<Toolbar>(Resource.Id.toolbar);
             Activity.SetActionBar(toolbar);
-            toolbar.Title = "SOILCARE - MIC2018";
+            toolbar.Title = "SOILCARE - DTU 2018";
             return view;
         }
 
@@ -55,7 +55,7 @@ namespace SoilCare.Android.Fragments
             // Start a new Activity Here
 
             var activity2 = new Intent(this.Activity, typeof(NewUserLandActivity));
-            activity2.PutExtra("MyData", "Data from Activity1");
+            activity2.PutExtra("MyData", "Data from HomeActivity");
             StartActivity(activity2);
 
             return base.OnOptionsItemSelected(item);
@@ -126,8 +126,7 @@ namespace SoilCare.Android.Fragments
             //ViewGroup.LayoutParams params = myListView.getLayoutParams();
             ViewGroup.LayoutParams params2 = myListView.LayoutParameters;
             params2.Height = totalHeight + (myListView.DividerHeight * (myListAdapter.Count) - 1);
-            myListView.LayoutParameters = params2;
-            // print height of adapter on log
+            myListView.LayoutParameters = params2;            
         }
 
         private void FindViews()

@@ -22,7 +22,6 @@ C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\b
 C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
 C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Refractored.Fab.pdb
 C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\Refractored.Fab.dll.mdb
-C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\SoilCare.Android.csprojResolveAssemblyReference.cache
 C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\SoilCare.Android.csproj.CoreCompileInputs.cache
 C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\SoilCare.Android.dll
 C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\SoilCare.Android.pdb
