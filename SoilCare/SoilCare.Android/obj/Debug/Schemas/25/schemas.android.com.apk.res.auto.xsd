@@ -2,7 +2,7 @@
 <xs:schema xmlns:app="http://schemas.android.com/apk/res-auto" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res-auto" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>1/6/2018 4:48:44 PM</xs:documentation>
+    <xs:documentation>1/6/2018 10:49:13 PM</xs:documentation>
   </xs:annotation>
   <xs:attribute name="allowStacking">
     <xs:annotation>
@@ -1328,7 +1328,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -1343,6 +1345,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -1810,7 +1813,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -1825,6 +1830,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -2180,7 +2186,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -2195,6 +2203,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -2550,7 +2559,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -2565,6 +2576,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -5490,7 +5502,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -5505,6 +5519,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -5860,7 +5875,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -5875,6 +5892,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -6319,7 +6337,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -6334,6 +6354,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -6954,7 +6975,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -6969,6 +6992,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -7324,7 +7348,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -7339,6 +7365,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -8802,7 +8829,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -8817,6 +8846,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -9233,7 +9263,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -9248,6 +9280,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -9603,7 +9636,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -9618,6 +9653,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -9973,7 +10009,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -9988,6 +10026,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -10343,7 +10382,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -10358,6 +10399,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -10758,7 +10800,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -10773,6 +10817,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -11128,7 +11173,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -11143,6 +11190,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -11588,7 +11636,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -11603,6 +11653,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -12209,7 +12260,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -12224,6 +12277,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -12658,7 +12712,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -12673,6 +12729,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -13237,7 +13294,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -13252,6 +13311,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -13816,7 +13876,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -13831,6 +13893,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -14186,7 +14249,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -14201,6 +14266,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -14645,7 +14711,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -14660,6 +14728,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -15565,7 +15634,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -15580,6 +15651,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -16024,7 +16096,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -16039,6 +16113,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -16483,7 +16558,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -16498,6 +16575,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -17125,7 +17203,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -17140,6 +17220,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -17703,7 +17784,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -17718,6 +17801,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -18652,7 +18736,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -18667,6 +18753,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -19022,7 +19109,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -19037,6 +19126,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -19572,7 +19662,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -19587,6 +19679,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -20151,7 +20244,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -20166,6 +20261,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -20610,7 +20706,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -20625,6 +20723,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -21189,7 +21288,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -21204,6 +21305,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -21975,7 +22077,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -21990,6 +22094,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -22345,7 +22450,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -22360,6 +22467,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -25035,7 +25143,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -25050,6 +25160,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -27355,7 +27466,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -27370,6 +27483,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -27934,7 +28048,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -27949,6 +28065,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -28304,7 +28421,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -28319,6 +28438,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />
@@ -28947,7 +29067,9 @@
             <xs:enumeration value="@drawable/icon_home" />
             <xs:enumeration value="@drawable/icon_image" />
             <xs:enumeration value="@drawable/icon_language" />
+            <xs:enumeration value="@drawable/icon_leftarrow" />
             <xs:enumeration value="@drawable/icon_library" />
+            <xs:enumeration value="@drawable/icon_location" />
             <xs:enumeration value="@drawable/icon_nextpage" />
             <xs:enumeration value="@drawable/icon_notificaton" />
             <xs:enumeration value="@drawable/icon_plantonsoil" />
@@ -28962,6 +29084,7 @@
             <xs:enumeration value="@drawable/icon_soilcare2" />
             <xs:enumeration value="@drawable/icon_star" />
             <xs:enumeration value="@drawable/icon_team" />
+            <xs:enumeration value="@drawable/icon_tickbox" />
             <xs:enumeration value="@drawable/icon_update" />
             <xs:enumeration value="@drawable/icons_plus_white" />
             <xs:enumeration value="@drawable/nav_item_colors" />

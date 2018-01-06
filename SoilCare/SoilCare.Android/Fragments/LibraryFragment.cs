@@ -23,7 +23,7 @@ namespace SoilCare.Android.Fragments
         private ListView listView;
         private TextView textViewLibrary;
         private EditText editTextSearchLibrary;
-        private ImageView imageView;
+        private ImageButton imageButton;
 
         private List<PlantInfo> list;
         private LibraryAdapter adapter;             
@@ -47,9 +47,9 @@ namespace SoilCare.Android.Fragments
             FindViews();
             TestData();
 
-            imageView.Click += delegate
+            imageButton.Click += delegate
             {
-                Toast.MakeText(this.Activity, "Saved", ToastLength.Short).Show();
+                Toast.MakeText(this.Activity, "Search", ToastLength.Short).Show();
                 adapter.Filter.InvokeFilter(editTextSearchLibrary.Text);
                
                 if (editTextSearchLibrary.Visibility == ViewStates.Visible)
@@ -99,7 +99,7 @@ namespace SoilCare.Android.Fragments
             list.Add(new PlantInfo("Le", " Viet Nam ", Resource.Drawable.icon_soilcare2));
             list.Add(new PlantInfo("Mang Cau", " TRung Quoc ", Resource.Drawable.icon_soilcare2));
             list.Add(new PlantInfo("Mit uot", " Han Quoc ", Resource.Drawable.icon_soilcare2));
-
+            
             adapter = new LibraryAdapter(this.Activity, list);
             listView.Adapter = adapter;
             listView.TextFilterEnabled = true;
@@ -110,7 +110,7 @@ namespace SoilCare.Android.Fragments
             listView = this.View.FindViewById<ListView>(Resource.Id.listViewLibrary);
             textViewLibrary = this.View.FindViewById<TextView>(Resource.Id.textViewLibrary);
             editTextSearchLibrary = this.View.FindViewById<EditText>(Resource.Id.editTextSearchLibrary);
-            imageView = this.View.FindViewById<ImageView>(Resource.Id.imageButtonSearchLibrary);          
+            imageButton = this.View.FindViewById<ImageButton>(Resource.Id.imageButtonSearchLibrary);          
         }
 
         private class SearchViewExpandListener

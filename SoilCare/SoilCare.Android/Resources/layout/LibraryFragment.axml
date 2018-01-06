@@ -26,15 +26,16 @@
             android:hint="Search Library"
             android:visibility="gone"
             android:padding="10dp"
-            android:layout_height="match_parent">
-            <requestFocus />
-        </EditText>
-        <ImageView
+            android:layout_height="match_parent" />
+        <ImageButton
             android:id="@+id/imageButtonSearchLibrary"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:padding="10dp"
-            android:src="@drawable/search" />
+            android:padding="15dp"
+            android:src="@drawable/search"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter" />
     </LinearLayout>
     <ListView
         android:id="@+id/listViewLibrary"

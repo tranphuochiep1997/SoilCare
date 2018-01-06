@@ -9,12 +9,21 @@
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:background="@color/colorGreen">
+        <ImageButton
+            android:id="@+id/imageButtonLeftArrow"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="15dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_leftarrow"
+            android:scaleType="fitCenter" />
         <TextView
-            android:id="@+id/textViewSpecifiedUserLand"
+            android:id="@+id/textViewSpecifiedLand"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="User Land 1"
+            android:text="USER LAND 1"
             android:textColor="@android:color/white"
             android:padding="10dp"
             android:gravity="center_vertical"
@@ -45,7 +54,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#95a5a6"
+        android:background="#bdc3c7"
         android:text="History"
         android:padding="15dp"
         android:textColor="@color/colorWhite"

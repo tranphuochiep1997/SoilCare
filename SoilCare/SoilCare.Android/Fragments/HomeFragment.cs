@@ -80,7 +80,11 @@ namespace SoilCare.Android.Fragments
             var userland = new Intent(this.Activity, typeof(UserLandActivity));
             userland.PutExtra("UserLandData", "Data from HomeActivity");
             StartActivity(userland);
+
         }
+
+
+
 
         // IT WILL BE DELETED SOON
 
