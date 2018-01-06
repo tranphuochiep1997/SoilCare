@@ -2,7 +2,7 @@
 <xs:schema xmlns:app="http://schemas.android.com/apk/res-auto" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res-auto" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>1/4/2018 4:17:54 PM</xs:documentation>
+    <xs:documentation>04/01/2018 17:57:24 PM</xs:documentation>
   </xs:annotation>
   <xs:attribute name="allowStacking">
     <xs:annotation>
@@ -1321,6 +1321,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -1337,6 +1340,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -1801,6 +1805,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -1817,6 +1824,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -2169,6 +2177,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -2185,6 +2196,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -2537,6 +2549,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -2553,6 +2568,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -5475,6 +5491,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -5491,6 +5510,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -5843,6 +5863,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -5859,6 +5882,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -6300,6 +6324,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -6316,6 +6343,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -6933,6 +6961,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -6949,6 +6980,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -7301,6 +7333,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -7317,6 +7352,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -8777,6 +8813,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -8793,6 +8832,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -9206,6 +9246,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -9222,6 +9265,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -9574,6 +9618,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -9590,6 +9637,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -9942,6 +9990,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -9958,6 +10009,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -10310,6 +10362,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -10326,6 +10381,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -10723,6 +10779,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -10739,6 +10798,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -11091,6 +11151,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -11107,6 +11170,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -11549,6 +11613,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -11565,6 +11632,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -12168,6 +12236,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -12184,6 +12255,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -12615,6 +12687,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -12631,6 +12706,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -13192,6 +13268,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -13208,6 +13287,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -13769,6 +13849,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -13785,6 +13868,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -14137,6 +14221,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -14153,6 +14240,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -14594,6 +14682,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -14610,6 +14701,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -15512,6 +15604,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -15528,6 +15623,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -15969,6 +16065,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -15985,6 +16084,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -16426,6 +16526,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -16442,6 +16545,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -17066,6 +17170,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -17082,6 +17189,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -17642,6 +17750,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -17658,6 +17769,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -18589,6 +18701,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -18605,6 +18720,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -18957,6 +19073,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -18973,6 +19092,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -19505,6 +19625,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -19521,6 +19644,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -20082,6 +20206,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -20098,6 +20225,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -20539,6 +20667,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -20555,6 +20686,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -21116,6 +21248,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -21132,6 +21267,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -21900,6 +22036,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -21916,6 +22055,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -22268,6 +22408,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -22284,6 +22427,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -24956,6 +25100,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -24972,6 +25119,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -27274,6 +27422,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -27290,6 +27441,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -27851,6 +28003,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -27867,6 +28022,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -28219,6 +28375,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -28235,6 +28394,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
@@ -28860,6 +29020,9 @@
             <xs:enumeration value="@drawable/design_snackbar_background" />
             <xs:enumeration value="@drawable/fab_shadow" />
             <xs:enumeration value="@drawable/fab_shadow_mini" />
+            <xs:enumeration value="@drawable/ic_actionbar_back" />
+            <xs:enumeration value="@drawable/ic_actionbar_edit" />
+            <xs:enumeration value="@drawable/ic_actionbar_rate" />
             <xs:enumeration value="@drawable/icon_about" />
             <xs:enumeration value="@drawable/icon_account" />
             <xs:enumeration value="@drawable/icon_add" />
@@ -28876,6 +29039,7 @@
             <xs:enumeration value="@drawable/icon_privacy" />
             <xs:enumeration value="@drawable/icon_profilepicture" />
             <xs:enumeration value="@drawable/icon_rating" />
+            <xs:enumeration value="@drawable/icon_search" />
             <xs:enumeration value="@drawable/icon_settings" />
             <xs:enumeration value="@drawable/icon_soilcare" />
             <xs:enumeration value="@drawable/icon_soilcare2" />
