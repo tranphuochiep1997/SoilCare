@@ -2415,26 +2415,26 @@ namespace SoilCare.Android
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f02008c
-			public const int avd_hide_password_1 = 2130837644;
+			// aapt resource value: 0x7f020087
+			public const int avd_hide_password_1 = 2130837639;
 			
-			// aapt resource value: 0x7f02008d
-			public const int avd_hide_password_2 = 2130837645;
+			// aapt resource value: 0x7f020088
+			public const int avd_hide_password_2 = 2130837640;
 			
-			// aapt resource value: 0x7f02008e
-			public const int avd_hide_password_3 = 2130837646;
+			// aapt resource value: 0x7f020089
+			public const int avd_hide_password_3 = 2130837641;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f02008f
-			public const int avd_show_password_1 = 2130837647;
+			// aapt resource value: 0x7f02008a
+			public const int avd_show_password_1 = 2130837642;
 			
-			// aapt resource value: 0x7f020090
-			public const int avd_show_password_2 = 2130837648;
+			// aapt resource value: 0x7f02008b
+			public const int avd_show_password_2 = 2130837643;
 			
-			// aapt resource value: 0x7f020091
-			public const int avd_show_password_3 = 2130837649;
+			// aapt resource value: 0x7f02008c
+			public const int avd_show_password_3 = 2130837644;
 			
 			// aapt resource value: 0x7f020055
 			public const int background = 2130837589;
@@ -2464,142 +2464,127 @@ namespace SoilCare.Android
 			public const int fab_shadow_mini = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int ic_actionbar_back = 2130837598;
+			public const int icon_about = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int ic_actionbar_edit = 2130837599;
+			public const int icon_account = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int ic_actionbar_rate = 2130837600;
+			public const int icon_add = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int icon_about = 2130837601;
+			public const int icon_feedback = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int icon_account = 2130837602;
+			public const int icon_home = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int icon_add = 2130837603;
+			public const int icon_image = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int icon_feedback = 2130837604;
+			public const int icon_language = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int icon_home = 2130837605;
+			public const int icon_library = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int icon_image = 2130837606;
+			public const int icon_nextpage = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int icon_lancher = 2130837607;
+			public const int icon_notificaton = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int icon_language = 2130837608;
+			public const int icon_plantonsoil = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int icon_library = 2130837609;
+			public const int icon_plus = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int icon_nextpage = 2130837610;
+			public const int icon_plus2 = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int icon_notificaton = 2130837611;
+			public const int icon_privacy = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int icon_plantonsoil = 2130837612;
+			public const int icon_profilepicture = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int icon_plus = 2130837613;
+			public const int icon_rating = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int icon_plus2 = 2130837614;
+			public const int icon_settings = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int icon_privacy = 2130837615;
+			public const int icon_soilcare = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int icon_profilepicture = 2130837616;
+			public const int icon_soilcare2 = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int icon_rating = 2130837617;
+			public const int icon_star = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int icon_search = 2130837618;
+			public const int icon_team = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int icon_settings = 2130837619;
+			public const int icon_update = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int icon_soilcare = 2130837620;
+			public const int icons_plus_white = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int icon_soilcare2 = 2130837621;
+			public const int nav_item_colors = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int icon_star = 2130837622;
+			public const int navigation_empty_icon = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int icon_team = 2130837623;
+			public const int notification_action_background = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int icon_update = 2130837624;
+			public const int notification_bg = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int icons_plus_white = 2130837625;
+			public const int notification_bg_low = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int nav_item_colors = 2130837626;
+			public const int notification_bg_low_normal = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int navigation_empty_icon = 2130837627;
+			public const int notification_bg_low_pressed = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int notification_action_background = 2130837628;
+			public const int notification_bg_normal = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int notification_bg = 2130837629;
+			public const int notification_bg_normal_pressed = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int notification_bg_low = 2130837630;
-			
-			// aapt resource value: 0x7f02007f
-			public const int notification_bg_low_normal = 2130837631;
-			
-			// aapt resource value: 0x7f020080
-			public const int notification_bg_low_pressed = 2130837632;
-			
-			// aapt resource value: 0x7f020081
-			public const int notification_bg_normal = 2130837633;
-			
-			// aapt resource value: 0x7f020082
-			public const int notification_bg_normal_pressed = 2130837634;
-			
-			// aapt resource value: 0x7f020083
-			public const int notification_icon_background = 2130837635;
-			
-			// aapt resource value: 0x7f02008a
-			public const int notification_template_icon_bg = 2130837642;
-			
-			// aapt resource value: 0x7f02008b
-			public const int notification_template_icon_low_bg = 2130837643;
-			
-			// aapt resource value: 0x7f020084
-			public const int notification_tile_bg = 2130837636;
+			public const int notification_icon_background = 2130837630;
 			
 			// aapt resource value: 0x7f020085
-			public const int notify_panel_notification_icon_bg = 2130837637;
+			public const int notification_template_icon_bg = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int rounded_button = 2130837638;
+			public const int notification_template_icon_low_bg = 2130837638;
 			
-			// aapt resource value: 0x7f020087
-			public const int settings = 2130837639;
+			// aapt resource value: 0x7f02007f
+			public const int notification_tile_bg = 2130837631;
 			
-			// aapt resource value: 0x7f020088
-			public const int tooltip_frame_dark = 2130837640;
+			// aapt resource value: 0x7f020080
+			public const int notify_panel_notification_icon_bg = 2130837632;
 			
-			// aapt resource value: 0x7f020089
-			public const int tooltip_frame_light = 2130837641;
+			// aapt resource value: 0x7f020081
+			public const int rounded_button = 2130837633;
+			
+			// aapt resource value: 0x7f020082
+			public const int settings = 2130837634;
+			
+			// aapt resource value: 0x7f020083
+			public const int tooltip_frame_dark = 2130837635;
+			
+			// aapt resource value: 0x7f020084
+			public const int tooltip_frame_light = 2130837636;
 			
 			static Drawable()
 			{
@@ -2625,9 +2610,6 @@ namespace SoilCare.Android
 			
 			// aapt resource value: 0x7f070034
 			public const int META = 2131165236;
-			
-			// aapt resource value: 0x7f0700c0
-			public const int MyButton = 2131165376;
 			
 			// aapt resource value: 0x7f070035
 			public const int SHIFT = 2131165237;
@@ -2878,8 +2860,8 @@ namespace SoilCare.Android
 			// aapt resource value: 0x7f0700a1
 			public const int imageButtonNewUserLand = 2131165345;
 			
-			// aapt resource value: 0x7f0700c6
-			public const int imageProfilePic = 2131165382;
+			// aapt resource value: 0x7f0700c4
+			public const int imageProfilePic = 2131165380;
 			
 			// aapt resource value: 0x7f07009a
 			public const int imageview = 2131165338;
@@ -2923,35 +2905,29 @@ namespace SoilCare.Android
 			// aapt resource value: 0x7f07009d
 			public const int main_content = 2131165341;
 			
-			// aapt resource value: 0x7f0700c5
-			public const int masked = 2131165381;
+			// aapt resource value: 0x7f0700c3
+			public const int masked = 2131165379;
 			
 			// aapt resource value: 0x7f0700ad
 			public const int media_actions = 2131165357;
 			
-			// aapt resource value: 0x7f0700cb
-			public const int menu_account = 2131165387;
+			// aapt resource value: 0x7f0700c9
+			public const int menu_account = 2131165385;
+			
+			// aapt resource value: 0x7f0700c6
+			public const int menu_edit = 2131165382;
+			
+			// aapt resource value: 0x7f0700c7
+			public const int menu_home = 2131165383;
 			
 			// aapt resource value: 0x7f0700c8
-			public const int menu_edit = 2131165384;
-			
-			// aapt resource value: 0x7f0700c9
-			public const int menu_home = 2131165385;
+			public const int menu_library = 2131165384;
 			
 			// aapt resource value: 0x7f0700ca
-			public const int menu_library = 2131165386;
+			public const int menu_settings = 2131165386;
 			
-			// aapt resource value: 0x7f0700ce
-			public const int menu_rate = 2131165390;
-			
-			// aapt resource value: 0x7f0700cd
-			public const int menu_search = 2131165389;
-			
-			// aapt resource value: 0x7f0700cc
-			public const int menu_settings = 2131165388;
-			
-			// aapt resource value: 0x7f0700c1
-			public const int message = 2131165377;
+			// aapt resource value: 0x7f0700bf
+			public const int message = 2131165375;
 			
 			// aapt resource value: 0x7f070030
 			public const int middle = 2131165232;
@@ -3145,17 +3121,17 @@ namespace SoilCare.Android
 			// aapt resource value: 0x7f0700bc
 			public const int textViewAppVersion = 2131165372;
 			
-			// aapt resource value: 0x7f0700c3
-			public const int textViewDescription = 2131165379;
+			// aapt resource value: 0x7f0700c1
+			public const int textViewDescription = 2131165377;
 			
 			// aapt resource value: 0x7f07009b
 			public const int textViewLandCollectionName = 2131165339;
 			
-			// aapt resource value: 0x7f0700c2
-			public const int textViewLandName = 2131165378;
+			// aapt resource value: 0x7f0700c0
+			public const int textViewLandName = 2131165376;
 			
-			// aapt resource value: 0x7f0700c7
-			public const int textViewSponser = 2131165383;
+			// aapt resource value: 0x7f0700c5
+			public const int textViewSponser = 2131165381;
 			
 			// aapt resource value: 0x7f0700bb
 			public const int textViewTeamName = 2131165371;
@@ -3183,9 +3159,6 @@ namespace SoilCare.Android
 			
 			// aapt resource value: 0x7f07008a
 			public const int toolbar = 2131165322;
-			
-			// aapt resource value: 0x7f0700bf
-			public const int toolbarHasBackButton = 2131165375;
 			
 			// aapt resource value: 0x7f07003d
 			public const int top = 2131165245;
@@ -3226,8 +3199,8 @@ namespace SoilCare.Android
 			// aapt resource value: 0x7f07009f
 			public const int viewpager = 2131165343;
 			
-			// aapt resource value: 0x7f0700c4
-			public const int visible = 2131165380;
+			// aapt resource value: 0x7f0700c2
+			public const int visible = 2131165378;
 			
 			// aapt resource value: 0x7f07003b
 			public const int withText = 2131165243;
@@ -3487,22 +3460,16 @@ namespace SoilCare.Android
 			public const int SettingsFragment = 2130903104;
 			
 			// aapt resource value: 0x7f030041
-			public const int Solutions = 2130903105;
+			public const int support_simple_spinner_dropdown_item = 2130903105;
 			
 			// aapt resource value: 0x7f030042
-			public const int support_simple_spinner_dropdown_item = 2130903106;
+			public const int toolbar = 2130903106;
 			
 			// aapt resource value: 0x7f030043
-			public const int toolbar = 2130903107;
+			public const int tooltip = 2130903107;
 			
 			// aapt resource value: 0x7f030044
-			public const int toolbarHasBackButton = 2130903108;
-			
-			// aapt resource value: 0x7f030045
-			public const int tooltip = 2130903109;
-			
-			// aapt resource value: 0x7f030046
-			public const int user_land_row_view = 2130903110;
+			public const int user_land_row_view = 2130903108;
 			
 			static Layout()
 			{
@@ -3522,12 +3489,6 @@ namespace SoilCare.Android
 			
 			// aapt resource value: 0x7f0d0001
 			public const int bottom_navigation_main = 2131558401;
-			
-			// aapt resource value: 0x7f0d0002
-			public const int search_toolbar = 2131558402;
-			
-			// aapt resource value: 0x7f0d0003
-			public const int solution_menu = 2131558403;
 			
 			static Menu()
 			{

@@ -18,7 +18,7 @@ namespace SoilCare.Android.Fragments
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            HasOptionsMenu = true;
+
             // Create your fragment here
         }
 
@@ -31,20 +31,5 @@ namespace SoilCare.Android.Fragments
             toolbar.Title = "LIBRARY";
             return view;
         }
-
-        public override void OnCreateOptionsMenu(IMenu menu, MenuInflater inflater)
-        {
-            inflater.Inflate(Resource.Menu.search_toolbar, menu);
-            base.OnCreateOptionsMenu(menu, inflater);
-        }
-
-        public override bool OnOptionsItemSelected(IMenuItem item)
-        {
-            Toast.MakeText(this.Activity, "Action selected: " + item.TitleFormatted,
-                ToastLength.Short).Show();            
-            return base.OnOptionsItemSelected(item);
-        }
-
-
     }
 }
