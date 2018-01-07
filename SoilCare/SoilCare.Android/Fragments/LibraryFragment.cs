@@ -49,17 +49,18 @@ namespace SoilCare.Android.Fragments
 
             imageButton.Click += delegate
             {
-                Toast.MakeText(this.Activity, "Search", ToastLength.Short).Show();
                 adapter.Filter.InvokeFilter(editTextSearchLibrary.Text);
                
                 if (editTextSearchLibrary.Visibility == ViewStates.Visible)
                 {
                     editTextSearchLibrary.Visibility = ViewStates.Gone;
+                    editTextSearchLibrary.ClearFocus();
                     textViewLibrary.Visibility = ViewStates.Visible;
                 }
                 else
                 {
                     editTextSearchLibrary.Visibility = ViewStates.Visible;
+                    editTextSearchLibrary.RequestFocus();
                     textViewLibrary.Visibility = ViewStates.Gone;
                 }
             };
@@ -77,7 +78,6 @@ namespace SoilCare.Android.Fragments
 
         private void EditTextSearchLibrary_TextChanged(object sender, global::Android.Text.TextChangedEventArgs e)
         {
-            Toast.MakeText(this.Activity, e.Text.ToString() , ToastLength.Short).Show();
             var searchItem = editTextSearchLibrary.Text;
             adapter.Filter.InvokeFilter(editTextSearchLibrary.Text);
         }

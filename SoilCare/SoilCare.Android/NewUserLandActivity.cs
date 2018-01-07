@@ -34,8 +34,6 @@ namespace SoilCare.Android
             switch (item.ItemId)
             {
                 case global::Android.Resource.Id.Home:
-                    Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
-                    ToastLength.Short).Show();
                     Finish();
                     return true;
                 default:

@@ -26,9 +26,6 @@ namespace SoilCare.Android.Fragments
         {
 
             View view = inflater.Inflate(Resource.Layout.SettingsFragment, container, false);
-            Toolbar toolbar = view.FindViewById<Toolbar>(Resource.Id.toolbar);
-            Activity.SetActionBar(toolbar);
-            toolbar.Title = "SETTINGS";
             return view;
         }
     }

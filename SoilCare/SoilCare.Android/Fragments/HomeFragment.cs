@@ -18,6 +18,7 @@ namespace SoilCare.Android.Fragments
 {
     public class HomeFragment : global::Android.Support.V4.App.Fragment
     {
+        private ImageButton buttonAdd;
         private ListView listView;
         private List<UserLand> list;
 
@@ -27,40 +28,14 @@ namespace SoilCare.Android.Fragments
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            HasOptionsMenu = true;
             
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = inflater.Inflate(Resource.Layout.HomeFragment, container, false);
-            Toolbar toolbar = view.FindViewById<Toolbar>(Resource.Id.toolbar);
-            Activity.SetActionBar(toolbar);
-            toolbar.Title = "SOILCARE - DTU 2018";
             return view;
         }
-
-        // TOOLBAR: here
-        // Link Check: https://stackoverflow.com/questions/8308695/android-options-menu-in-fragment/8309255#8309255
-        public override void OnCreateOptionsMenu(IMenu menu, MenuInflater inflater)
-        {
-            inflater.Inflate(Resource.Menu.add_new_land_toolbar, menu);
-            base.OnCreateOptionsMenu(menu, inflater);
-        }
-
-        public override bool OnOptionsItemSelected(IMenuItem item)
-        {
-            Toast.MakeText(this.Activity, "Action selected: " + item.TitleFormatted,
-                ToastLength.Short).Show();
-            // Start a new Activity Here
-
-            var newuserland = new Intent(this.Activity, typeof(NewUserLandActivity));
-            newuserland.PutExtra("NewUserLandData", "Data from HomeActivity");
-            StartActivity(newuserland);
-
-            return base.OnOptionsItemSelected(item);
-        }
-
 
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
@@ -69,14 +44,21 @@ namespace SoilCare.Android.Fragments
             TestData();
 
             listView.ItemClick += ListView_ItemClick;
+            buttonAdd.Click += ButtonAdd_Click;
 
             //fab.Click += Fab_Click;
 
         }
 
+        private void ButtonAdd_Click(object sender, EventArgs e)
+        {
+            var newuserland = new Intent(this.Activity, typeof(NewUserLandActivity));
+            newuserland.PutExtra("NewUserLandData", "Data from HomeActivity");
+            StartActivity(newuserland);
+        }
+
         private void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            Toast.MakeText(this.Activity, list[e.Position].UserLandName + " has been clicked !!!", ToastLength.Short).Show();
             var userland = new Intent(this.Activity, typeof(UserLandActivity));
             userland.PutExtra("UserLandData", "Data from HomeActivity");
             StartActivity(userland);
@@ -146,6 +128,7 @@ namespace SoilCare.Android.Fragments
         private void FindViews()
         {
             listView = this.View.FindViewById<ListView>(Resource.Id.listViewLandList);
+            buttonAdd = this.View.FindViewById<ImageButton>(Resource.Id.imageButtonAdd);
             //fab = this.View.FindViewById<FloatingActionButton>(Resource.Id.fab1);
             //fab.AttachToListView(listView);        
         }

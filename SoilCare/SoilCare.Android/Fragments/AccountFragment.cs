@@ -26,9 +26,6 @@ namespace SoilCare.Android.Fragments
         {
 
             View view = inflater.Inflate(Resource.Layout.AccountFragment, container, false);
-            Toolbar toolbar = view.FindViewById<Toolbar>(Resource.Id.toolbar);
-            Activity.SetActionBar(toolbar);
-            toolbar.Title = "PERSONAL INFORMATION";
             return view;
         }
     }

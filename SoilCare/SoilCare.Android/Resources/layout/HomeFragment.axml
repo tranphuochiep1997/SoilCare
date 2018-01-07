@@ -4,9 +4,32 @@
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/colorGreen">
+        <TextView
+            android:id="@+id/textViewHome"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text=" HOME"
+            android:textColor="@android:color/white"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <ImageButton
+            android:id="@+id/imageButtonAdd"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/icon_add"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="match_parent">

@@ -66,7 +66,7 @@
             </LinearLayout>
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="0.5dip"
+                android:layout_height="2dip"
                 android:layout_marginEnd="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="0.5dp"
@@ -82,7 +82,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="20dp"
                     android:src="@drawable/icon_tickbox" />
                 <TextView
                     android:layout_width="0dp"
@@ -96,8 +96,7 @@
                     android:id="@+id/textViewHumidity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
+                    android:layout_marginEnd="20dp"
                     android:gravity="center"
                     android:text="90%"
                     android:textSize="20sp"
@@ -112,7 +111,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="20dp"
                     android:src="@drawable/icon_tickbox" />
                 <TextView
                     android:layout_width="0dp"
@@ -126,8 +125,7 @@
                     android:id="@+id/textViewAcidity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
+                    android:layout_marginEnd="20dp"
                     android:gravity="center"
                     android:text="90%"
                     android:textSize="20sp"
@@ -137,13 +135,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="10dp"
-                android:weightSum="3">
+                android:padding="10dp">
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="20dp"
                     android:src="@drawable/icon_tickbox" />
                 <TextView
                     android:layout_width="0dp"
@@ -157,8 +154,7 @@
                     android:id="@+id/textViewNutrient"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
+                    android:layout_marginEnd="20dp"
                     android:gravity="center"
                     android:text="90%"
                     android:textSize="20sp"
@@ -168,13 +164,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="10dp"
-                android:weightSum="3">
+                android:padding="10dp">
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="20dp"
                     android:src="@drawable/icon_tickbox" />
                 <TextView
                     android:layout_width="0dp"
@@ -188,8 +183,7 @@
                     android:id="@+id/textViewSalinity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
+                    android:layout_marginEnd="20dp"
                     android:gravity="center"
                     android:text="90%"
                     android:textSize="20sp"
@@ -199,13 +193,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="10dp"
-                android:weightSum="3">
+                android:padding="10dp">
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="20dp"
                     android:src="@drawable/icon_tickbox" />
                 <TextView
                     android:layout_width="0dp"
@@ -219,8 +212,7 @@
                     android:id="@+id/textViewPorosity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
+                    android:layout_marginEnd="20dp"
                     android:gravity="center"
                     android:text="90%"
                     android:textSize="20sp"
@@ -230,13 +222,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="10dp"
-                android:weightSum="3">
+                android:padding="10dp">
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="20dp"
                     android:src="@drawable/icon_tickbox" />
                 <TextView
                     android:layout_width="0dp"
@@ -250,8 +241,7 @@
                     android:id="@+id/textViewWaterRetention"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
+                    android:layout_marginEnd="20dp"
                     android:gravity="center"
                     android:text="90%"
                     android:textSize="20sp"
@@ -274,6 +264,7 @@
                         android:layout_marginEnd="20dp"
                         android:layout_marginStart="30dp"
                         android:text="Recommend"
+                        android:textColor="@android:color/white"
                         android:background="@drawable/rounded_button" />
                 </LinearLayout>
                 <LinearLayout
@@ -287,6 +278,7 @@
                         android:layout_marginEnd="30dp"
                         android:layout_marginStart="20dp"
                         android:text="Plants"
+                        android:textColor="@android:color/white"
                         android:background="@drawable/rounded_button" />
                 </LinearLayout>
             </LinearLayout>
