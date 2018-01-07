@@ -22,7 +22,7 @@
   </style>
 
   <style name="CustomActionBarTheme"
-    parent="@style/Theme.AppCompat.Light.DarkActionBar">
+    parent="@style/Theme.AppCompat.Light">
 
     <item name="android:windowNoTitle">true</item>
     <item name="android:windowActionBar">false</item>

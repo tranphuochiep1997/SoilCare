@@ -54,9 +54,9 @@ namespace SoilCare.Android.Fragments
                 ToastLength.Short).Show();
             // Start a new Activity Here
 
-            var activity2 = new Intent(this.Activity, typeof(NewUserLandActivity));
-            activity2.PutExtra("MyData", "Data from HomeActivity");
-            StartActivity(activity2);
+            var newuserland = new Intent(this.Activity, typeof(NewUserLandActivity));
+            newuserland.PutExtra("NewUserLandData", "Data from HomeActivity");
+            StartActivity(newuserland);
 
             return base.OnOptionsItemSelected(item);
         }
@@ -68,9 +68,23 @@ namespace SoilCare.Android.Fragments
             FindViews();
             TestData();
 
+            listView.ItemClick += ListView_ItemClick;
+
             //fab.Click += Fab_Click;
 
         }
+
+        private void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            Toast.MakeText(this.Activity, list[e.Position].UserLandName + " has been clicked !!!", ToastLength.Short).Show();
+            var userland = new Intent(this.Activity, typeof(UserLandActivity));
+            userland.PutExtra("UserLandData", "Data from HomeActivity");
+            StartActivity(userland);
+
+        }
+
+
+
 
         // IT WILL BE DELETED SOON
 

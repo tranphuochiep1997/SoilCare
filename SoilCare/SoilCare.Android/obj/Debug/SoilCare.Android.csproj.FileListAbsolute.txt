@@ -74,3 +74,4 @@ C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\o
 C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\bin\Debug\SoilCare.Android.dll.mdb
 C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\android\assets\Refractored.Fab.dll.mdb
 C:\Users\tienh\OneDrive\Desktop\IMC Project\SoilCare\SoilCare\SoilCare.Android\obj\Debug\android\assets\SoilCare.Android.dll.mdb
+E:\NewClone\SoilCare\SoilCare\packages\Refractored.FloatingActionButton.2.1.0\lib\MonoAndroid10\Refractored.Fab.dll

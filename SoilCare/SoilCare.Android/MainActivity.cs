@@ -24,10 +24,7 @@ namespace SoilCare.Android
         LibraryFragment libraryFragment;
         AccountFragment accountFragment;
         SettingsFragment settingsFragment;
-<<<<<<< HEAD
 
-=======
->>>>>>> 5485ab2031398304ed353a2ef9aaa7ad81ba0a18
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -68,9 +65,6 @@ namespace SoilCare.Android
             adapter.AddFragment(settingsFragment);
             viewPager.Adapter = adapter;
         }
-
-
-
     }
 }
 

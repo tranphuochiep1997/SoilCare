@@ -113,6 +113,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdapterClass\LibraryAdapter.cs" />
     <Compile Include="AdapterClass\UserLandAdapter.cs" />
     <Compile Include="AdapterClass\ViewPagerAdapter.cs" />
     <Compile Include="BitmapHelper.cs" />
@@ -122,16 +123,17 @@
     <Compile Include="Fragments\LibraryFragment.cs" />
     <Compile Include="Fragments\NewLandFragment.cs" />
     <Compile Include="Fragments\SettingsFragment.cs" />
+    <Compile Include="Fragments\UserLandFragment.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MeasureActivity.cs" />
+    <Compile Include="ModelClass\PlantInfo.cs" />
     <Compile Include="ModelClass\UserLand.cs" />
     <Compile Include="NewUserLandActivity.cs" />
+    <Compile Include="AdapterClass\ObjectExtentions.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
     <Compile Include="SolutionsActivity.cs" />
     <Compile Include="UserLandActivity.cs" />
-=======
->>>>>>> 5485ab2031398304ed353a2ef9aaa7ad81ba0a18
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
@@ -160,7 +162,6 @@
     <AndroidResource Include="Resources\layout\NewUserLand.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-<<<<<<< HEAD
     <AndroidResource Include="Resources\layout\library_row_view.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -176,8 +177,6 @@
     <AndroidResource Include="Resources\layout\SolutionView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-=======
->>>>>>> 5485ab2031398304ed353a2ef9aaa7ad81ba0a18
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -302,7 +301,6 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon_plantonsoil.png" />
   </ItemGroup>
-<<<<<<< HEAD
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon_search.png" />
   </ItemGroup>
@@ -353,8 +351,6 @@
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon_app.png" />
   </ItemGroup>
-=======
->>>>>>> 5485ab2031398304ed353a2ef9aaa7ad81ba0a18
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Annotations.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

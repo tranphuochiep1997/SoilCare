@@ -10,10 +10,11 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Content.PM;
+using Android.Support.V7.App;
 
 namespace SoilCare.Android
 {
-    [Activity(Label = "Add Your New Land", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
+    [Activity(Label = "Add Your New Land", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/CustomActionBarTheme")]
     public class NewUserLandActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
