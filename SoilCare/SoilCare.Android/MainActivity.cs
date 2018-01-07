@@ -24,7 +24,10 @@ namespace SoilCare.Android
         LibraryFragment libraryFragment;
         AccountFragment accountFragment;
         SettingsFragment settingsFragment;
-        
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5485ab2031398304ed353a2ef9aaa7ad81ba0a18
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -35,20 +38,20 @@ namespace SoilCare.Android
             bottomNavigation.NavigationItemSelected += BottomNavigation_NavigationItemSelected;
             viewPager = FindViewById<ViewPager>(Resource.Id.viewpager);
             viewPager.PageSelected += ViewPager_PageSelected;
-            SetUpViewPager(viewPager);       
-                      
+            SetUpViewPager(viewPager);
+
         }
 
         private void ViewPager_PageSelected(object sender, ViewPager.PageSelectedEventArgs e)
         {
             var item = bottomNavigation.Menu.GetItem(e.Position);
             bottomNavigation.SelectedItemId = item.ItemId;
-        }     
+        }
 
         private void BottomNavigation_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
         {
             viewPager.SetCurrentItem(e.Item.Order, true);
-            
+
         }
 
         private void SetUpViewPager(ViewPager viewPager)
@@ -65,6 +68,9 @@ namespace SoilCare.Android
             adapter.AddFragment(settingsFragment);
             viewPager.Adapter = adapter;
         }
+
+
+
     }
 }
 
