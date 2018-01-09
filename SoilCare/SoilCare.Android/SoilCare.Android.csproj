@@ -127,6 +127,7 @@
     <Compile Include="Fragments\UserLandFragment.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MeasureActivity.cs" />
+    <Compile Include="MeasureHasPlantActivity.cs" />
     <Compile Include="ModelClass\PlantInfo.cs" />
     <Compile Include="ModelClass\UserLand.cs" />
     <Compile Include="NewUserLandActivity.cs" />
@@ -137,6 +138,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SolutionsActivity.cs" />
     <Compile Include="UserLandActivity.cs" />
+    <Compile Include="UserLandHasPlantActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
@@ -187,6 +189,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\PlantDetail.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MeasureHasPlant.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\UserLandHasPlant.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

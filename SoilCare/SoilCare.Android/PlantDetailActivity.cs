@@ -41,9 +41,9 @@ namespace SoilCare.Android
 
         private void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            var userland = new Intent(this, typeof(UserLandActivity));
-            userland.PutExtra("UserLandData", "Data from PlantDetailActivity");
-            StartActivity(userland);
+            var userlandHasPlant = new Intent(this, typeof(UserLandHasPlantActivity));
+            userlandHasPlant.PutExtra("UserLandHasPlantData", "Data from PlantDetailActivity");
+            StartActivity(userlandHasPlant);
         }
 
         private void ImageButtonSearch_Click(object sender, EventArgs e)
@@ -62,7 +62,6 @@ namespace SoilCare.Android
 
         private void ImageButtonLeftArrow_Click(object sender, EventArgs e)
         {
-            StartActivity(typeof(MainActivity));
             Finish();
         }
 
