@@ -131,6 +131,7 @@
     <Compile Include="ModelClass\UserLand.cs" />
     <Compile Include="NewUserLandActivity.cs" />
     <Compile Include="AdapterClass\ObjectExtentions.cs" />
+    <Compile Include="PlantDetailActivity.cs" />
     <Compile Include="RecommendActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -183,6 +184,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\recommend_row_view.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\PlantDetail.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

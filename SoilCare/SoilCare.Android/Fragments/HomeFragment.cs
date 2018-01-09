@@ -58,8 +58,7 @@ namespace SoilCare.Android.Fragments
         }
 
         private void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
-        {
-            Toast.MakeText(this.Activity, "List View Item Clicked", ToastLength.Short).Show();
+        {          
 
             var userland = new Intent(this.Activity, typeof(UserLandActivity));
             userland.PutExtra("UserLandData", "Data from HomeActivity");

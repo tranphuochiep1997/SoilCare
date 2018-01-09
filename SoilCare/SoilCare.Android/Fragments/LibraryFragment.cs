@@ -73,8 +73,12 @@ namespace SoilCare.Android.Fragments
 
         private void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            Toast.MakeText(this.Activity, list[e.Position].PlantName+" ngon lắm ạ!!!", ToastLength.Short).Show();
+            var plantDetail = new Intent(this.Activity, typeof(PlantDetailActivity));
+            plantDetail.PutExtra("PlantDetailData", "Data from HomeActivity");
+            StartActivity(plantDetail);
         }
+
+
 
         private void EditTextSearchLibrary_TextChanged(object sender, global::Android.Text.TextChangedEventArgs e)
         {
