@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace SoilCare.Android
 {
-    [Activity(Label = "UserLandActivity", Theme = "@style/CustomActionBarTheme")]
+    [Activity(Label = "UserLandActivity", MainLauncher =false, Theme = "@style/CustomActionBarTheme")]
     public class UserLandActivity : Activity
     {
         ImageButton imageButton;
