@@ -17,6 +17,12 @@ namespace SoilCare.Android
     [Activity(Label = "Add Your New Land", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/CustomActionBarTheme")]
     public class NewUserLandActivity : Activity
     {
+        ImageButton imageButton;
+        EditText editTextName;
+        EditText editTextDes;
+        Button btSave;
+        Button btCancel;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -27,6 +33,9 @@ namespace SoilCare.Android
             toolbar.Title = "ADD YOUR NEW LAND HERE";
             ActionBar.SetDisplayHomeAsUpEnabled(true);
             ActionBar.SetHomeButtonEnabled(true);
+
+            FindViews();
+
 
         }
         public override bool OnOptionsItemSelected(IMenuItem item)
@@ -40,6 +49,14 @@ namespace SoilCare.Android
                     return base.OnOptionsItemSelected(item);
             }
            
+        }
+        private void FindViews()
+        {
+            imageButton = FindViewById<ImageButton>(Resource.Id.imageButtonNewUserLand);
+            editTextName = FindViewById<EditText>(Resource.Id.editTextNewLandName);
+            editTextDes = FindViewById<EditText>(Resource.Id.editTextNewLandLocation);
+            btSave = FindViewById<Button>(Resource.Id.buttonSave);
+            btCancel = FindViewById<Button>(Resource.Id.buttonCancle);
         }
     }
 }
