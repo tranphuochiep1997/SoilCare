@@ -23,7 +23,7 @@ namespace SoilCare.Android
         HomeFragment homeFragment;
         LibraryFragment libraryFragment;
         AccountFragment accountFragment;
-        SettingsFragment settingsFragment;
+        //SettingsFragment settingsFragment;
 
 
         protected override void OnCreate(Bundle bundle)
@@ -57,12 +57,12 @@ namespace SoilCare.Android
             homeFragment = new HomeFragment();
             libraryFragment = new LibraryFragment();
             accountFragment = new AccountFragment();
-            settingsFragment = new SettingsFragment();
+           // settingsFragment = new SettingsFragment();
 
             adapter.AddFragment(homeFragment);
             adapter.AddFragment(libraryFragment);
             adapter.AddFragment(accountFragment);
-            adapter.AddFragment(settingsFragment);
+            //adapter.AddFragment(settingsFragment);
             viewPager.Adapter = adapter;
         }
     }

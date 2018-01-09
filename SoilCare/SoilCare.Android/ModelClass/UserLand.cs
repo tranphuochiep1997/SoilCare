@@ -28,7 +28,6 @@ namespace SoilCare.Android.ModelClass
         {
 
         }
-
         public string UserLandName { get => userLandName; set => userLandName = value; }
         public string UserLandDescription { get => userLandDescription; set => userLandDescription = value; }
         public int UserLandImage { get => userLandImage; set => userLandImage = value; }

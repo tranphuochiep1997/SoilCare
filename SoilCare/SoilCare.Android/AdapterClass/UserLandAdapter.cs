@@ -37,6 +37,8 @@ namespace SoilCare.Android.AdapterClass
         {
             public TextView LandName;
             public TextView LandDescription;
+            public ImageView ImageView;
+            public ImageButton ImageButton;
             
         }
         public override View GetView(int position, View convertView, ViewGroup parent)
@@ -46,9 +48,11 @@ namespace SoilCare.Android.AdapterClass
             {
                 convertView = LayoutInflater.FromContext(context).Inflate(Resource.Layout.user_land_row_view, parent,false);
                 viewHolder = new ViewHolder();
+                viewHolder.ImageView = convertView.FindViewById<ImageView>(Resource.Id.imageViewUserLand);
                 viewHolder.LandName = convertView.FindViewById<TextView>(Resource.Id.textViewLandName);
                 viewHolder.LandDescription = convertView.FindViewById<TextView>(Resource.Id.textViewDescription);
-                
+                viewHolder.ImageButton = convertView.FindViewById<ImageButton>(Resource.Id.imageButtonEdit);
+
                 convertView.Tag = viewHolder;
             }
             else
@@ -57,8 +61,14 @@ namespace SoilCare.Android.AdapterClass
             }
 
             var item = items[position];
+            viewHolder.ImageView.SetImageResource(Resource.Drawable.background);
             viewHolder.LandName.Text = item.UserLandName;
             viewHolder.LandDescription.Text = item.UserLandDescription;
+            viewHolder.ImageButton.Click += delegate
+            {
+                // ((Activity) mContext).startActivityForResult(intent, REQUEST_FOR_ACTIVITY_CODE);
+                context.StartActivity(typeof(NewUserLandActivity));
+            };
             
             return convertView;
         }
