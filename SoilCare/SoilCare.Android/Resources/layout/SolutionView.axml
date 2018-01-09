@@ -1,19 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp">
-  <ImageView
-    android:src="@drawable/ic_tick"
-    android:id="@+id/Image"
-    android:layout_width="48dp"
-    android:layout_height="48dp"/>
-  <TextView
-    android:id="@+id/solutionName"
-    android:text="Name of solution 1"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textSize="20sp"
-    android:textStyle="bold"/>
-  
-</RelativeLayout>
+    android:orientation="horizontal"
+    android:paddingRight="31dp"
+    android:paddingTop="@dimen/solutionView_margin_row"
+    android:paddingBottom="@dimen/solutionView_margin_row">
+    <ImageView
+        android:src="@drawable/ic_tick"
+        android:layout_width="18dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="13dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:padding="0dp">
+        <TextView
+            android:id="@+id/solutionName"
+            android:text="Cuốc Bẫm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/solutionView_text_size"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:fontFamily="@font/cabin_bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:textSize="@dimen/solutionView_text_size"
+            android:textColor="#000"
+            android:fontFamily="@font/cabin_regular"
+            android:layout_marginTop="@dimen/solutionView_margin_row"
+            android:layout_below="@id/solutionName" />
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Depth"
+            android:fontFamily="@font/cabin_regular"
+            android:textSize="@dimen/solutionView_text_size"
+            android:textColor="#000"
+            android:layout_marginTop="@dimen/solutionView_margin_row"
+            android:layout_below="@id/solutionName"
+            android:layout_alignParentRight="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Value"
+            android:fontFamily="@font/cabin_regular"
+            android:textSize="@dimen/solutionView_text_size"
+            android:textColor="#000"
+            android:layout_marginTop="@dimen/solutionView_margin_row"
+            android:layout_below="@id/quantity" />
+        <TextView
+            android:id="@+id/value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:fontFamily="@font/cabin_regular"
+            android:textSize="@dimen/solutionView_text_size"
+            android:textColor="#000"
+            android:layout_marginTop="@dimen/solutionView_margin_row"
+            android:layout_below="@id/quantity"
+            android:layout_alignParentRight="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unit"
+            android:fontFamily="@font/cabin_regular"
+            android:textSize="@dimen/solutionView_text_size"
+            android:textColor="#000"
+            android:layout_marginTop="@dimen/solutionView_margin_row"
+            android:layout_below="@id/value" />
+        <TextView
+            android:id="@+id/unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cm"
+            android:fontFamily="@font/cabin_regular"
+            android:textSize="@dimen/solutionView_text_size"
+            android:textColor="#000"
+            android:layout_marginTop="@dimen/solutionView_margin_row"
+            android:layout_below="@id/value"
+            android:layout_alignParentRight="true" />
+        <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description:"
+            android:fontFamily="@font/cabin_regular"
+            android:textSize="@dimen/solutionView_text_size"
+            android:textColor="#000"
+            android:layout_marginTop="@dimen/solutionView_margin_row"
+            android:layout_below="@id/unit" />
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dùng cuốc, cuốc liên tục xuống đất cho đến khi mệt thì nghỉ."
+            android:textSize="@dimen/solutionView_text_size"
+            android:textColor="#000"
+            android:fontFamily="@font/cabin_regular"
+            android:layout_marginTop="@dimen/solutionView_margin_row"
+            android:textAlignment="center"
+            android:layout_below="@id/descriptionText" />
+    </RelativeLayout>
+</LinearLayout>

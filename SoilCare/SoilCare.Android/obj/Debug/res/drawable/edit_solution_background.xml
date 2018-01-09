@@ -1,0 +1,4 @@
+<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android"><stroke android:width="2dp" android:color="#b9c3cc" /><corners android:radius="0dp" />
+
+  // Add your desired padding
+  <padding android:left="8dp" android:top="8dp" android:right="8dp" android:bottom="8dp"></padding></shape>

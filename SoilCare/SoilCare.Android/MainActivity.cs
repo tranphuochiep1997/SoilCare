@@ -11,9 +11,12 @@ using Android.Support.V4.View;
 using SoilCare.Android.AdapterClass;
 using Android.Views;
 using Android.Support.V4.App;
+using SoilCare.Android.ModelClass;
+using System.Collections.Generic;
 
 namespace SoilCare.Android
 {
+
     [Activity(Label = "@string/app_name", MainLauncher = true, Theme = "@style/CustomActionBarTheme")]
     public class MainActivity : FragmentActivity
     {
@@ -30,6 +33,7 @@ namespace SoilCare.Android
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
+
             bottomNavigation = FindViewById<BottomNavigationView>(Resource.Id.bottom_navigation);
             bottomNavigation.SetShiftMode(false, false);
             bottomNavigation.NavigationItemSelected += BottomNavigation_NavigationItemSelected;
@@ -66,5 +70,6 @@ namespace SoilCare.Android
             viewPager.Adapter = adapter;
         }
     }
+
 }
 

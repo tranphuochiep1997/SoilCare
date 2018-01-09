@@ -115,8 +115,10 @@
   <ItemGroup>
     <Compile Include="Activity1.cs" />
     <Compile Include="AdapterClass\LibraryAdapter.cs" />
+    <Compile Include="AdapterClass\SolutionsAdapter.cs" />
     <Compile Include="AdapterClass\UserLandAdapter.cs" />
     <Compile Include="AdapterClass\ViewPagerAdapter.cs" />
+    <Compile Include="AddSolutionActivity.cs" />
     <Compile Include="BitmapHelper.cs" />
     <Compile Include="BottomNavigationViewHelper.cs" />
     <Compile Include="Fragments\AccountFragment.cs" />
@@ -132,6 +134,7 @@
     <Compile Include="MeasureActivity.cs" />
     <Compile Include="MeasureHasPlantActivity.cs" />
     <Compile Include="ModelClass\PlantInfo.cs" />
+    <Compile Include="ModelClass\SolutionModel.cs" />
     <Compile Include="ModelClass\UserLand.cs" />
     <Compile Include="NewUserLandActivity.cs" />
     <Compile Include="AdapterClass\ObjectExtentions.cs" />
@@ -206,7 +209,15 @@
     <AndroidResource Include="Resources\layout\initial2.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\initial3.axml">
+    <AndroidResource Include="Resources\layout\initial3.axml"/>
+    <AndroidResource Include="Resources\font\cabin_bold.ttf" />
+    <AndroidResource Include="Resources\font\cabin_italic.ttf" />
+    <AndroidResource Include="Resources\font\cabin_mediumitalic.ttf" />
+    <AndroidResource Include="Resources\font\cabin_regular.ttf" />
+    <AndroidResource Include="Resources\layout\AddSolution.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\EditSolutionView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -225,7 +236,9 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\values\dimens.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\colors.xml">
@@ -360,12 +373,6 @@
     <AndroidResource Include="Resources\drawable\ic_actionbar_rate.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\menu\solutions_toolbar_menu.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\toolbarHasBackIcon.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_actionbar_edit.png" />
   </ItemGroup>
   <ItemGroup>
@@ -409,9 +416,15 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\green_button.xml" />
+    <AndroidResource Include="Resources\drawable\rounded_border_brown.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rounded_border_brown.xml" />
+    <AndroidResource Include="Resources\drawable\ic_actionbar_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\edit_solution_background.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Annotations.targets')" />
