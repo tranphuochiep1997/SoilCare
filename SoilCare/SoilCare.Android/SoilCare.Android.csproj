@@ -125,6 +125,9 @@
     <Compile Include="Fragments\NewLandFragment.cs" />
     <Compile Include="Fragments\SettingsFragment.cs" />
     <Compile Include="Fragments\UserLandFragment.cs" />
+    <Compile Include="initial1Activity.cs" />
+    <Compile Include="initial2Activity.cs" />
+    <Compile Include="initial3Activity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MeasureActivity.cs" />
     <Compile Include="ModelClass\PlantInfo.cs" />
@@ -183,6 +186,18 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\recommend_row_view.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <Content Include="Resources\drawable\splash.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <AndroidResource Include="Resources\layout\initial2.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\initial3.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\initial1.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -376,6 +391,18 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon_logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\backgr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\green_button.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rounded_border_brown.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Annotations.targets')" />

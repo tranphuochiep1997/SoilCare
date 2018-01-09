@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgr">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="56dp"
+        android:cropToPadding="false"
+        android:src="@drawable/logo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <EditText
+        android:id="@+id/getphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/rounded_border_brown"
+        android:hint="Enter your phone number"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:phoneNumber="true"
+        android:textColor="@color/brown"
+        android:textColorHint="@color/brown"
+        android:visibility="visible"
+        android:textAlignment="center" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="Get Code"
+        android:background="@drawable/green_button"
+        android:textSize="18sp"
+        android:id="@+id/getcode"
+        android:layout_below="@+id/getphone"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorWhite" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Confirm your code"
+        android:layout_below="@+id/getcode"
+        android:layout_alignLeft="@+id/logo"
+        android:layout_alignStart="@+id/logo"
+        android:layout_marginTop="20dp"
+        android:id="@+id/confirm"
+        android:textColorHint="@color/brown"
+        android:textStyle="italic"
+        android:inputType="numberDecimal"
+        android:textColor="@color/brown"
+        android:maxLength="6"
+        android:textAlignment="center" />
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/brown"
+        android:textSize="17sp"
+        tools:textStyle="bold|italic"
+        android:id="@+id/noti"
+        android:layout_below="@+id/confirm"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

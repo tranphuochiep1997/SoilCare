@@ -14,7 +14,7 @@ using Android.Support.V4.App;
 
 namespace SoilCare.Android
 {
-    [Activity(Label = "@string/app_name", MainLauncher = true, Theme = "@style/CustomActionBarTheme")]
+    [Activity(Label = "@string/app_name", Theme = "@style/CustomActionBarTheme")]
     public class MainActivity : FragmentActivity
     {
         BottomNavigationView bottomNavigation;
