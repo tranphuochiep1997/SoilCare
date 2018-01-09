@@ -21,7 +21,7 @@
             android:textSize="20dp"
             android:textStyle="bold" />
         <ImageButton
-            android:id="@+id/imageButtonSearch"
+            android:id="@+id/imageButtonClose"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:adjustViewBounds="true"
@@ -90,6 +90,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
                     android:text="Humidity"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginStart="5dp"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -98,7 +99,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
                     android:text="90%"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -107,7 +108,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
                     android:text="Good"
                     android:layout_weight="1.5"
                     android:textSize="20sp"
@@ -130,6 +131,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
                     android:text="Acidity"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginStart="5dp"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -138,7 +140,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
                     android:text="90%"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -147,7 +149,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
                     android:text="Low"
                     android:layout_weight="1.5"
                     android:textSize="20sp"
@@ -170,6 +172,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
                     android:text="Nutrient"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginStart="5dp"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -178,7 +181,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
                     android:text="90%"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -187,7 +190,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
                     android:text="High"
                     android:layout_weight="1.5"
                     android:textSize="20sp"
@@ -209,7 +212,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
-                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center_vertical"
                     android:text="Salinity"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -218,7 +221,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
                     android:text="90%"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -227,7 +230,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
                     android:text="High"
                     android:layout_weight="1.5"
                     android:textSize="20sp"
@@ -250,6 +253,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
                     android:text="Porosity"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginStart="5dp"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -258,7 +262,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
                     android:text="90%"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -267,7 +271,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
                     android:text="High"
                     android:layout_weight="1.5"
                     android:textSize="20sp"
@@ -289,6 +293,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
+                    android:layout_gravity="center_vertical"
                     android:text="Water Retention"
                     android:layout_marginStart="5dp"
                     android:textSize="20sp"
@@ -298,7 +303,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
                     android:text="90%"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -307,7 +312,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
                     android:text="Low"
                     android:layout_weight="1.5"
                     android:textSize="20sp"
@@ -317,6 +322,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:layout_marginBottom="25dp"
                 android:orientation="horizontal"
                 android:weightSum="2">
                 <LinearLayout
@@ -330,8 +336,8 @@
                         android:layout_marginEnd="20dp"
                         android:layout_marginStart="30dp"
                         android:text="Recommend"
-                        android:background="@drawable/rounded_button"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/rounded_button" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="0dp"
@@ -344,8 +350,8 @@
                         android:layout_marginEnd="30dp"
                         android:layout_marginStart="20dp"
                         android:text="Plants"
-                        android:background="@drawable/rounded_button"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/rounded_button" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

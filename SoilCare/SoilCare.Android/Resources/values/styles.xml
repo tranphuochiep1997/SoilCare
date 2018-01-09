@@ -72,7 +72,4 @@
     <item name="android:colorPrimary">#2e9d11</item>
     <item name="android:windowBackground">@color/colorWhite</item>
   </style>
-
-
-  
 </resources>

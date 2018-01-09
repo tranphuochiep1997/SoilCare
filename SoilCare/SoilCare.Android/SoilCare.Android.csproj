@@ -130,15 +130,18 @@
     <Compile Include="initial3Activity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MeasureActivity.cs" />
+    <Compile Include="MeasureHasPlantActivity.cs" />
     <Compile Include="ModelClass\PlantInfo.cs" />
     <Compile Include="ModelClass\UserLand.cs" />
     <Compile Include="NewUserLandActivity.cs" />
     <Compile Include="AdapterClass\ObjectExtentions.cs" />
+    <Compile Include="PlantDetailActivity.cs" />
     <Compile Include="RecommendActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SolutionsActivity.cs" />
     <Compile Include="UserLandActivity.cs" />
+    <Compile Include="UserLandHasPlantActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
@@ -188,16 +191,22 @@
     <AndroidResource Include="Resources\layout\recommend_row_view.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <Content Include="Resources\drawable\splash.xml">
+    <AndroidResource Include="Resources\layout\PlantDetail.axml">
       <SubType>Designer</SubType>
-    </Content>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MeasureHasPlant.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\UserLandHasPlant.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\initial1.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\initial2.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\initial3.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\layout\initial1.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -393,13 +402,13 @@
     <AndroidResource Include="Resources\drawable\icon_logout.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\backgr.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\green_button.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\rounded_border_brown.xml" />

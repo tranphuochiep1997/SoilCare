@@ -36,7 +36,7 @@ namespace SoilCare.Android
         {
             if (!switcher)
             {
-                getcode.Text="CONFIRM";
+                getcode.Text = "CONFIRM";
                 switcher = true;
                 getphone.ClearFocus();
                 noti.Text = "The code is sending to you as a SMS in several seconds!";

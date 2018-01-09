@@ -76,8 +76,6 @@ namespace SoilCare.Android
             
         }
 
-
-
         private void FindViews()
         {
             listView = FindViewById<ListView>(Resource.Id.listViewPlantDetail);
