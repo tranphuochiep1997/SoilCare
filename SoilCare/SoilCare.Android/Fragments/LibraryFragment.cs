@@ -12,6 +12,7 @@ using Android.Runtime;
 using Android.Support.V4.View;
 using Android.Util;
 using Android.Views;
+using Android.Views.InputMethods;
 using Android.Widget;
 using SoilCare.Android.AdapterClass;
 using SoilCare.Android.ModelClass;
@@ -30,9 +31,7 @@ namespace SoilCare.Android.Fragments
 
         public override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
-            HasOptionsMenu = true;
-            
+            base.OnCreate(savedInstanceState);        
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -54,14 +53,23 @@ namespace SoilCare.Android.Fragments
                 if (editTextSearchLibrary.Visibility == ViewStates.Visible)
                 {
                     editTextSearchLibrary.Visibility = ViewStates.Gone;
-                    editTextSearchLibrary.ClearFocus();
                     textViewLibrary.Visibility = ViewStates.Visible;
+
+                    InputMethodManager inputMethodManager = Activity.GetSystemService(Context.InputMethodService) as InputMethodManager;
+                    inputMethodManager.HideSoftInputFromWindow(editTextSearchLibrary.WindowToken, HideSoftInputFlags.None);
+
                 }
                 else
                 {
-                    editTextSearchLibrary.Visibility = ViewStates.Visible;
+                    editTextSearchLibrary.Visibility = ViewStates.Visible;                   
                     editTextSearchLibrary.RequestFocus();
                     textViewLibrary.Visibility = ViewStates.Gone;
+
+
+                    InputMethodManager inputMethodManager = Activity.GetSystemService(Context.InputMethodService) as InputMethodManager;
+                    inputMethodManager.ShowSoftInput(editTextSearchLibrary, ShowFlags.Forced);
+                    inputMethodManager.ToggleSoftInput(ShowFlags.Forced, HideSoftInputFlags.ImplicitOnly);
+
                 }
             };
 
@@ -70,6 +78,8 @@ namespace SoilCare.Android.Fragments
             listView.ItemClick += ListView_ItemClick;
 
         }
+
+
 
         private void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {

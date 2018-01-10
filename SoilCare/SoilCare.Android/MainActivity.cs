@@ -16,8 +16,7 @@ using System.Collections.Generic;
 
 namespace SoilCare.Android
 {
-
-    [Activity(Label = "@string/app_name", MainLauncher = true, Theme = "@style/CustomActionBarTheme")]
+    [Activity(Label = "@string/app_name", Theme = "@style/CustomActionBarTheme", MainLauncher = true)]
     public class MainActivity : FragmentActivity
     {
         BottomNavigationView bottomNavigation;
