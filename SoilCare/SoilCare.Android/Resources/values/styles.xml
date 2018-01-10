@@ -66,7 +66,7 @@
     <item name="android:windowExitAnimation">@anim/slide_right</item>
   </style>
   
-  <style name="BasicTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+  <style name="BasicTheme" parent="Theme.AppCompat.Light.NoActionBar">
     <item name="android:windowNoTitle">true</item>
     <item name="android:windowActionBar">false</item>
     <item name="android:colorPrimary">#2e9d11</item>

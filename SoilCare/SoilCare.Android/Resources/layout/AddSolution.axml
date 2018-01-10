@@ -9,7 +9,7 @@
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:background="@color/colorGreen">
-      <ImageButton
+        <ImageButton
             android:id="@+id/button_back"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -17,7 +17,7 @@
             android:src="@drawable/ic_actionbar_back"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
-            android:scaleType="fitCenter" />
+            android:scaleType="fitStart" />
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -39,7 +39,6 @@
             android:background="@android:color/transparent"
             android:scaleType="fitCenter" />
     </LinearLayout>
-
     <TextView
         android:id="@+id/Heading"
         android:text="Solutions for Salad"
