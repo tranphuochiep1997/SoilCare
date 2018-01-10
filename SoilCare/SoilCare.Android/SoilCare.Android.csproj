@@ -119,6 +119,7 @@
     <Compile Include="AdapterClass\ViewPagerAdapter.cs" />
     <Compile Include="BitmapHelper.cs" />
     <Compile Include="BottomNavigationViewHelper.cs" />
+    <Compile Include="EditUserLandActivity.cs" />
     <Compile Include="Fragments\AccountFragment.cs" />
     <Compile Include="Fragments\HomeFragment.cs" />
     <Compile Include="Fragments\LibraryFragment.cs" />
@@ -207,6 +208,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\initial3.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\EditUserLand.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

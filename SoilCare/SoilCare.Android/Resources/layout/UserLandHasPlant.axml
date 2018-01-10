@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="fill_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:background="@color/colorGreen">
-        <ImageButton
-            android:id="@+id/imageButtonLeftArrow"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:padding="15dp"
-            android:adjustViewBounds="true"
-            android:background="@android:color/transparent"
-            android:src="@drawable/icon_leftarrow"
-            android:scaleType="fitCenter" />
-        <TextView
-            android:id="@+id/textViewSpecifiedLand"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:text="USER LAND 1"
-            android:textColor="@android:color/white"
-            android:padding="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+      <ImageButton
+          android:id="@+id/imageButtonLeftArrow"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:padding="15dp"
+          android:adjustViewBounds="true"
+          android:background="@android:color/transparent"
+          android:src="@drawable/icon_leftarrow"
+          android:scaleType="fitCenter" />
+      <TextView
+          android:id="@+id/textViewSpecifiedLand"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="match_parent"
+          android:text="USER LAND 1"
+          android:textColor="@android:color/white"
+          android:padding="10dp"
+          android:textSize="20dp"
+          android:textStyle="bold" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <ImageView
-            android:id="@+id/imageViewSpecifiedUserLand"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:background="@drawable/background"
-            android:layout_margin="10dp" />
-        <Button
-            android:id="@+id/buttonMeasure"
-            android:layout_width="150dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
-            android:text="MEASURE"
-            android:textColor="@color/colorWhite"
-            android:background="@drawable/rounded_button"
-            android:layout_marginBottom="10dp" />
+      <ImageView
+          android:id="@+id/imageViewSpecifiedUserLand"
+          android:layout_width="match_parent"
+          android:layout_height="120dp"
+          android:background="@drawable/background"
+          android:layout_margin="10dp" />
+      <Button
+          android:id="@+id/buttonMeasure"
+          android:layout_width="150dp"
+          android:layout_height="80dp"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginTop="5dp"
+          android:text="MEASURE"
+          android:textColor="@color/colorWhite"
+          android:background="@drawable/rounded_button"
+          android:layout_marginBottom="10dp" />
     </LinearLayout>
     <TextView
         android:layout_width="match_parent"
@@ -59,11 +59,14 @@
         android:textColor="@color/colorWhite"
         android:textStyle="bold"
         android:textSize="18dp" />
-    <ListView
-        android:id="@+id/listViewMeasuredUserLand"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="5dp" />
-</LinearLayout>
+
+        <ListView
+            android:id="@+id/listViewMeasuredUserLand"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp" />
+      </LinearLayout>
+
+

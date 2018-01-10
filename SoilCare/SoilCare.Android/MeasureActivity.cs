@@ -52,7 +52,6 @@ namespace SoilCare.Android
 
         private void ImageButton_Click(object sender, EventArgs e)
         {
-            StartActivity(typeof(UserLandActivity));
             Finish();
         }
 
