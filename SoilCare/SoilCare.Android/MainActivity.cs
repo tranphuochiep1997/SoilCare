@@ -16,6 +16,7 @@ using System.Collections.Generic;
 
 namespace SoilCare.Android
 {
+
     [Activity(Label = "@string/app_name", Theme = "@style/CustomActionBarTheme", MainLauncher = true)]
     public class MainActivity : FragmentActivity
     {

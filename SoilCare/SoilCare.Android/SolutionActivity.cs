@@ -14,8 +14,8 @@ using SoilCare.Android.ModelClass;
 
 namespace SoilCare.Android
 {
-    [Activity(Label = "SolutionsActivity", MainLauncher = false, Theme = "@style/CustomActionBarTheme")]
-    public class SolutionsActivity : Activity
+    [Activity(Label = "SolutionActivity", MainLauncher = false, Theme = "@style/BasicTheme")]
+    public class SolutionActivity : Activity
     {
         ListView listView;
         ImageButton backButton;
@@ -26,7 +26,7 @@ namespace SoilCare.Android
         {
  
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.Solutions);
+            SetContentView(Resource.Layout.Solution);
             
             List<SolutionModel> solutionList = new List<SolutionModel>()
             {
@@ -35,7 +35,7 @@ namespace SoilCare.Android
                     Solution_name = "Cuốc Bẫm",
                     Quantity = "Depth",
                     Value = 30,
-                    Unit_symbol = "Cm",
+                    Unit_symbol = "Cmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
                     Solution_description = "Dùng cuốc, cuốc liên tục xuống đất " +
                     "cho đến khi mệt thì nghỉ."
                 },
@@ -60,7 +60,7 @@ namespace SoilCare.Android
             rateButton = FindViewById<ImageButton>(Resource.Id.button_rate);
             editButton = FindViewById<ImageButton>(Resource.Id.button_edit);
             listView = FindViewById<ListView>(Resource.Id.list);
-            listView.Adapter = new SolutionsAdapter(this, solutionList);
+            listView.Adapter = new SolutionAdapter(this, solutionList);
 
             backButton.Click += delegate
             {
@@ -68,8 +68,8 @@ namespace SoilCare.Android
             };
             editButton.Click += delegate
             {
-                Intent addSolutionActivity = new Intent(this, typeof(AddSolutionsActivity));
-                StartActivity(addSolutionActivity);
+                Intent editSolutionActivity = new Intent(this, typeof(EditSolutionActivity));
+                StartActivity(editSolutionActivity);
             };
         }
         

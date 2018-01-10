@@ -114,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activity1.cs" />
+    <Compile Include="AdapterClass\EditSolutionAdapter.cs" />
     <Compile Include="AdapterClass\LibraryAdapter.cs" />
     <Compile Include="AdapterClass\SolutionsAdapter.cs" />
     <Compile Include="AdapterClass\UserLandAdapter.cs" />
@@ -143,9 +144,10 @@
     <Compile Include="RecommendActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SolutionsActivity.cs" />
+    <Compile Include="SolutionActivity.cs" />
     <Compile Include="UserLandActivity.cs" />
     <Compile Include="UserLandHasPlantActivity.cs" />
+    <compile Include="EditSolutionActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
@@ -183,7 +185,7 @@
     <AndroidResource Include="Resources\layout\Measure.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\Solutions.axml">
+    <AndroidResource Include="Resources\layout\Solution.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\SolutionView.axml">
@@ -210,20 +212,26 @@
     <AndroidResource Include="Resources\layout\initial2.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\initial3.axml"/>
-    <AndroidResource Include="Resources\font\cabin_bold.ttf" />
-    <AndroidResource Include="Resources\font\cabin_italic.ttf" />
-    <AndroidResource Include="Resources\font\cabin_mediumitalic.ttf" />
-    <AndroidResource Include="Resources\font\cabin_regular.ttf" />
+    <AndroidResource Include="Resources\layout\initial3.axml" />
     <AndroidResource Include="Resources\layout\AddSolution.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\EditSolutionView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+
     <AndroidResource Include="Resources\layout\EditUserLand.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+
+    <AndroidResource Include="Resources\layout\EditSolution.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\font\cabin_bold.ttf" />
+    <AndroidResource Include="Resources\font\cabin_italic.ttf" />
+    <AndroidResource Include="Resources\font\cabin_medium_italic.ttf" />
+    <AndroidResource Include="Resources\font\cabin_regular.ttf" />
+
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -429,6 +437,9 @@
     <AndroidResource Include="Resources\drawable\edit_solution_background.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Resources\font\cabin.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Annotations.targets')" />
