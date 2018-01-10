@@ -14,12 +14,12 @@ using SoilCare.Android.ModelClass;
 
 namespace SoilCare.Android.AdapterClass
 {
-    class SolutionAdapter : BaseAdapter<SolutionModel>
+    class EditSolutionAdapter : BaseAdapter<SolutionModel>
     {
         List<SolutionModel> items;
         Activity context;
 
-        public SolutionAdapter(Activity context, List<SolutionModel> items) :base()
+        public EditSolutionAdapter(Activity context, List<SolutionModel> items) : base()
         {
             this.context = context;
             this.items = items;
@@ -38,11 +38,11 @@ namespace SoilCare.Android.AdapterClass
             var item = items[position];
             View view = convertView;
             if (view == null) // no view to re-use, create new
-                view = context.LayoutInflater.Inflate(Resource.Layout.SolutionView, null);
+                view = context.LayoutInflater.Inflate(Resource.Layout.EditSolutionView, null);
             view.FindViewById<TextView>(Resource.Id.solutionName).Text = item.Solution_name;
             view.FindViewById<TextView>(Resource.Id.value).Text = item.Value.ToString();
             view.FindViewById<TextView>(Resource.Id.quantity).Text = item.Quantity;
-            view.FindViewById<TextView>(Resource.Id.unit).Text = item.Unit_symbol;
+            view.FindViewById<TextView>(Resource.Id.unit_symbol).Text = item.Unit_symbol;
             view.FindViewById<TextView>(Resource.Id.description).Text = item.Solution_description;
             return view;
         }
