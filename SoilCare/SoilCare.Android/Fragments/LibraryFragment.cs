@@ -12,6 +12,7 @@ using Android.Runtime;
 using Android.Support.V4.View;
 using Android.Util;
 using Android.Views;
+using Android.Views.InputMethods;
 using Android.Widget;
 using SoilCare.Android.AdapterClass;
 using SoilCare.Android.ModelClass;
@@ -56,12 +57,14 @@ namespace SoilCare.Android.Fragments
                     editTextSearchLibrary.Visibility = ViewStates.Gone;
                     editTextSearchLibrary.ClearFocus();
                     textViewLibrary.Visibility = ViewStates.Visible;
+                    HideKeyboard(editTextSearchLibrary);
                 }
                 else
                 {
                     editTextSearchLibrary.Visibility = ViewStates.Visible;
                     editTextSearchLibrary.RequestFocus();
                     textViewLibrary.Visibility = ViewStates.Gone;
+                    ShowKeyboard(editTextSearchLibrary);
                 }
             };
 
@@ -69,6 +72,20 @@ namespace SoilCare.Android.Fragments
 
             listView.ItemClick += ListView_ItemClick;
 
+        }
+        public void HideKeyboard(View pView)
+        {
+            InputMethodManager inputMethodManager = Activity.GetSystemService(Context.InputMethodService) as InputMethodManager;
+            inputMethodManager.HideSoftInputFromWindow(pView.WindowToken, HideSoftInputFlags.None);
+        }
+
+        public void ShowKeyboard(View pView)
+        {
+            pView.RequestFocus();
+
+            InputMethodManager inputMethodManager = Activity.GetSystemService(Context.InputMethodService) as InputMethodManager;
+            inputMethodManager.ShowSoftInput(pView, ShowFlags.Forced);
+            inputMethodManager.ToggleSoftInput(ShowFlags.Forced, HideSoftInputFlags.ImplicitOnly);
         }
 
         private void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)

@@ -113,7 +113,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activity1.cs" />
     <Compile Include="AdapterClass\LibraryAdapter.cs" />
     <Compile Include="AdapterClass\SolutionsAdapter.cs" />
     <Compile Include="AdapterClass\UserLandAdapter.cs" />
@@ -121,6 +120,7 @@
     <Compile Include="AddSolutionActivity.cs" />
     <Compile Include="BitmapHelper.cs" />
     <Compile Include="BottomNavigationViewHelper.cs" />
+    <Compile Include="EditUserNameActivity.cs" />
     <Compile Include="Fragments\AccountFragment.cs" />
     <Compile Include="Fragments\HomeFragment.cs" />
     <Compile Include="Fragments\LibraryFragment.cs" />
@@ -214,6 +214,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\EditSolutionView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\EditUserLand.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

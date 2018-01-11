@@ -60,6 +60,5 @@
         android:textSize="17sp"
         android:id="@+id/noti"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:text="có con cu nho nhỏ" />
+        android:gravity="center" />
 </LinearLayout>
