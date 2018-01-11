@@ -11,7 +11,7 @@
         android:layout_width="18dp"
         android:layout_height="14dp"
         android:layout_marginTop="4dp"
-        android:layout_marginRight="13dp" />
+        android:layout_marginRight="13dp"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,14 +25,14 @@
             android:textSize="@dimen/solutionView_text_size"
             android:textStyle="bold"
             android:textColor="#000"
-            android:fontFamily="@font/cabin_bold" />
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Quantity"
             android:textSize="@dimen/solutionView_text_size"
             android:textColor="#000"
-            android:fontFamily="@font/cabin_regular"
+
             android:layout_marginTop="@dimen/solutionView_margin_row"
             android:layout_below="@id/solutionName" />
         <TextView
@@ -40,10 +40,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Depth"
-            android:fontFamily="@font/cabin_regular"
+
             android:textSize="@dimen/solutionView_text_size"
             android:textColor="#000"
-            android:maxWidth="@dimen/solution_text_view_width"
             android:layout_marginTop="@dimen/solutionView_margin_row"
             android:layout_below="@id/solutionName"
             android:layout_alignParentRight="true" />
@@ -51,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Value"
-            android:fontFamily="@font/cabin_regular"
+
             android:textSize="@dimen/solutionView_text_size"
             android:textColor="#000"
             android:layout_marginTop="@dimen/solutionView_margin_row"
@@ -61,10 +60,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="30"
-            android:fontFamily="@font/cabin_regular"
             android:textSize="@dimen/solutionView_text_size"
             android:textColor="#000"
-            android:maxWidth="@dimen/solution_text_view_width"
             android:layout_marginTop="@dimen/solutionView_margin_row"
             android:layout_below="@id/quantity"
             android:layout_alignParentRight="true" />
@@ -72,7 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Unit"
-            android:fontFamily="@font/cabin_regular"
+
             android:textSize="@dimen/solutionView_text_size"
             android:textColor="#000"
             android:layout_marginTop="@dimen/solutionView_margin_row"
@@ -82,8 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="cm"
-            android:maxWidth="@dimen/solution_text_view_width"
-            android:fontFamily="@font/cabin_regular"
+
             android:textSize="@dimen/solutionView_text_size"
             android:textColor="#000"
             android:layout_marginTop="@dimen/solutionView_margin_row"
@@ -93,8 +89,8 @@
             android:id="@+id/descriptionText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Description"
-            android:fontFamily="@font/cabin_regular"
+            android:text="Description:"
+
             android:textSize="@dimen/solutionView_text_size"
             android:textColor="#000"
             android:layout_marginTop="@dimen/solutionView_margin_row"
@@ -106,11 +102,9 @@
             android:text="Dùng cuốc, cuốc liên tục xuống đất cho đến khi mệt thì nghỉ."
             android:textSize="@dimen/solutionView_text_size"
             android:textColor="#000"
-            android:fontFamily="@font/cabin_regular"
+
             android:layout_marginTop="@dimen/solutionView_margin_row"
-            android:layout_below="@id/unit"
-            android:minWidth="50dp"
-            android:maxWidth="@dimen/solution_text_view_width"
-            android:layout_alignParentRight="true" />
+            android:textAlignment="center"
+            android:layout_below="@id/descriptionText" />
     </RelativeLayout>
 </LinearLayout>

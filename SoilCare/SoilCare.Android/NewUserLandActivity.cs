@@ -22,32 +22,36 @@ namespace SoilCare.Android
         EditText editTextDes;
         Button btSave;
         Button btCancel;
-        ImageButton leftArrow;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.NewUserLand);
+
+            Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            SetActionBar(toolbar);
+            toolbar.Title = "ADD YOUR NEW LAND HERE";
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
+
             FindViews();
 
-            imageButton.Click += ImageButton_Click;
-            leftArrow.Click += LeftArrow_Click;
 
         }
-
-        private void LeftArrow_Click(object sender, EventArgs e)
+        public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            Finish();
+            switch (item.ItemId)
+            {
+                case global::Android.Resource.Id.Home:
+                    Finish();
+                    return true;
+                default:
+                    return base.OnOptionsItemSelected(item);
+            }
+           
         }
-
-        private void ImageButton_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void FindViews()
         {
-            leftArrow = FindViewById<ImageButton>(Resource.Id.imageButtonLeftArrow);
             imageButton = FindViewById<ImageButton>(Resource.Id.imageButtonNewUserLand);
             editTextName = FindViewById<EditText>(Resource.Id.editTextNewLandName);
             editTextDes = FindViewById<EditText>(Resource.Id.editTextNewLandLocation);

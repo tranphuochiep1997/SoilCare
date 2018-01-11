@@ -67,7 +67,7 @@ namespace SoilCare.Android.AdapterClass
             viewHolder.ImageButton.Click += delegate
             {
                 // ((Activity) mContext).startActivityForResult(intent, REQUEST_FOR_ACTIVITY_CODE);
-                context.StartActivity(typeof(EditUserLandActivity));
+                context.StartActivity(typeof(NewUserLandActivity));
             };
             
             return convertView;

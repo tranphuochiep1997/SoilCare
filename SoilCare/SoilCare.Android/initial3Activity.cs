@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -12,7 +13,7 @@ using Android.Widget;
 
 namespace SoilCare.Android
 {
-    [Activity(Label = "initial3Activity")]
+    [Activity(Label = "initial3Activity", ScreenOrientation = ScreenOrientation.Portrait, NoHistory = true)]
     public class initial3Activity : Activity
     {
         private EditText name, location, email;

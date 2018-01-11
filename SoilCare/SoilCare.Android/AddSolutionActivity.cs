@@ -14,8 +14,8 @@ using SoilCare.Android.ModelClass;
 
 namespace SoilCare.Android
 {
-    [Activity(Label = "AddSolutionActivity", MainLauncher = false, Theme = "@style/BasicTheme")]
-    public class AddSolutionActivity : Activity
+    [Activity(Label = "AddSolutionActivity", MainLauncher = false, Theme = "@style/CustomActionBarTheme")]
+    public class AddSolutionsActivity : Activity
     {
         ImageButton backButton;
         ImageButton saveButton;
@@ -31,11 +31,6 @@ namespace SoilCare.Android
             backButton.Click += delegate
             {
                 this.OnBackPressed();
-            };
-            saveButton.Click += delegate
-            {
-                this.OnBackPressed();
-                this.Finish();
             };
         }
     }

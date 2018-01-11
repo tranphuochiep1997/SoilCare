@@ -14,12 +14,12 @@ using SoilCare.Android.ModelClass;
 
 namespace SoilCare.Android.AdapterClass
 {
-    class SolutionAdapter : BaseAdapter<SolutionModel>
+    class SolutionsAdapter : BaseAdapter<SolutionModel>
     {
         List<SolutionModel> items;
         Activity context;
 
-        public SolutionAdapter(Activity context, List<SolutionModel> items) :base()
+        public SolutionsAdapter(Activity context, List<SolutionModel> items) :base()
         {
             this.context = context;
             this.items = items;

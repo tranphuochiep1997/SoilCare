@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -12,7 +13,7 @@ using Android.Widget;
 
 namespace SoilCare.Android
 {
-    [Activity(Label = "initial2Activity")]
+    [Activity(Label = "initial2Activity", ScreenOrientation = ScreenOrientation.Portrait, NoHistory = true)]
     public class initial2Activity : Activity
     {
         private Button getcode;

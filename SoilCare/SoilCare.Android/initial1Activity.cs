@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -12,7 +13,7 @@ using Android.Widget;
 
 namespace SoilCare.Android
 {
-    [Activity(Label = "SoilCare", NoHistory = true)]
+    [Activity(Label = "SoilCare",MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait, NoHistory = true)]
     public class initial1Activity : Activity
     {
         System.Timers.Timer timer = null;

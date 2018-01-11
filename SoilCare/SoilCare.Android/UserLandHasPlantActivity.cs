@@ -81,28 +81,5 @@ namespace SoilCare.Android
             listView.Adapter = adapter;
             listView.TextFilterEnabled = true;
         }
-
-        private void GetListViewSize(ListView myListView)
-        {
-            IListAdapter myListAdapter = myListView.Adapter;
-            if (myListAdapter == null)
-            {
-                //do nothing return null
-                return;
-            }
-            //set listAdapter in loop for getting final size
-            int totalHeight = 0;
-            for (int size = 0; size < myListAdapter.Count; size++)
-            {
-                View listItem = myListAdapter.GetView(size, null, myListView);
-                listItem.Measure(0, 0);
-                totalHeight += listItem.MeasuredHeight;
-            }
-            //setting listview item in adapter
-            //ViewGroup.LayoutParams params = myListView.getLayoutParams();
-            ViewGroup.LayoutParams params2 = myListView.LayoutParameters;
-            params2.Height = totalHeight + (myListView.DividerHeight * (myListAdapter.Count) - 1);
-            myListView.LayoutParameters = params2;
-        }
     }
 }
