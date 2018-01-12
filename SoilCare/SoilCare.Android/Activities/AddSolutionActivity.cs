@@ -14,7 +14,7 @@ using SoilCare.Android.ModelClass;
 
 namespace SoilCare.Android
 {
-    [Activity(Label = "AddSolutionActivity", MainLauncher = false, Theme = "@style/CustomActionBarTheme")]
+    [Activity(Label = "AddSolutionActivity", MainLauncher = false)]
     public class AddSolutionsActivity : Activity
     {
         ImageButton backButton;

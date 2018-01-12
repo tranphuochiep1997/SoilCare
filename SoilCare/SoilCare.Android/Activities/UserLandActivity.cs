@@ -15,7 +15,7 @@ using SoilCare.Android.ModelClass;
 
 namespace SoilCare.Android
 {
-    [Activity(Label = "UserLandActivity", MainLauncher =false, Theme = "@style/CustomActionBarTheme")]
+    [Activity(Label = "UserLandActivity", MainLauncher =false)]
     public class UserLandActivity : Activity
     {
         ImageButton imageButton;

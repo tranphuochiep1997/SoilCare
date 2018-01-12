@@ -4519,8 +4519,8 @@ namespace SoilCare.Android
 			// aapt resource value: 0x7f09016f
 			public const int Base_Widget_Design_TabLayout = 2131296623;
 			
-			// aapt resource value: 0x7f090195
-			public const int BasicTheme = 2131296661;
+			// aapt resource value: 0x7f09018e
+			public const int BasicTheme = 2131296654;
 			
 			// aapt resource value: 0x7f090000
 			public const int CardView = 2131296256;
@@ -4530,18 +4530,6 @@ namespace SoilCare.Android
 			
 			// aapt resource value: 0x7f090003
 			public const int CardView_Light = 2131296259;
-			
-			// aapt resource value: 0x7f090190
-			public const int CustomActionBarTheme = 2131296656;
-			
-			// aapt resource value: 0x7f090191
-			public const int MyActionBar = 2131296657;
-			
-			// aapt resource value: 0x7f090193
-			public const int MyActionBarTabText = 2131296659;
-			
-			// aapt resource value: 0x7f090192
-			public const int MyActionBarTitleText = 2131296658;
 			
 			// aapt resource value: 0x7f090022
 			public const int Platform_AppCompat = 2131296290;
@@ -4942,12 +4930,6 @@ namespace SoilCare.Android
 			// aapt resource value: 0x7f09017c
 			public const int Theme_Design_NoActionBar = 2131296636;
 			
-			// aapt resource value: 0x7f09018e
-			public const int Theme_MyTheme = 2131296654;
-			
-			// aapt resource value: 0x7f09018f
-			public const int Theme_MyTheme_Base = 2131296655;
-			
 			// aapt resource value: 0x7f090115
 			public const int ThemeOverlay_AppCompat = 2131296533;
 			
@@ -5223,9 +5205,6 @@ namespace SoilCare.Android
 			
 			// aapt resource value: 0x7f090186
 			public const int Widget_Design_TextInputLayout = 2131296646;
-			
-			// aapt resource value: 0x7f090194
-			public const int dialog_animation = 2131296660;
 			
 			static Style()
 			{

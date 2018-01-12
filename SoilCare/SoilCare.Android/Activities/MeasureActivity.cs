@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace SoilCare.Android
 {
-    [Activity(Label = "MeasureActivity", Theme = "@style/CustomActionBarTheme")]
+    [Activity(Label = "MeasureActivity")]
     public class MeasureActivity : Activity
     {
         ImageButton imageButton;

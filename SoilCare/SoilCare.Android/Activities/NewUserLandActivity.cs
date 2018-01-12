@@ -14,7 +14,7 @@ using Android.Support.V7.App;
 
 namespace SoilCare.Android
 {
-    [Activity(Label = "Add Your New Land", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/CustomActionBarTheme")]
+    [Activity(Label = "Add Your New Land", ScreenOrientation = ScreenOrientation.Portrait)]
     public class NewUserLandActivity : Activity
     {
         ImageButton imageButton;

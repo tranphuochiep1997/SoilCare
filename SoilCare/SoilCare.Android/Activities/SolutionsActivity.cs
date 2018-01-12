@@ -14,7 +14,7 @@ using SoilCare.Android.ModelClass;
 
 namespace SoilCare.Android
 {
-    [Activity(Label = "SolutionsActivity", MainLauncher = false, Theme = "@style/CustomActionBarTheme")]
+    [Activity(Label = "SolutionsActivity", MainLauncher = false)]
     public class SolutionsActivity : Activity
     {
         ListView listView;
