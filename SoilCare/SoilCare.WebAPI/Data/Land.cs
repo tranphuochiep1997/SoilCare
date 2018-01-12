@@ -24,13 +24,13 @@ namespace SoilCare.WebAPI.Data
         public string Land_name { get; set; }
         public string Land_address { get; set; }
         public string Land_image { get; set; }
+        public Nullable<double> Land_area { get; set; }
         public string User_id { get; set; }
         public Nullable<System.DateTime> Created_at { get; set; }
         public string Status { get; set; }
     
         public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public ICollection<Measure> Measures { get; set; }
-        //public virtual ICollection<Measure> Measures { get; set; }
+        public virtual ICollection<Measure> Measures { get; set; }
     }
 }

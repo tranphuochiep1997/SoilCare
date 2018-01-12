@@ -144,7 +144,6 @@
     <Compile Include="Data\User.cs">
       <DependentUpon>SoilCareDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="MyMapper\Mapper.cs" />
     <Compile Include="Controllers\MeasuresController.cs" />
     <Compile Include="Controllers\SolutionOffersController.cs" />
     <Compile Include="Controllers\PlantsController.cs" />

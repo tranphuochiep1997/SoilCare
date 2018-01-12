@@ -45,12 +45,10 @@ namespace SoilCare.WebAPI.AutomapperProfile
                     m => m.MapFrom(src => src.Unit_symbol_config ?? src.Solution.Unit_symbol))
                 .ForMember("Unit_name",
                     m => m.MapFrom(src => src.Unit_name_config ?? src.Solution.Unit_name))
-                .ForMember("Quantity",
-                    m => m.MapFrom(src => src.Solution.Quantity))
                 .ForMember("Solution_purpose",
                     m => m.MapFrom(src => src.Solution.Solution_purpose))
-                .ForMember("Solution_discription",
-                    m => m.MapFrom(src => src.Solution.Solution_discription))
+                .ForMember("Solution_description",
+                    m => m.MapFrom(src => src.Solution.Solution_description))
                 .ForMember("Owner",
                     m => m.MapFrom(src => src.Solution.Owner));
             CreateMap<SolutionOfferModel, SolutionOffer>()

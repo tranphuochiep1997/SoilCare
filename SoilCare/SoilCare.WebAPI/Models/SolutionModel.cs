@@ -11,7 +11,7 @@ namespace SoilCare.WebAPI.Models
         public string Unit_name { get; set; }
         public string Quantity { get; set; }
         public string Solution_purpose { get; set; }
-        public string Solution_discription { get; set; }
+        public string Solution_description { get; set; }
         public string Owner { get; set; }
     }
     public class SolutionWithStatusModel : SolutionModel
@@ -26,6 +26,6 @@ namespace SoilCare.WebAPI.Models
         public string Unit_name { get; set; }
         public string Quantity { get; set; }
         public string Solution_purpose { get; set; }
-        public string Solution_discription { get; set; }
+        public string Solution_description { get; set; }
     }
 }

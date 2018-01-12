@@ -3,6 +3,7 @@ GO
 
 use SoilCare;
 
+
 CREATE TABLE Soil(
 	Soil_id nvarchar(200), 
 	Soil_name nvarchar(200), 
@@ -30,13 +31,12 @@ CREATE TABLE Plant(
 	Plant_id nvarchar(200),
 	Plant_name nvarchar(200),
 	Plant_image nvarchar(200), 
-	Plant_discription nvarchar(200),
+	Plant_description nvarchar(200),
 	Soil_id nvarchar(200),
 	[Status] nvarchar(200),
 	CONSTRAINT Plant_pk PRIMARY KEY(Plant_id),
 	CONSTRAINT Plant_fk FOREIGN KEY(Soil_id) REFERENCES Soil(Soil_id),
 );
-
 
 
 
@@ -97,9 +97,8 @@ CREATE TABLE Solution(
 	[Value] float,
 	Unit_name nvarchar(200),
 	Unit_symbol nvarchar(200),
-	Quantity nvarchar(200),
 	Solution_purpose nvarchar(200),
-	Solution_discription nvarchar(200),
+	Solution_description nvarchar(200),
 	Owner nvarchar(200),
 	CONSTRAINT Solution_pk PRIMARY KEY(Solution_id)
 );

@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace SoilCare.Android
 {
-    [Activity(Label = "SoilCare",MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait, NoHistory = true)]
+    [Activity(Label = "SoilCare", MainLauncher=true, ScreenOrientation = ScreenOrientation.Portrait, NoHistory = true)]
     public class initial1Activity : Activity
     {
         System.Timers.Timer timer = null;

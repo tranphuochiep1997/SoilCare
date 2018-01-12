@@ -9,7 +9,7 @@ namespace SoilCare.WebAPI.Models
         
         public string Plant_name { get; set; }
         public string Plant_image { get; set; }
-        public string Plant_discription { get; set; }
+        public string Plant_description { get; set; }
     }
     public class PlantModel : AddPlantModel
     {
