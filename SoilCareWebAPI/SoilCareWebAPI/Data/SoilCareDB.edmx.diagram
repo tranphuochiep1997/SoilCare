@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cdf6464e304b49349f0d322b1f29c58d" Name="Diagram1">
+        <EntityTypeShape EntityType="SoilCareModel.Land" Width="1.5" PointX="3" PointY="1.375" />
+        <EntityTypeShape EntityType="SoilCareModel.Measure" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="SoilCareModel.Plant" Width="1.5" PointX="3" PointY="6.625" />
+        <EntityTypeShape EntityType="SoilCareModel.Soil" Width="1.5" PointX="0.75" PointY="5.875" />
+        <EntityTypeShape EntityType="SoilCareModel.Solution" Width="1.5" PointX="5.25" PointY="5.5" />
+        <EntityTypeShape EntityType="SoilCareModel.SolutionOffer" Width="1.5" PointX="7.5" PointY="1.625" />
+        <EntityTypeShape EntityType="SoilCareModel.User" Width="1.5" PointX="0.75" PointY="1.625" />
+        <AssociationConnector Association="SoilCareModel.Land_fk" />
+        <AssociationConnector Association="SoilCareModel.Measure_fk1" />
+        <AssociationConnector Association="SoilCareModel.Measure_fk2" />
+        <AssociationConnector Association="SoilCareModel.SolutionOffer_fk1" />
+        <AssociationConnector Association="SoilCareModel.Plant_fk" />
+        <AssociationConnector Association="SoilCareModel.SolutionOffer_fk2" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
