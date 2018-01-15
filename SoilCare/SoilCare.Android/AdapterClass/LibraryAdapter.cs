@@ -43,6 +43,8 @@ namespace SoilCare.Android.AdapterClass
             public TextView plantName;
             public TextView plantDescription;
             public ImageView imageView;
+            public ImageView tick;
+            public TextView solution;
 
         }
         public override View GetView(int position, View convertView, ViewGroup parent)
@@ -55,7 +57,9 @@ namespace SoilCare.Android.AdapterClass
                 viewHolder.plantName = convertView.FindViewById<TextView>(Resource.Id.textViewPlantName);
                 viewHolder.plantDescription = convertView.FindViewById<TextView>(Resource.Id.textViewPlantDescription);
                 viewHolder.imageView = convertView.FindViewById<ImageView>(Resource.Id.imageViewLibrary);
-                convertView.Tag = viewHolder;
+                viewHolder.tick = convertView.FindViewById<ImageView>(Resource.Id.imgTick);
+                viewHolder.solution = convertView.FindViewById<TextView>(Resource.Id.tvSolution);
+
             }
             else
             {
@@ -66,6 +70,14 @@ namespace SoilCare.Android.AdapterClass
             viewHolder.plantName.Text = item.PlantName;
             viewHolder.plantDescription.Text = item.PlantDescription;
             viewHolder.imageView.SetImageResource(item.PlantImage);
+
+            if (context.GetType().Equals(typeof(UserLandActivity))) {
+                viewHolder.tick.Visibility = ViewStates.Visible;
+                viewHolder.solution.Visibility = ViewStates.Visible;
+            }
+            
+            
+            convertView.Tag = viewHolder;
 
             return convertView;
         }
