@@ -10,11 +10,12 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using SoilCareAndroid.AdapterClass;
+using SoilCareAndroid.Connection;
 using SoilCareAndroid.ModelClass;
 
 namespace SoilCareAndroid
 {
-    [Activity(Label = "SolutionsActivity", MainLauncher = false)]
+    [Activity(Label = "SolutionsActivity", MainLauncher = true)]
     public class SolutionsActivity : Activity
     {
         ListView listView;
@@ -27,40 +28,19 @@ namespace SoilCareAndroid
  
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Solutions);
-            
-            List<SolutionModel> solutionList = new List<SolutionModel>()
-            {
-                new SolutionModel
-                {
-                    Solution_name = "Cuốc Bẫm",
-                    Quantity = "Depth",
-                    Value = 30,
-                    Unit_symbol = "Cm",
-                    Solution_description = "Dùng cuốc, cuốc liên tục xuống đất " +
-                    "cho đến khi mệt thì nghỉ."
-                },
-                new SolutionModel
-                {
-                    Solution_name = "Bơm nước",
-                    Quantity = "Volume",
-                    Value = 1000,
-                    Unit_symbol = "L",
-                    Solution_description = "Có thể trổ nước từ kênh hoặc bơm nước."
-                },
-                new SolutionModel
-                {
-                    Solution_name = "Bón phân hữu cơ",
-                    Quantity = "Amount",
-                    Value = 5,
-                    Unit_symbol = "Packages(s)",
-                    Solution_description = "Bón phân hữu cơ đều khắp đất."
-                }
-            };
+
+
             backButton = FindViewById<ImageButton>(Resource.Id.button_back);
             rateButton = FindViewById<ImageButton>(Resource.Id.button_rate);
             editButton = FindViewById<ImageButton>(Resource.Id.button_edit);
             listView = FindViewById<ListView>(Resource.Id.list);
-            listView.Adapter = new SolutionsAdapter(this, solutionList);
+
+            // Get Data using APIConnection
+            List<SolutionModel> listSolution = new List<SolutionModel>();
+            APIConnection connector = new APIConnection();
+            listSolution = connector.GetData<List<SolutionModel>>(APIConnection.Solutions);
+            
+            listView.Adapter = new SolutionsAdapter(this, listSolution);
 
             backButton.Click += delegate
             {

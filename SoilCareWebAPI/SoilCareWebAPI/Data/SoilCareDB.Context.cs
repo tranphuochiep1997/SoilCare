@@ -18,8 +18,10 @@ namespace SoilCareWebAPI.Data
         public SoilCareEntities()
             : base("name=SoilCareEntities")
         {
+            this.Configuration.LazyLoadingEnabled = false;
+
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

@@ -19,5 +19,6 @@ namespace SoilCareAndroid.ModelClass
         public Nullable<double> Value { get; set; }
         public string Solution_description { get; set; }
         public string Unit_symbol { get; set; }
+        public string Unit_name { get; set; }
     }
 }
