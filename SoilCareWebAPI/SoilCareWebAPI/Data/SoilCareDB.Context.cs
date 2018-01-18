@@ -32,5 +32,6 @@ namespace SoilCareWebAPI.Data
         public virtual DbSet<Solution> Solutions { get; set; }
         public virtual DbSet<SolutionOffer> SolutionOffers { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
     }
 }

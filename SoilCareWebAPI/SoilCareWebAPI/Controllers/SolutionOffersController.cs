@@ -1,13 +1,15 @@
-﻿using SoilCareWebAPI.Data;
-using SoilCareWebAPI.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using SoilCareWebAPI.Data;
+using SoilCareWebAPI.Models;
 
 namespace SoilCareWebAPI.Controllers
 {
@@ -24,15 +26,16 @@ namespace SoilCareWebAPI.Controllers
             string measureId = offer.Measure_id;
             using (SoilCareEntities db = new SoilCareEntities())
             {
-                foreach(string solutionId in offer.Solution_id)
+                foreach (string solutionId in offer.Solution_id)
                 {
-                    db.SolutionOffers.Add(new SolutionOffer {
+                    db.SolutionOffers.Add(new SolutionOffer
+                    {
                         Measure_id = measureId,
                         Solution_id = solutionId,
                         Status = "Unchanged",
                     });
                 }
-                
+
                 try
                 {
                     db.SaveChanges();
@@ -86,7 +89,7 @@ namespace SoilCareWebAPI.Controllers
                 return BadRequest(ModelState);
             }
             SolutionOffer _offer = null;
-            using(SoilCareEntities db = new SoilCareEntities())
+            using (SoilCareEntities db = new SoilCareEntities())
             {
                 _offer = db.SolutionOffers.Find(new string[] { id, offer.Solution_id });
 
@@ -101,7 +104,7 @@ namespace SoilCareWebAPI.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                        throw;
+                    throw;
                 }
             }
             return Ok();

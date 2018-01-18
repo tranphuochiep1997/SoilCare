@@ -25,6 +25,7 @@ namespace SoilCareWebAPI.Data
         public Nullable<double> Value { get; set; }
         public string Unit_name { get; set; }
         public string Unit_symbol { get; set; }
+        public string Quantity { get; set; }
         public string Solution_purpose { get; set; }
         public string Solution_description { get; set; }
         public string Owner { get; set; }

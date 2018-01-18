@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\SoilCare Project\Git new 3\SoilCare\SoilCareWebAPI\SoilCareWebAPI\Data\SoilCareDB.edmx'. 
+﻿// T4 code generation is enabled for model 'E:\SoilCare Project\Git Divide Project\SoilCare\SoilCareWebAPI\SoilCareWebAPI\Data\SoilCareDB.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
