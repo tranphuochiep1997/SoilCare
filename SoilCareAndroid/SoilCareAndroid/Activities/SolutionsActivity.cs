@@ -38,7 +38,7 @@ namespace SoilCareAndroid
             // Get Data using APIConnection
             List<SolutionModel> listSolution = new List<SolutionModel>();
             APIConnection connector = new APIConnection();
-            listSolution = connector.GetData<List<SolutionModel>>(APIConnection.GetSolutions);
+            listSolution = connector.GetData<List<SolutionModel>>(APIConnection.Solutions);
             
             listView.Adapter = new SolutionsAdapter(this, listSolution);
 

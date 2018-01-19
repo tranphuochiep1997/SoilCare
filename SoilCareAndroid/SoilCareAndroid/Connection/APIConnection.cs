@@ -18,13 +18,13 @@ namespace SoilCareAndroid.Connection
         private const string apiUrl = "http://soilcarewebapi.azurewebsites.net/api";
 
         // List Request Type for Get method
-        public static string GetPlants = "Plants";
-        public static string GetPlantById = "Plants/{id}";
-        public static string GetSolutions = "Solutions";
-        public static string GetUserById = "Users/{id}";
-        public static string GetCodeByTelephone = "Users/telephone/{id}";
-        public static string GetSoils = "Soils";
-        public static string GetSoilById = "Soils/{id}";
+        public static string Plants = "Plants";
+        public static string PlantById = "Plants/{id}";
+        public static string Solutions = "Solutions";
+        public static string UserById = "Users/{id}";
+        public static string CodeByTelephone = "Users/telephone/{id}";
+        public static string Soils = "Soils";
+        public static string SoilById = "Soils/{id}";
 
         // List Request Type for Post method
 
