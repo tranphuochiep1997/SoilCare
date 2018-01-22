@@ -19,7 +19,8 @@ namespace SoilCareWebAPI.AutomapperProfile
             CreateMap<AddPlantModel, Plant>();
 
             // Soil
-            CreateMap<Soil, SoilModel>()
+            CreateMap<Soil, SoilModel>();
+            CreateMap<Soil, SoilModelDetail>()
                 .ForMember(dest => dest.Plants,
                 m => m.MapFrom(src => src.Plants.Select(s => s.Plant_id)));
             // Land
@@ -31,8 +32,10 @@ namespace SoilCareWebAPI.AutomapperProfile
 
             // Measure
             CreateMap<Measure, MeasureModel>()
-                .ForMember(dest => dest.Solution,
-                    m => m.MapFrom(src => src.SolutionOffers.Where(s => !s.Status.ToLower().Equals("deleted"))));
+                .ForMember(dest => dest.Plant_name,
+                    m => m.MapFrom(src => src.Plant.Plant_name))
+                .ForMember(dest => dest.HasSolution,
+                    m => m.MapFrom(src => src.SolutionOffers.Where(s => !s.Status.ToLower().Equals("deleted")).Count()));
             CreateMap<AddMeasureModel, Measure>();
 
             // SolutionOffer
@@ -58,6 +61,7 @@ namespace SoilCareWebAPI.AutomapperProfile
             // Solution
             CreateMap<Solution, SolutionModel>();
             CreateMap<AddSolutionModel, Solution>();
+			
 
         }
 

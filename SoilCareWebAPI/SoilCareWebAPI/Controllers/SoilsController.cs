@@ -36,8 +36,8 @@ namespace SoilCareWebAPI.Controllers
             {
                 Soil = db.Soils.Include("Plants")
                                    .Where(s => s.Soil_id.Equals(id))
-                                   .Select(AutoMapper.Mapper.Map<Soil, SoilModel>)
-                                   .FirstOrDefault<SoilModel>();
+                                   .Select(AutoMapper.Mapper.Map<Soil, SoilModelDetail>)
+                                   .FirstOrDefault<SoilModelDetail>();
             }
             if (Soil == null) return NotFound();
             return Ok(Soil);

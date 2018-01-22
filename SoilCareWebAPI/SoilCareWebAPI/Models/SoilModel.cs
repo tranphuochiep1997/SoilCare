@@ -21,7 +21,9 @@ namespace SoilCareWebAPI.Models
         public Nullable<double> Max_water_retention { get; set; }
         public Nullable<double> Min_salinity { get; set; }
         public Nullable<double> Max_salinity { get; set; }
-
+    }
+    public class SoilModelDetail : SoilModel
+    {
         public ICollection<string> Plants { get; set; }
     }
 }

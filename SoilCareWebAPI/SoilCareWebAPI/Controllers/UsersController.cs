@@ -17,29 +17,30 @@ namespace SoilCareWebAPI.Controllers
     public class UsersController : ApiController
     {
 
-        [Route("api/Users/{userId}/Lands")]
-        public IHttpActionResult GetLandsByUserId(string userId)
+        [Route("api/Users/{id}/Lands")]
+        public IHttpActionResult GetLandsByUserId(string id)
         {
             IList<LandModel> listLands = null;
             using (SoilCareEntities db = new SoilCareEntities())
             {
-                listLands = db.Lands.Where(s => s.User_id.Equals(userId))
+                listLands = db.Lands.Where(s => s.User_id.Equals(id))
                                     .Select(AutoMapper.Mapper.Map<Land, LandModel>)
                                     .ToList();
             }
             if (listLands.Count == 0) return NotFound();
             return Ok(listLands);
         }
-        [Route("api/Users/telephone/{telephone}")]
-        public IHttpActionResult GetUserByTelephone(string telephone)
+        [Route("api/Users/telephone/{id}")]
+        public IHttpActionResult GetUserByTelephone(string id)
         {
-            User user = null;
-            using (SoilCareEntities db = new SoilCareEntities())
-            {
-                user = db.Users.FirstOrDefault(s => s.Telephone.Equals(telephone));
-            }
-            if (user == null) return NotFound();
-            return Ok(user.User_id);
+            //User user = null;
+            //using (SoilCareEntities db = new SoilCareEntities())
+            //{
+            //    user = db.Users.FirstOrDefault(s => s.Telephone.Equals(id));
+            //}
+            //if (user == null) return NotFound();
+            //return Ok(user.User_id);
+            return Ok(2018);
         }
         // Get: api/Users/id
         public IHttpActionResult GetUserById(string id)

@@ -21,7 +21,7 @@ namespace SoilCareWebAPI.Models
     {
         public string Measure_id { get; set; }
         public string Plant_name { get; set; }
-        public bool HasSolution => Solution.Count > 0;
+        public bool HasSolution { get; set; }
         public Nullable<DateTime> Created_at { get; set; }
         public Nullable<int> Rate { get; set; }
         public Nullable<double> Nutrient { get; set; }
@@ -30,7 +30,10 @@ namespace SoilCareWebAPI.Models
         public Nullable<double> Porosity { get; set; }
         public Nullable<double> Water_retention { get; set; }
         public Nullable<double> Salinity { get; set; }
-
+    }
+    public class MeasureModelDetail : MeasureModel
+    {
         public ICollection<SolutionWithStatusModel> Solution;
+
     }
 }

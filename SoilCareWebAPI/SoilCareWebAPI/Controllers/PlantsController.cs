@@ -35,7 +35,7 @@ namespace SoilCareWebAPI.Controllers
             PlantModel plant = null;
             using (SoilCareEntities db = new SoilCareEntities())
             {
-                plant = db.Plants.Where(s => s.Plant_id.Equals(id))
+                plant = db.Plants.Include("Soil").Where(s => s.Plant_id.Equals(id))
                              .Select(AutoMapper.Mapper.Map<Plant, PlantModel>)
                              .FirstOrDefault<PlantModel>();
             }

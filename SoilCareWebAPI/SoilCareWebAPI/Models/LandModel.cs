@@ -13,7 +13,11 @@ namespace SoilCareWebAPI.Models
         public string Land_image { get; set; }
         public Nullable<DateTime> Created_at { get; set; }
 
+    }
+    public class LandModelDetail : LandModel
+    {
         public ICollection<MeasureModel> Measures { get; set; }
+
     }
 
     public class AddLandModel

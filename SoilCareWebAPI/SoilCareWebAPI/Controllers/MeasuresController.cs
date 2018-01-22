@@ -38,7 +38,8 @@ namespace SoilCareWebAPI.Controllers
             IList<SolutionWithStatusModel> listSolution = null;
             using (SoilCareEntities db = new SoilCareEntities())
             {
-                listSolution = db.SolutionOffers.Where(s => s.Measure_id.Equals(measureid))
+                listSolution = db.SolutionOffers.Include("Solution")
+                                             .Where(s => s.Measure_id.Equals(measureid))
                                              .Select(AutoMapper.Mapper.Map<SolutionOffer, SolutionWithStatusModel>)
                                              .ToList();
             }

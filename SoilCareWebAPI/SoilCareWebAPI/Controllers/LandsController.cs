@@ -23,7 +23,8 @@ namespace SoilCareWebAPI.Controllers
             IList<MeasureModel> measures = null;
             using (SoilCareEntities db = new SoilCareEntities())
             {
-                measures = db.Measures.Where(s => s.Land_id.Equals(id))
+                measures = db.Measures.Include("Plant").Include("SolutionOffers")
+                                   .Where(s => s.Land_id.Equals(id))
                                    .Select(AutoMapper.Mapper.Map<Measure, MeasureModel>)
                                    .ToList();
             }
@@ -36,10 +37,10 @@ namespace SoilCareWebAPI.Controllers
             LandModel land = null;
             using (SoilCareEntities db = new SoilCareEntities())
             {
-                land = db.Lands.Include("Measures")
-                                   .Where(s => s.Land_id.Equals(id))
-                                   .Select(AutoMapper.Mapper.Map<Land, LandModel>)
-                                   .FirstOrDefault();
+                land = db.Lands
+                            .Where(s => s.Land_id.Equals(id))
+                            .Select(AutoMapper.Mapper.Map<Land, LandModel>)
+                            .FirstOrDefault();
             }
             if (land == null) return NotFound();
             return Ok(land);
