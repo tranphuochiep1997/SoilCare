@@ -9,8 +9,10 @@ namespace SoilCareWebAPI.Models
     {
         public string User_name { get; set; }
         public string User_image { get; set; }
-        public string Telephone { get; set; }
-        public string Region { get; set; }
+        public string User_location { get; set; }
+        public string User_email { get; set; }
+        public string User_telephone { get; set; }
+
     }
     public class UserModel : AddUserModel
     {

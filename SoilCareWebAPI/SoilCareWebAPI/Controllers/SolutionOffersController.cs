@@ -95,7 +95,7 @@ namespace SoilCareWebAPI.Controllers
 
                 if (_offer == null) return NotFound();
 
-                _offer = AutoMapper.Mapper.Map<SolutionOfferModel, SolutionOffer>(offer);
+                AutoMapper.Mapper.Map<SolutionOfferModel, SolutionOffer>(offer, _offer);
                 _offer.Status = "Modified";
 
                 try

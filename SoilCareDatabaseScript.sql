@@ -53,8 +53,9 @@ CREATE TABLE Compatibility(
 CREATE TABLE [User](
 	User_id nvarchar(200),
 	User_name nvarchar(200),
-	Telephone nvarchar(200),
-	Region nvarchar(200),
+	User_telephone nvarchar(200),
+	User_location nvarchar(200),
+	User_email nvarchar(200),
 	User_image nvarchar(200),
 	Created_at datetime,
 	CONSTRAINT User_pk PRIMARY KEY(User_id),

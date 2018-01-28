@@ -33,14 +33,21 @@ namespace SoilCareWebAPI.Controllers
         [Route("api/Users/telephone/{id}")]
         public IHttpActionResult GetUserByTelephone(string id)
         {
-            //User user = null;
-            //using (SoilCareEntities db = new SoilCareEntities())
-            //{
-            //    user = db.Users.FirstOrDefault(s => s.Telephone.Equals(id));
-            //}
-            //if (user == null) return NotFound();
-            //return Ok(user.User_id);
-            return Ok(2018);
+            User user = null;
+            using (SoilCareEntities db = new SoilCareEntities())
+            {
+                user = db.Users.FirstOrDefault(s => s.User_telephone.Equals(id));
+            }
+            if (user == null)
+            {
+                user = PostUserByTelephone(id);
+                if (user == null) return Conflict();
+            }
+            return Ok(new {
+                user.User_id,
+                Verified_code = "2018",
+                Expiration_time = DateTime.Now.AddMinutes(5),
+            });
         }
         // Get: api/Users/id
         public IHttpActionResult GetUserById(string id)
@@ -56,18 +63,13 @@ namespace SoilCareWebAPI.Controllers
             if (user == null) return NotFound();
             return Ok(user);
         }
-        // POST: api/Users
-        [ResponseType(typeof(User))]
-        public IHttpActionResult PostUser(AddUserModel user)
+        // POST telephone first: api/Users
+        public User PostUserByTelephone([FromBody]string telephone)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            User _user = Mapper.Map<AddUserModel, User>(user);
+            User _user = new User();
             _user.User_id = Guid.NewGuid().ToString("N");
             _user.Created_at = DateTime.Now;
+            _user.User_telephone = telephone;
 
             using (SoilCareEntities db = new SoilCareEntities())
             {
@@ -80,12 +82,41 @@ namespace SoilCareWebAPI.Controllers
                 {
                     if (UserExists(db, _user.User_id))
                     {
-                        return Conflict();
+                        return null;
                     }
                     throw;
                 }
             }
-            return CreatedAtRoute("DefaultApi", new { id = _user.User_id }, _user);
+            return _user;
+        }
+        // PUT: api/Users/UserId
+        [ResponseType(typeof(void))]
+        public IHttpActionResult PutUser(string id, AddUserModel user)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            User _user = null;
+            using (SoilCareEntities db = new SoilCareEntities())
+            {
+                _user = db.Users.Find(id);
+
+                if (_user == null) return NotFound();
+
+                // Map model to entity
+                Mapper.Map<AddUserModel, User>(user, _user);
+
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    throw;
+                }
+            }
+            return Ok();
         }
         private bool UserExists(SoilCareEntities db, string id)
         {
