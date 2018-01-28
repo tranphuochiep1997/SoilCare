@@ -11,11 +11,10 @@ namespace SoilCareWebAPI.Models
         public string User_image { get; set; }
         public string User_location { get; set; }
         public string User_email { get; set; }
-        public string User_telephone { get; set; }
-
     }
     public class UserModel : AddUserModel
     {
+        public string User_telephone { get; set; }
         public string User_id { get; set; }
         public Nullable<System.DateTime> Created_at { get; set; }
     }

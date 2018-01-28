@@ -64,7 +64,7 @@ namespace SoilCareWebAPI.Controllers
             return Ok(user);
         }
         // POST telephone first: api/Users
-        public User PostUserByTelephone([FromBody]string telephone)
+        public User PostUserByTelephone(string telephone)
         {
             User _user = new User();
             _user.User_id = Guid.NewGuid().ToString("N");
