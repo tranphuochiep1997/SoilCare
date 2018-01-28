@@ -92,6 +92,5 @@ namespace SoilCareAndroid.Connection
             var response = client.Execute<T>(request);
             return response.Data;
         }
-
     }
 }

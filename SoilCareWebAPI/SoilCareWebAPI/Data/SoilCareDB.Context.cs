@@ -19,7 +19,6 @@ namespace SoilCareWebAPI.Data
             : base("name=SoilCareEntities")
         {
             this.Configuration.LazyLoadingEnabled = false;
-
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

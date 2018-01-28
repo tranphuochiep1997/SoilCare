@@ -11,6 +11,7 @@ namespace SoilCareWebAPI.Models
         public string Land_name { get; set; }
         public string Land_address { get; set; }
         public string Land_image { get; set; }
+        public Nullable<double> Land_area { get; set; }
         public Nullable<DateTime> Created_at { get; set; }
 
     }
@@ -26,5 +27,6 @@ namespace SoilCareWebAPI.Models
         public string Land_address { get; set; }
         public string Land_image { get; set; }
         public string User_id { get; set; }
+        public Nullable<double> Land_area { get; set; }
     }
 }
