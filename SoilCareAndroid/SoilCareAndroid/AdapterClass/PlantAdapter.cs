@@ -12,25 +12,23 @@ using Android.Widget;
 using Java.Lang;
 using SoilCareAndroid.ModelClass;
 
-// Adapter này sẽ k cần nữa : PladtAdapter sẽ thay thế nó nhé các bạn
-// Reference Link : https://blog.ostebaronen.dk/2014/03/filtering-listview-with-searchview-in.html
 namespace SoilCareAndroid.AdapterClass
 {
-    public class LibraryAdapter : BaseAdapter<PlantInfo>, IFilterable
+    class PlantAdapter: BaseAdapter<AddPlantModel>
     {
-        private List<PlantInfo> originalData;
-        private List<PlantInfo> items;
+        private List<AddPlantModel> originalData;
+        private List<AddPlantModel> items;
         private readonly Activity context;
 
-        public LibraryAdapter(Activity context, List<PlantInfo> items) : base()
+        public PlantAdapter(Activity context, List<AddPlantModel> items) : base()
         {
             this.context = context;
-            this.items = items.OrderBy(s=> s.PlantName).ToList();
+            this.items = items.OrderBy(s => s.Plant_name).ToList();
 
-            Filter = new LibraryFilter(this);
+            Filter = new PlantFilter(this);
         }
 
-        public override PlantInfo this[int position] => items[position];
+        public override AddPlantModel this[int position] => items[position];
 
         public override int Count => items.Count;
 
@@ -68,16 +66,19 @@ namespace SoilCareAndroid.AdapterClass
             }
 
             var item = items[position];
-            viewHolder.plantName.Text = item.PlantName;
-            viewHolder.plantDescription.Text = item.PlantDescription;
-            viewHolder.imageView.SetImageResource(item.PlantImage);
+            viewHolder.plantName.Text = item.Plant_name;
+            viewHolder.plantDescription.Text = item.Plant_description;
 
-            if (context.GetType().Equals(typeof(UserLandActivity))) {
+            var bitmapImage = BitmapHelper.GetImageBitmapFromUrl(item.Plant_image);
+            viewHolder.imageView.SetImageBitmap(bitmapImage);
+
+            if (context.GetType().Equals(typeof(UserLandActivity)))
+            {
                 viewHolder.tick.Visibility = ViewStates.Visible;
                 viewHolder.solution.Visibility = ViewStates.Visible;
             }
-            
-            
+
+
             convertView.Tag = viewHolder;
 
             return convertView;
@@ -92,11 +93,11 @@ namespace SoilCareAndroid.AdapterClass
             base.NotifyDataSetChanged();
         }
 
-        private class LibraryFilter : Filter
+        private class PlantFilter : Filter
         {
-            private readonly LibraryAdapter _adapter;
+            private readonly PlantAdapter _adapter;
 
-            public LibraryFilter(LibraryAdapter adapter)
+            public PlantFilter(PlantAdapter adapter)
             {
                 _adapter = adapter;
             }
@@ -104,16 +105,16 @@ namespace SoilCareAndroid.AdapterClass
             protected override FilterResults PerformFiltering(ICharSequence constraint)
             {
                 var returnObj = new FilterResults();
-                var results = new List<PlantInfo>();
+                var results = new List<AddPlantModel>();
                 if (_adapter.originalData == null)
                     _adapter.originalData = _adapter.items;
                 if (constraint == null) return returnObj;
-                if(_adapter.originalData != null && _adapter.originalData.Any())
+                if (_adapter.originalData != null && _adapter.originalData.Any())
                 {
                     //Compare constraint to all names lowercased
                     // if they are contained they are added to results.
                     results.AddRange(
-                        _adapter.originalData.Where(s => s.PlantName.ToLower().Contains(constraint.ToString())));
+                        _adapter.originalData.Where(s => s.Plant_name.ToLower().Contains(constraint.ToString())));
                 }
                 returnObj.Values = FromArray(results.Select(r => r.ToJavaObject()).ToArray());
                 returnObj.Count = results.Count;
@@ -127,7 +128,7 @@ namespace SoilCareAndroid.AdapterClass
             {
                 using (var values = results.Values)
                     _adapter.items = values.ToArray<Java.Lang.Object>()
-                        .Select(r => r.ToNetObject<PlantInfo>()).ToList();
+                        .Select(r => r.ToNetObject<AddPlantModel>()).ToList();
 
                 _adapter.NotifyDataSetChanged();
 

@@ -15,7 +15,7 @@ using SoilCareAndroid.ModelClass;
 
 namespace SoilCareAndroid
 {
-    [Activity(Label = "SolutionsActivity", MainLauncher = true)]
+    [Activity(Label = "SolutionsActivity")]
     public class SolutionsActivity : Activity
     {
         ListView listView;

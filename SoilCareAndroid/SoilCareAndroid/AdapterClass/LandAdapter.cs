@@ -10,21 +10,21 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using SoilCareAndroid.ModelClass;
-// Adapter này sẽ k cần nữa : LandAdapter sẽ thay thế nó nhé các bạn
+
 namespace SoilCareAndroid.AdapterClass
 {
-    public class UserLandAdapter : BaseAdapter<UserLand>
+    class LandAdapter : BaseAdapter<LandModel>
     {
-        List<UserLand> items;
+        List<LandModel> items;
         Activity context;
 
-        public UserLandAdapter(Activity context, List<UserLand> items) : base()
+        public LandAdapter(List<LandModel> items, Activity context): base()
         {
-            this.context = context;
             this.items = items;
+            this.context = context;
         }
 
-        public override UserLand this[int position] => items[position];
+        public override LandModel this[int position] => items[position];
 
         public override int Count => items.Count;
 
@@ -33,20 +33,20 @@ namespace SoilCareAndroid.AdapterClass
             return position;
         }
 
-        public class ViewHolder: Java.Lang.Object
+        public class ViewHolder : Java.Lang.Object
         {
             public TextView LandName;
             public TextView LandDescription;
             public ImageView ImageView;
             public ImageButton ImageButton;
-            
         }
+
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             ViewHolder viewHolder;
-            if(convertView == null)
+            if (convertView == null)
             {
-                convertView = LayoutInflater.FromContext(context).Inflate(Resource.Layout.user_land_row_view, parent,false);
+                convertView = LayoutInflater.FromContext(context).Inflate(Resource.Layout.user_land_row_view, parent, false);
                 viewHolder = new ViewHolder();
                 viewHolder.ImageView = convertView.FindViewById<ImageView>(Resource.Id.imageViewUserLand);
                 viewHolder.LandName = convertView.FindViewById<TextView>(Resource.Id.textViewLandName);
@@ -61,15 +61,17 @@ namespace SoilCareAndroid.AdapterClass
             }
 
             var item = items[position];
-            viewHolder.ImageView.SetImageResource(Resource.Drawable.background);
-            viewHolder.LandName.Text = item.UserLandName;
-            viewHolder.LandDescription.Text = item.UserLandDescription;
+
+            var bitmapImage = BitmapHelper.GetImageBitmapFromUrl(item.Land_image);
+            viewHolder.ImageView.SetImageBitmap(bitmapImage);
+            viewHolder.LandName.Text = item.Land_name;
+            viewHolder.LandDescription.Text = item.Land_address;
             viewHolder.ImageButton.Click += delegate
             {
                 // ((Activity) mContext).startActivityForResult(intent, REQUEST_FOR_ACTIVITY_CODE);
                 context.StartActivity(typeof(EditUserLandActivity));
             };
-            
+
             return convertView;
         }
     }

@@ -15,6 +15,7 @@ using Android.Views;
 using Android.Views.InputMethods;
 using Android.Widget;
 using SoilCareAndroid.AdapterClass;
+using SoilCareAndroid.Connection;
 using SoilCareAndroid.ModelClass;
 
 namespace SoilCareAndroid.Fragments
@@ -26,8 +27,8 @@ namespace SoilCareAndroid.Fragments
         private EditText editTextSearchLibrary;
         private ImageButton imageButton;
 
-        private List<PlantInfo> list;
-        private LibraryAdapter adapter;             
+        private List<AddPlantModel> list;
+        private PlantAdapter adapter;             
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -105,23 +106,26 @@ namespace SoilCareAndroid.Fragments
 
         private void TestData()
         {
-            list = new List<PlantInfo>();     
-            
-            // Item click events showed wrong results , fix later.
-            list.Add(new PlantInfo("Cam", " TRung Quoc ", Resource.Drawable.icon_soilcare2));
-            list.Add(new PlantInfo("Tao", " Lao ", Resource.Drawable.icon_soilcare2));
-            list.Add(new PlantInfo("Buoi", " Viet Nam ", Resource.Drawable.icon_soilcare2));
-            list.Add(new PlantInfo("Oi", " TRung Quoc ", Resource.Drawable.icon_soilcare2));
-            list.Add(new PlantInfo("Xoai", " Thai Lan ", Resource.Drawable.icon_soilcare2));
-            list.Add(new PlantInfo("Man", " Nga ", Resource.Drawable.icon_soilcare2));
-            list.Add(new PlantInfo("Dao", " My ", Resource.Drawable.icon_soilcare2));
-            list.Add(new PlantInfo("Nho", " Quang Binh ", Resource.Drawable.icon_soilcare2));
-            list.Add(new PlantInfo("Quyt", " TRung Quoc ", Resource.Drawable.icon_soilcare2));
-            list.Add(new PlantInfo("Le", " Viet Nam ", Resource.Drawable.icon_soilcare2));
-            list.Add(new PlantInfo("Mang Cau", " TRung Quoc ", Resource.Drawable.icon_soilcare2));
-            list.Add(new PlantInfo("Mit uot", " Han Quoc ", Resource.Drawable.icon_soilcare2));
-            
-            adapter = new LibraryAdapter(this.Activity, list);
+            list = new List<AddPlantModel>();
+
+            //// Item click events showed wrong results , fix later.
+            //list.Add(new PlantInfo("Cam", " TRung Quoc ", Resource.Drawable.icon_soilcare2));
+            //list.Add(new PlantInfo("Tao", " Lao ", Resource.Drawable.icon_soilcare2));
+            //list.Add(new PlantInfo("Buoi", " Viet Nam ", Resource.Drawable.icon_soilcare2));
+            //list.Add(new PlantInfo("Oi", " TRung Quoc ", Resource.Drawable.icon_soilcare2));
+            //list.Add(new PlantInfo("Xoai", " Thai Lan ", Resource.Drawable.icon_soilcare2));
+            //list.Add(new PlantInfo("Man", " Nga ", Resource.Drawable.icon_soilcare2));
+            //list.Add(new PlantInfo("Dao", " My ", Resource.Drawable.icon_soilcare2));
+            //list.Add(new PlantInfo("Nho", " Quang Binh ", Resource.Drawable.icon_soilcare2));
+            //list.Add(new PlantInfo("Quyt", " TRung Quoc ", Resource.Drawable.icon_soilcare2));
+            //list.Add(new PlantInfo("Le", " Viet Nam ", Resource.Drawable.icon_soilcare2));
+            //list.Add(new PlantInfo("Mang Cau", " TRung Quoc ", Resource.Drawable.icon_soilcare2));
+            //list.Add(new PlantInfo("Mit uot", " Han Quoc ", Resource.Drawable.icon_soilcare2));
+
+            APIConnection connector = new APIConnection();
+            list = connector.GetData<List<AddPlantModel>>(APIConnection.Plants);
+
+            adapter = new PlantAdapter(this.Activity, list);
             listView.Adapter = adapter;
             listView.TextFilterEnabled = true;
         }

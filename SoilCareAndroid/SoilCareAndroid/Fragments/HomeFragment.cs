@@ -13,6 +13,7 @@ using Android.Widget;
 using SoilCareAndroid.ModelClass;
 using SoilCareAndroid.AdapterClass;
 using Refractored.Fab;
+using SoilCareAndroid.Connection;
 
 namespace SoilCareAndroid.Fragments
 {
@@ -20,7 +21,7 @@ namespace SoilCareAndroid.Fragments
     {
         private ImageButton buttonAdd;
         private ListView listView;
-        private List<UserLand> list;
+        private List<LandModel> list;
 
         //private FloatingActionButton fab;
         
@@ -65,37 +66,15 @@ namespace SoilCareAndroid.Fragments
             StartActivity(userland);
         }
 
-        // IT WILL BE DELETED SOON
-
-        //private void Fab_Click(object sender, EventArgs e)
-        //{
-        //    ShowCustomAlertDialog();
-        //}
-        //private void ShowCustomAlertDialog()
-        //{
-        //    FragmentTransaction ft = FragmentManager.BeginTransaction();
-        //    //Remove fragment else it will crash as it is already added to backstack
-        //    Fragment prev = FragmentManager.FindFragmentByTag("dialog fragment");
-        //    if(prev != null)
-        //    {
-        //        ft.Remove(prev);
-        //    }
-        //    ft.AddToBackStack(null);
-
-        //    FragmentTransaction transaction = FragmentManager.BeginTransaction();
-        //    NewLandFragment newLand = new NewLandFragment();
-        //    newLand.Show(transaction, "dialog fragment");
-        //}
-
-        // just testing the data 
+        // Get 
         private void TestData()
         {
-            list = new List<UserLand>();
-            for(int i = 1; i <=5; i++)
-            {
-                list.Add(new UserLand("User Land "+i, "User Land Description "+i, Resource.Drawable.icon_profilepicture));
-            }
-            listView.Adapter = new UserLandAdapter(this.Activity, list);
+            // Get Data using APIConnection
+            list = new List<LandModel>();
+            APIConnection connector = new APIConnection();
+            list = connector.GetData<List<LandModel>>(APIConnection.UserLand);
+            listView.Adapter = new LandAdapter(list, this.Activity);
+
             GetListViewSize(listView);
         }
 

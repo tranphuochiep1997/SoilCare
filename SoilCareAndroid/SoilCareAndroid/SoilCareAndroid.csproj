@@ -116,6 +116,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdapterClass\PlantAdapter.cs" />
+    <Compile Include="AdapterClass\LandAdapter.cs" />
     <Compile Include="AdapterClass\LibraryAdapter.cs" />
     <Compile Include="AdapterClass\SolutionsAdapter.cs" />
     <Compile Include="AdapterClass\UserLandAdapter.cs" />
@@ -137,12 +139,15 @@
     <Compile Include="Activities\MeasureActivity.cs" />
     <Compile Include="Activities\MeasureHasPlantActivity.cs" />
     <Compile Include="ModelClass\PlantInfo.cs" />
+    <Compile Include="ModelClass\PlantModel.cs" />
+    <Compile Include="ModelClass\SoilModel.cs" />
     <Compile Include="ModelClass\SolutionModel.cs" />
     <Compile Include="ModelClass\UserLand.cs" />
     <Compile Include="Activities\NewUserLandActivity.cs" />
     <Compile Include="AdapterClass\ObjectExtentions.cs" />
     <Compile Include="Activities\PlantDetailActivity.cs" />
     <Compile Include="Activities\RecommendActivity.cs" />
+    <Compile Include="ModelClass\LandModel.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Activities\SolutionsActivity.cs" />

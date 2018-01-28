@@ -20,12 +20,15 @@ namespace SoilCareAndroid.Connection
         // List Request Type for Get method
         //=========================================================
 
+        //        QUERY FOR PLANT
         // Return all plants in library
         public static string Plants = "Plants";
 
         //Return a plant and its Soil by plant Id
         public static string PlantById = "Plants/{id}";
 
+
+        //        QUERY FOR SOLUTION
         // Return all solutions
         public static string Solutions = "Solutions";
 
@@ -35,18 +38,22 @@ namespace SoilCareAndroid.Connection
         // Return list of solutions of a measurement
         public static string SolutionsByMeasureId = "Measures/{id}/Solutions";
 
+        //        QUERY FOR USER INFORMATION
         // Return user information by user Id
         public static string UserById = "Users/{id}";
         
         // Tạm thời sẽ trả về số 2018
-        public static string CodeByTelephone = "Users/telephone/{id}"; 
+        public static string CodeByTelephone = "Users/telephone/{id}";
 
+
+        //        QUERY FOR SOIL
         // Return all kinds of soils
         public static string Soils = "Soils";
 
         // Return a soil information by soil id
         public static string SoilById = "Soils/{id}";
 
+        //        QUERY FOR LAND
         // Return a list of all lands of a user by his Id
         public static string LandsByUserId = "Users/{id}/Lands";
 
@@ -55,6 +62,10 @@ namespace SoilCareAndroid.Connection
 
         // Return measured history of a land by land Id
         public static string MeasuresByLandId = "Lands/{id}/Measures";
+
+        //        QUERY FOR HOME PAGE
+        // return list of user's land
+        public static string UserLand = "Users/user001/Lands";
 
         // List Request Type for Post method
         //=============================================================

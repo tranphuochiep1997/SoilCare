@@ -1,15 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
 
-namespace SoilCareWebAPI.Models
+using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
+
+namespace SoilCareAndroid.ModelClass
 {
     public class AddPlantModel
     {
         public string Plant_name { get; set; }
-        public string Plant_image { get; set; }
         public string Plant_description { get; set; }
+        public string Plant_image { get; set; }       
     }
     public class PlantModel : AddPlantModel
     {
