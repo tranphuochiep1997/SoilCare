@@ -116,6 +116,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\EditSolutionActivity.cs" />
+    <Compile Include="AdapterClass\EditSolutionAdapter.cs" />
     <Compile Include="AdapterClass\PlantAdapter.cs" />
     <Compile Include="AdapterClass\LandAdapter.cs" />
     <Compile Include="AdapterClass\LibraryAdapter.cs" />
@@ -225,6 +227,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\EditUserLand.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\EditSolution.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

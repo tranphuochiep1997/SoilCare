@@ -11,6 +11,9 @@ using System.Web.Http.Description;
 using AutoMapper;
 using SoilCareWebAPI.Data;
 using SoilCareWebAPI.Models;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
 
 namespace SoilCareWebAPI.Controllers
 {
@@ -30,10 +33,40 @@ namespace SoilCareWebAPI.Controllers
             if (listLands.Count == 0) return NotFound();
             return Ok(listLands);
         }
+        // Get code using telephone
+        [Route("api/Users/GetCode/{id}")]
+        public IHttpActionResult GetCodeByTelephone(string id)
+        {
+            Random rand = new Random();
+            string countryCode = "+84";
+            string telephone = id.Substring(1);
+
+            const string accountSid = "ACb4103bcbc0a10f7941342a3f86191bfe";
+            const string authToken = "6aa84952874c9adeffe542bcae543cfb";
+            TwilioClient.Init(accountSid, authToken);
+
+            string verified_code = rand.Next(1000000).ToString("D6");
+
+            var to = new PhoneNumber(countryCode + telephone);
+            string _body = "Your verify code is "
+                + verified_code + ". Please verify within 5 minutes";
+
+            var message = MessageResource.Create(
+                to,
+                from: new PhoneNumber("+17062223527 "),
+                body: _body);
+
+            return Ok(new {
+                Verified_code = verified_code,
+                Expiration_time = DateTime.Now.AddMinutes(5),
+            });
+        }
+
         [Route("api/Users/telephone/{id}")]
         public IHttpActionResult GetUserByTelephone(string id)
         {
             User user = null;
+            bool IsNew = false;
             using (SoilCareEntities db = new SoilCareEntities())
             {
                 user = db.Users.FirstOrDefault(s => s.User_telephone.Equals(id));
@@ -42,11 +75,11 @@ namespace SoilCareWebAPI.Controllers
             {
                 user = PostUserByTelephone(id);
                 if (user == null) return Conflict();
+                IsNew = true;
             }
             return Ok(new {
                 user.User_id,
-                Verified_code = "2018",
-                Expiration_time = DateTime.Now.AddMinutes(5),
+                IsNew,
             });
         }
         // Get: api/Users/id

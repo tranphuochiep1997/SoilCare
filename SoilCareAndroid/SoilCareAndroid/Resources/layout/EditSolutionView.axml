@@ -4,124 +4,104 @@
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     android:scrollbars="none">
-  <RelativeLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:paddingLeft="10dp"
-      android:paddingRight="10dp">
-    <EditText
-        android:id="@+id/solutionName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cày sâu"
-            
-        android:textSize="@dimen/solutionView_text_size"
-        android:textColor="#000"
-        android:background="@drawable/edit_solution_background"
-        android:layout_marginTop="@dimen/solutionView_margin_row"
-        android:layout_alignParentRight="true"
-        android:width="@dimen/addSolution_editText_width"
-        android:textAlignment="center" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name"
-        android:textSize="@dimen/solutionView_text_size"
-        android:textColor="#000"
-           
-        android:layout_marginTop="@dimen/solutionView_margin_row"
-        android:layout_alignBaseline="@id/solutionName" />
-    <EditText
-        android:id="@+id/quantity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Depth"
-           
-        android:textSize="@dimen/solutionView_text_size"
-        android:textColor="#000"
-        android:background="@drawable/edit_solution_background"
-        android:layout_marginTop="@dimen/solutionView_margin_row"
-        android:layout_below="@id/solutionName"
-        android:layout_alignParentRight="true"
-        android:width="@dimen/addSolution_editText_width"
-        android:textAlignment="center" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quantity"
-        android:textSize="@dimen/solutionView_text_size"
-        android:textColor="#000"
-           
-        android:layout_marginTop="@dimen/solutionView_margin_row"
-        android:layout_alignBaseline="@id/quantity" />
-    <EditText
-        android:id="@+id/value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="30"
-            
-        android:textSize="@dimen/solutionView_text_size"
-        android:textColor="#000"
-        android:background="@drawable/edit_solution_background"
-        android:layout_marginTop="@dimen/solutionView_margin_row"
-        android:layout_below="@id/quantity"
-        android:layout_alignParentRight="true"
-        android:width="@dimen/addSolution_editText_width"
-        android:textAlignment="center" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Value"
-           
-        android:textSize="@dimen/solutionView_text_size"
-        android:textColor="#000"
-        android:layout_marginTop="@dimen/solutionView_margin_row"
-        android:layout_alignBaseline="@id/value" />
-    <EditText
-        android:id="@+id/unit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="cm"
-            
-        android:textSize="@dimen/solutionView_text_size"
-        android:textColor="#000"
-        android:background="@drawable/edit_solution_background"
-        android:layout_marginTop="@dimen/solutionView_margin_row"
-        android:layout_below="@id/value"
-        android:layout_alignParentRight="true"
-        android:width="@dimen/addSolution_editText_width"
-        android:textAlignment="center" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Unit"
-           
-        android:textSize="@dimen/solutionView_text_size"
-        android:textColor="#000"
-        android:layout_marginTop="@dimen/solutionView_margin_row"
-        android:layout_alignBaseline="@id/unit" />
-    <EditText
-        android:id="@+id/description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dùng cuốc, cuốc liên tục xuống đất cho đến khi mệt thì nghỉ."
-        android:textSize="@dimen/solutionView_text_size"
-        android:textColor="#000"
-        android:background="@drawable/edit_solution_background"
-            
-        android:layout_marginTop="@dimen/solutionView_margin_row"
-        android:textAlignment="center"
-        android:layout_below="@id/unit"
-        android:layout_alignParentRight="true"
-        android:width="@dimen/addSolution_editText_width" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Description"
-          
-        android:textSize="@dimen/solutionView_text_size"
-        android:textColor="#000"
-        android:layout_marginTop="@dimen/solutionView_margin_row"
-        android:layout_alignBaseline="@id/description" />
-  </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="@dimen/solutionView_margin_row">
+        <TextView
+            android:id="@+id/solutionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cày sâu, cuốc bẫm"
+            android:textSize="@dimen/solutionView_text_size"
+            android:textColor="#000"
+            android:layout_marginTop="@dimen/solutionView_margin_row"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/solutionView_margin_row">
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="Quantity"
+                android:textSize="@dimen/solutionView_text_size"
+                android:textColor="#000" />
+            <EditText
+                android:id="@+id/quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Depth"
+                android:textSize="@dimen/solutionView_text_size"
+                android:textColor="#000"
+                android:background="@drawable/edit_solution_background"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/solutionView_margin_row">
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="Value"
+                android:textSize="@dimen/solutionView_text_size"
+                android:textColor="#000" />
+            <EditText
+                android:id="@+id/value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="30"
+                android:textSize="@dimen/solutionView_text_size"
+                android:textColor="#000"
+                android:background="@drawable/edit_solution_background"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/solutionView_margin_row">
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="Unit"
+                android:textSize="@dimen/solutionView_text_size"
+                android:textColor="#000" />
+            <EditText
+                android:id="@+id/unitSymbol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="cm"
+                android:textSize="@dimen/solutionView_text_size"
+                android:textColor="#000"
+                android:background="@drawable/edit_solution_background"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/solutionView_margin_row">
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="@dimen/solutionView_text_size"
+                android:textColor="#000" />
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dùng cuốc, cuốc liên tục xuống đất cho đến khi mệt thì nghỉ."
+                android:textSize="@dimen/solutionView_text_size"
+                android:textColor="#000"
+                android:background="@drawable/edit_solution_background"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
 </ScrollView>

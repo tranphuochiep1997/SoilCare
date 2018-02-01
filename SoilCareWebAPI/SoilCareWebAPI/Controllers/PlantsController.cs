@@ -24,6 +24,7 @@ namespace SoilCareWebAPI.Controllers
             {
                 plantList = db.Plants.Where(s => s.Status.ToLower().Equals("approved"))
                                      .Select(AutoMapper.Mapper.Map<Plant, PlantModel>)
+                                     .OrderBy(s => s.Plant_name)
                                      .ToList();
             }
             return plantList;

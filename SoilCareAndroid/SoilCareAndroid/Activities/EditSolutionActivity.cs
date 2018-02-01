@@ -9,50 +9,46 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using SoilCareAndroid.Activities;
 using SoilCareAndroid.AdapterClass;
 using SoilCareAndroid.Connection;
 using SoilCareAndroid.ModelClass;
 
-namespace SoilCareAndroid
+namespace SoilCareAndroid.Activities
 {
-    [Activity(Label = "SolutionsActivity", MainLauncher = true)]
-    public class SolutionsActivity : Activity
+    [Activity(Label = "EditSolutionActivity", MainLauncher = false)]
+    public class EditSolutionActivity : Activity
     {
         ListView listView;
         ImageButton backButton;
-        ImageButton rateButton;
-        ImageButton editButton;
+        ImageButton saveButton;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
- 
+
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.Solutions);
+            SetContentView(Resource.Layout.EditSolution);
 
 
             backButton = FindViewById<ImageButton>(Resource.Id.button_back);
-            rateButton = FindViewById<ImageButton>(Resource.Id.button_rate);
-            editButton = FindViewById<ImageButton>(Resource.Id.button_edit);
+            saveButton = FindViewById<ImageButton>(Resource.Id.button_save);
             listView = FindViewById<ListView>(Resource.Id.list);
 
             // Get Data using APIConnection
             List<SolutionModel> listSolution = new List<SolutionModel>();
             APIConnection connector = new APIConnection();
             listSolution = connector.GetData<List<SolutionModel>>(APIConnection.Solutions);
-            
-            listView.Adapter = new SolutionsAdapter(this, listSolution);
+
+            listView.Adapter = new EditSolutionAdapter(this, listSolution);
 
             backButton.Click += delegate
             {
                 this.OnBackPressed();
             };
-            editButton.Click += delegate
+            saveButton.Click += delegate
             {
-                Intent editSolutionActivity = new Intent(this, typeof(EditSolutionActivity));
-                StartActivity(editSolutionActivity);
+                this.OnBackPressed();
+                this.Finish();
             };
         }
-        
     }
 }
