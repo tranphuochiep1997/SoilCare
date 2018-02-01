@@ -140,10 +140,13 @@
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\MeasureActivity.cs" />
     <Compile Include="Activities\MeasureHasPlantActivity.cs" />
+    <Compile Include="ModelClass\checkTelephone.cs" />
     <Compile Include="ModelClass\PlantInfo.cs" />
     <Compile Include="ModelClass\PlantModel.cs" />
     <Compile Include="ModelClass\SoilModel.cs" />
     <Compile Include="ModelClass\SolutionModel.cs" />
+    <Compile Include="ModelClass\GetCode.cs" />
+    <Compile Include="ModelClass\UserInfo.cs" />
     <Compile Include="ModelClass\UserLand.cs" />
     <Compile Include="Activities\NewUserLandActivity.cs" />
     <Compile Include="AdapterClass\ObjectExtentions.cs" />

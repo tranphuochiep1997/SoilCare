@@ -1,19 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using RestSharp;
+﻿using RestSharp;
 
 namespace SoilCareAndroid.Connection
 {
-    class APIConnection
+    public class APIConnection
     {
         private const string apiUrl = "http://soilcarewebapi.azurewebsites.net/api";
         private RestClient client;
@@ -48,7 +37,9 @@ namespace SoilCareAndroid.Connection
         public static string UserById = "Users/{id}";
         
         // Tạm thời sẽ trả về số 2018
-        public static string CodeByTelephone = "Users/telephone/{id}";
+        public static string CodeByTelephone = "Users/GetCode/{id}";
+
+        public static string UserByTelephone = "Users/telephone/{id}";
 
 
         //        QUERY FOR SOIL
@@ -96,7 +87,7 @@ namespace SoilCareAndroid.Connection
             return response.Data;
         }
 
-        // Post method
+        // Post method, create new one
         public bool PostData(string requestType, object model)
         {
             RestRequest request = new RestRequest(Method.POST);
@@ -107,7 +98,7 @@ namespace SoilCareAndroid.Connection
             return false;
         }
 
-        // Put Data
+        // Put Data, update 
         public bool PutData(string requestType, string id, object model)
         {
             RestRequest request = new RestRequest(Method.PUT);

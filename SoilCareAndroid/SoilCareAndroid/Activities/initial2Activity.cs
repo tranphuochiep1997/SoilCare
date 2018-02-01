@@ -10,6 +10,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using SoilCareAndroid.Connection;
+using SoilCareAndroid.ModelClass;
 
 namespace SoilCareAndroid
 {
@@ -21,6 +23,9 @@ namespace SoilCareAndroid
         private EditText confirm;
         private TextView noti;
         private bool switcher = false;
+        private APIConnection connector = new APIConnection();
+        private GetCode code;
+        private checkTelephone check;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -41,9 +46,40 @@ namespace SoilCareAndroid
                 switcher = true;
                 getphone.ClearFocus();
                 noti.Text = "The code is sending to you as a SMS in several seconds!";
+                code = connector.GetData<GetCode>(APIConnection.CodeByTelephone, getphone.Text);
+                getphone.Focusable = false;
             }
             else
-                StartActivity(typeof(initial3Activity));
+            {
+                int compare = code.Expiration_time.CompareTo(DateTime.Now);
+                if (compare >= 0) //input confirm code ontime
+                    if (confirm.Text==code.Verified_code)
+                    {
+                        check = connector.GetData<checkTelephone>(APIConnection.UserByTelephone, getphone.Text);
+                        if (check.IsNew) //newbie
+                        {
+                            Intent initial3 = new Intent(this, typeof(initial3Activity));
+                            initial3.PutExtra("user_id", check.User_id);
+                            StartActivity(initial3);
+                        }
+                        else //pro
+                        {
+                            Intent mainActivity = new Intent(this, typeof(MainActivity));
+                            mainActivity.PutExtra("user_id", check.User_id);
+                            StartActivity(mainActivity);
+                        }
+                    }
+                    else
+                    {
+                        noti.Text = "You have input an incorrect code. Try again!";
+                    }
+                else
+                {
+                    noti.Text = "The code is expired. You will received another one!";
+                    code = connector.GetData<GetCode>(APIConnection.CodeByTelephone, getphone.Text);
+                }
+            }
         }
     }
 }
+    
