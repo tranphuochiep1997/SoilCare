@@ -10,6 +10,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using SoilCareAndroid.Connection;
+using SoilCareAndroid.ModelClass;
 
 namespace SoilCareAndroid
 {
@@ -18,9 +20,13 @@ namespace SoilCareAndroid
     {
         private EditText name, location, email;
         private Button later, ok;
+        private UserInfo userInfo;
+        private APIConnection connector = new APIConnection();
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            string user_id = Intent.GetStringExtra("user_id");
+            userInfo = connector.GetData<UserInfo>(APIConnection.UserById, user_id);
             SetContentView(Resource.Layout.initial3);
             name = FindViewById<EditText>(Resource.Id.fullname);
             location = FindViewById<EditText>(Resource.Id.location);
@@ -41,14 +47,21 @@ namespace SoilCareAndroid
 
         private void Later_Click(object sender, EventArgs e)
         {
-            StartActivity(typeof(MainActivity));
-            clearFocus();
+            Intent mainActivity = new Intent(this, typeof(MainActivity));
+            mainActivity.PutExtra("user_id", userInfo.User_id);
+            StartActivity(mainActivity);
         }
 
         private void Ok_Click(object sender, EventArgs e)
         {
-            StartActivity(typeof(MainActivity));
-            clearFocus();
+            userInfo.User_email = email.Text;
+            userInfo.User_name = name.Text;
+            userInfo.User_location = location.Text;
+            userInfo.Created_at = DateTime.Now;
+            connector.PutData(APIConnection.UserById, userInfo.User_id, userInfo);
+            Intent mainActivity = new Intent(this, typeof(MainActivity));
+            mainActivity.PutExtra("user_id", userInfo.User_id);
+            StartActivity(mainActivity);
         }
     }
 }
