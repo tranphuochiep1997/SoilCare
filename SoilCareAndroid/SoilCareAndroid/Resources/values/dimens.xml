@@ -8,4 +8,6 @@
   <dimen name="solutionView_text_size">17sp</dimen>
   <dimen name="solutionView_margin_row">15dp</dimen>
   <dimen name="addSolution_editText_width">200dp</dimen>
+  <dimen name="addSolution_TextView_width">130dp</dimen>
+  <dimen name="editSolutionView_TextView_width">100dp</dimen>
 </resources>

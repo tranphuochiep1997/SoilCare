@@ -17,7 +17,7 @@ using System.Collections.Generic;
 namespace SoilCareAndroid
 {
 
-    [Activity(Label = "@string/app_name",MainLauncher =false)]
+    [Activity(Label = "@string/app_name",MainLauncher = false)]
     public class MainActivity : FragmentActivity
     {
         BottomNavigationView bottomNavigation;
