@@ -23,29 +23,10 @@
         <LinearLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:layout_marginTop="@dimen/solutionView_margin_row">
-            <TextView
-                android:layout_width="@dimen/editSolutionView_TextView_width"
-                android:layout_height="wrap_content"
-                android:text="Quantity"
-                android:textSize="@dimen/solutionView_text_size"
-                android:textColor="#000" />
-            <EditText
-                android:id="@+id/quantity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Depth"
-                android:textSize="@dimen/solutionView_text_size"
-                android:textColor="#000"
-                android:background="@drawable/edit_solution_background"
-                android:gravity="center" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
             android:orientation="horizontal"
             android:layout_marginTop="@dimen/solutionView_margin_row">
             <TextView
+                android:id="@+id/quantity"
                 android:layout_width="@dimen/editSolutionView_TextView_width"
                 android:layout_height="wrap_content"
                 android:text="Value"

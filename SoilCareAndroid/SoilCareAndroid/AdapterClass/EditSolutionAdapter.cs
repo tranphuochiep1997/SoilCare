@@ -40,7 +40,7 @@ namespace SoilCareAndroid.AdapterClass
                 view = context.LayoutInflater.Inflate(Resource.Layout.EditSolutionView, null);
             view.FindViewById<TextView>(Resource.Id.solutionName).Text = item.Solution_name;
             view.FindViewById<EditText>(Resource.Id.value).Text = item.Value.ToString();
-            view.FindViewById<EditText>(Resource.Id.quantity).Text = item.Quantity;
+            view.FindViewById<TextView>(Resource.Id.quantity).Text = item.Quantity;
             view.FindViewById<EditText>(Resource.Id.unitSymbol).Text = item.Unit_symbol;
             view.FindViewById<EditText>(Resource.Id.description).Text = item.Solution_description;
             return view;
