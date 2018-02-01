@@ -2812,8 +2812,8 @@ namespace SoilCareAndroid
 			// aapt resource value: 0x7f0800b1
 			public const int buttonCancle = 2131230897;
 			
-			// aapt resource value: 0x7f080105
-			public const int buttonMeasure = 2131230981;
+			// aapt resource value: 0x7f080104
+			public const int buttonMeasure = 2131230980;
 			
 			// aapt resource value: 0x7f080062
 			public const int buttonPanel = 2131230818;
@@ -2892,9 +2892,6 @@ namespace SoilCareAndroid
 			
 			// aapt resource value: 0x7f080099
 			public const int description = 2131230873;
-			
-			// aapt resource value: 0x7f0800fd
-			public const int descriptionText = 2131230973;
 			
 			// aapt resource value: 0x7f08009f
 			public const int design_bottom_sheet = 2131230879;
@@ -3004,8 +3001,8 @@ namespace SoilCareAndroid
 			// aapt resource value: 0x7f0800d8
 			public const int imageButtonClose = 2131230936;
 			
-			// aapt resource value: 0x7f080102
-			public const int imageButtonEdit = 2131230978;
+			// aapt resource value: 0x7f080101
+			public const int imageButtonEdit = 2131230977;
 			
 			// aapt resource value: 0x7f0800aa
 			public const int imageButtonLeftArrow = 2131230890;
@@ -3019,8 +3016,8 @@ namespace SoilCareAndroid
 			// aapt resource value: 0x7f0800f4
 			public const int imageButtonSearchUserLand = 2131230964;
 			
-			// aapt resource value: 0x7f080109
-			public const int imageProfilePic = 2131230985;
+			// aapt resource value: 0x7f080108
+			public const int imageProfilePic = 2131230984;
 			
 			// aapt resource value: 0x7f0800c2
 			public const int imageViewLibrary = 2131230914;
@@ -3028,11 +3025,11 @@ namespace SoilCareAndroid
 			// aapt resource value: 0x7f0800ce
 			public const int imageViewLocation = 2131230926;
 			
-			// aapt resource value: 0x7f080104
-			public const int imageViewSpecifiedUserLand = 2131230980;
+			// aapt resource value: 0x7f080103
+			public const int imageViewSpecifiedUserLand = 2131230979;
 			
-			// aapt resource value: 0x7f0800ff
-			public const int imageViewUserLand = 2131230975;
+			// aapt resource value: 0x7f0800fe
+			public const int imageViewUserLand = 2131230974;
 			
 			// aapt resource value: 0x7f0800b4
 			public const int imageview = 2131230900;
@@ -3088,8 +3085,8 @@ namespace SoilCareAndroid
 			// aapt resource value: 0x7f0800c9
 			public const int listViewLibrary = 2131230921;
 			
-			// aapt resource value: 0x7f080106
-			public const int listViewMeasuredUserLand = 2131230982;
+			// aapt resource value: 0x7f080105
+			public const int listViewMeasuredUserLand = 2131230981;
 			
 			// aapt resource value: 0x7f0800f5
 			public const int listViewPlantDetail = 2131230965;
@@ -3109,29 +3106,29 @@ namespace SoilCareAndroid
 			// aapt resource value: 0x7f0800ca
 			public const int main_content = 2131230922;
 			
-			// aapt resource value: 0x7f080108
-			public const int masked = 2131230984;
+			// aapt resource value: 0x7f080107
+			public const int masked = 2131230983;
 			
 			// aapt resource value: 0x7f0800e5
 			public const int media_actions = 2131230949;
 			
-			// aapt resource value: 0x7f08010e
-			public const int menu_account = 2131230990;
+			// aapt resource value: 0x7f08010d
+			public const int menu_account = 2131230989;
+			
+			// aapt resource value: 0x7f08010a
+			public const int menu_edit = 2131230986;
 			
 			// aapt resource value: 0x7f08010b
-			public const int menu_edit = 2131230987;
+			public const int menu_home = 2131230987;
 			
 			// aapt resource value: 0x7f08010c
-			public const int menu_home = 2131230988;
+			public const int menu_library = 2131230988;
 			
-			// aapt resource value: 0x7f08010d
-			public const int menu_library = 2131230989;
+			// aapt resource value: 0x7f08010e
+			public const int menu_search = 2131230990;
 			
-			// aapt resource value: 0x7f08010f
-			public const int menu_search = 2131230991;
-			
-			// aapt resource value: 0x7f0800fe
-			public const int message = 2131230974;
+			// aapt resource value: 0x7f0800fd
+			public const int message = 2131230973;
 			
 			// aapt resource value: 0x7f080030
 			public const int middle = 2131230768;
@@ -3346,8 +3343,8 @@ namespace SoilCareAndroid
 			// aapt resource value: 0x7f08008d
 			public const int textViewAppVersion = 2131230861;
 			
-			// aapt resource value: 0x7f080101
-			public const int textViewDescription = 2131230977;
+			// aapt resource value: 0x7f080100
+			public const int textViewDescription = 2131230976;
 			
 			// aapt resource value: 0x7f0800b2
 			public const int textViewHome = 2131230898;
@@ -3361,8 +3358,8 @@ namespace SoilCareAndroid
 			// aapt resource value: 0x7f0800b5
 			public const int textViewLandCollectionName = 2131230901;
 			
-			// aapt resource value: 0x7f080100
-			public const int textViewLandName = 2131230976;
+			// aapt resource value: 0x7f0800ff
+			public const int textViewLandName = 2131230975;
 			
 			// aapt resource value: 0x7f08008a
 			public const int textViewLibrary = 2131230858;
@@ -3397,14 +3394,14 @@ namespace SoilCareAndroid
 			// aapt resource value: 0x7f0800dc
 			public const int textViewSalinityLevel = 2131230940;
 			
-			// aapt resource value: 0x7f080103
-			public const int textViewSpecifiedLand = 2131230979;
+			// aapt resource value: 0x7f080102
+			public const int textViewSpecifiedLand = 2131230978;
 			
 			// aapt resource value: 0x7f0800f2
 			public const int textViewSpecifiedPlant = 2131230962;
 			
-			// aapt resource value: 0x7f08010a
-			public const int textViewSponser = 2131230986;
+			// aapt resource value: 0x7f080109
+			public const int textViewSponser = 2131230985;
 			
 			// aapt resource value: 0x7f08008c
 			public const int textViewTeamName = 2131230860;
@@ -3490,8 +3487,8 @@ namespace SoilCareAndroid
 			// aapt resource value: 0x7f0800cc
 			public const int viewpager = 2131230924;
 			
-			// aapt resource value: 0x7f080107
-			public const int visible = 2131230983;
+			// aapt resource value: 0x7f080106
+			public const int visible = 2131230982;
 			
 			// aapt resource value: 0x7f08003b
 			public const int withText = 2131230779;
