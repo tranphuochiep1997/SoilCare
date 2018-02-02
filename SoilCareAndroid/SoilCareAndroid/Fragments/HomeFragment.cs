@@ -24,7 +24,7 @@ namespace SoilCareAndroid.Fragments
         private List<LandModel> list;
 
         //private FloatingActionButton fab;
-        
+        string userId = "";
         
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -35,6 +35,7 @@ namespace SoilCareAndroid.Fragments
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = inflater.Inflate(Resource.Layout.HomeFragment, container, false);
+            userId = this.Arguments.GetString("user_id");
             return view;
         }
 
@@ -42,6 +43,7 @@ namespace SoilCareAndroid.Fragments
         {
             base.OnActivityCreated(savedInstanceState);
             FindViews();
+            
             TestData();
 
             listView.ItemClick += ListView_ItemClick;
@@ -59,8 +61,16 @@ namespace SoilCareAndroid.Fragments
         }
 
         private void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
-        {          
-
+        {
+            Bundle bundle = this.Arguments;
+            if (bundle == null)
+            {
+                Toast.MakeText(this.Activity, userId + "not OK", ToastLength.Long).Show();
+            }
+            else
+            {
+                Toast.MakeText(this.Activity, userId + "OK", ToastLength.Long).Show();
+            }
             var userland = new Intent(this.Activity, typeof(UserLandActivity));
             userland.PutExtra("UserLandData", "Data from HomeActivity");
             StartActivity(userland);
