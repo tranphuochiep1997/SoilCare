@@ -40,25 +40,4 @@
         android:textColor="@color/colorWhite"
         android:layout_gravity="center"
         android:textAlignment="center" />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Confirm your code"
-        android:layout_marginTop="20dp"
-        android:id="@+id/confirm"
-        android:textColorHint="@color/brown"
-        android:textStyle="italic"
-        android:inputType="numberDecimal"
-        android:textColor="@color/brown"
-        android:maxLength="6"
-        android:gravity="center"
-        android:layout_gravity="center" />
-    <TextView
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/brown"
-        android:textSize="17sp"
-        android:id="@+id/noti"
-        android:layout_gravity="center"
-        android:gravity="center" />
 </LinearLayout>
