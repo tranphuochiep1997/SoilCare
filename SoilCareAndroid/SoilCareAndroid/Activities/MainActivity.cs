@@ -26,6 +26,9 @@ namespace SoilCareAndroid
         HomeFragment homeFragment;
         LibraryFragment libraryFragment;
         AccountFragment accountFragment;
+
+        private checkTelephone check;
+
         //SettingsFragment settingsFragment;
 
 
@@ -40,6 +43,7 @@ namespace SoilCareAndroid
             viewPager = FindViewById<ViewPager>(Resource.Id.viewpager);
             viewPager.PageSelected += ViewPager_PageSelected;
             SetUpViewPager(viewPager);
+            //sendData();
 
         }
 
@@ -68,6 +72,11 @@ namespace SoilCareAndroid
             adapter.AddFragment(accountFragment);
             //adapter.AddFragment(settingsFragment);
             viewPager.Adapter = adapter;
+        }
+
+        public string getMyData()
+        {
+            return Intent.GetStringExtra("user_id");
         }
     }
 

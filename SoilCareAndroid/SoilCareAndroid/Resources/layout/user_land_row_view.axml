@@ -3,22 +3,21 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     card_view:cardUseCompatPadding="true"
-    card_view:cardElevation="4dp"
+    card_view:cardElevation="2dp"
     card_view:cardCornerRadius="6dp"
-    card_view:contentPadding="2dp"
+    card_view:contentPadding="1dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:orientation="vertical"
-        android:layout_margin="3dp"
+        android:layout_margin="1dp"
         android:descendantFocusability="blocksDescendants">
         <ImageView
             android:id="@+id/imageViewUserLand"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:padding="5dp"
+            android:padding="3dp"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
             android:src="@drawable/background" />
@@ -26,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_margin="5dp"
+            android:layout_margin="3dp"
             android:background="#80060605"
             android:layout_alignParentBottom="true">
             <LinearLayout

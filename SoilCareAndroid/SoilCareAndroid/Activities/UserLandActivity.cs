@@ -47,8 +47,7 @@ namespace SoilCareAndroid
 
         private void ImageButton_Click(object sender, EventArgs e)
         {
-            StartActivity(typeof(MainActivity));
-            Finish();
+            this.OnBackPressed();
         }
 
         private void FindViews()

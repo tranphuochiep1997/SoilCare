@@ -65,13 +65,13 @@ namespace SoilCareAndroid
                         }
                         else //pro
                         {
-                            Bundle bunlde = new Bundle();
-                            bunlde.PutString("user_id", check.User_id);
-                            HomeFragment home = new HomeFragment();
-                            home.Arguments = bunlde;
+                            //Bundle bunlde = new Bundle();
+                            //bunlde.PutString("user_id", check.User_id);
+                            //HomeFragment home = new HomeFragment();
+                            //home.Arguments = bunlde;
 
                             Intent mainActivity = new Intent(this, typeof(MainActivity));
-                            //mainActivity.PutExtra("user_id", check.User_id);
+                            mainActivity.PutExtra("user_id", check.User_id);
                             StartActivity(mainActivity);
                         }
                     }

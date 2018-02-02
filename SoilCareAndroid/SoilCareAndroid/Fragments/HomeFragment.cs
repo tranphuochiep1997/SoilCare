@@ -35,7 +35,8 @@ namespace SoilCareAndroid.Fragments
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = inflater.Inflate(Resource.Layout.HomeFragment, container, false);
-            userId = this.Arguments.GetString("user_id");
+            MainActivity main = (MainActivity)this.Activity;
+            userId = main.getMyData();
             return view;
         }
 
@@ -62,8 +63,7 @@ namespace SoilCareAndroid.Fragments
 
         private void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            Bundle bundle = this.Arguments;
-            if (bundle == null)
+            if (userId.Equals(""))
             {
                 Toast.MakeText(this.Activity, userId + "not OK", ToastLength.Long).Show();
             }
@@ -82,7 +82,7 @@ namespace SoilCareAndroid.Fragments
             // Get Data using APIConnection
             list = new List<LandModel>();
             APIConnection connector = new APIConnection();
-            list = connector.GetData<List<LandModel>>(APIConnection.UserLand);
+            list = connector.GetData<List<LandModel>>(APIConnection.LandsByUserId, userId);            
             listView.Adapter = new LandAdapter(list, this.Activity);
 
             GetListViewSize(listView);
