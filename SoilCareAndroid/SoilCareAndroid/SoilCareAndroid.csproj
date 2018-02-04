@@ -132,6 +132,7 @@
     <Compile Include="Fragments\AccountFragment.cs" />
     <Compile Include="Fragments\HomeFragment.cs" />
     <Compile Include="Fragments\LibraryFragment.cs" />
+    <Compile Include="Fragments\RootFragment.cs" />
     <Compile Include="Fragments\SettingsFragment.cs" />
     <Compile Include="Fragments\UserLandFragment.cs" />
     <Compile Include="Activities\initial1Activity.cs" />
@@ -236,6 +237,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\UserLandFragment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\root_fragment.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

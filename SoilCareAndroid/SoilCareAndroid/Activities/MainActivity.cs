@@ -17,15 +17,16 @@ using System.Collections.Generic;
 namespace SoilCareAndroid
 {
 
-    [Activity(Label = "@string/app_name",MainLauncher = false)]
+    [Activity(Label = "@string/app_name",MainLauncher = true)]
     public class MainActivity : FragmentActivity
     {
         BottomNavigationView bottomNavigation;
         ViewPager viewPager;
-
+        RootFragment rootFragment;
         HomeFragment homeFragment;
         LibraryFragment libraryFragment;
         AccountFragment accountFragment;
+        UserLandFragment userLandFragment;
 
         private checkTelephone check;
 
@@ -62,21 +63,35 @@ namespace SoilCareAndroid
         private void SetUpViewPager(ViewPager viewPager)
         {
             ViewPagerAdapter adapter = new ViewPagerAdapter(SupportFragmentManager);
+            rootFragment = new RootFragment();
             homeFragment = new HomeFragment();
             libraryFragment = new LibraryFragment();
             accountFragment = new AccountFragment();
+            userLandFragment = new UserLandFragment();
            // settingsFragment = new SettingsFragment();
 
-            adapter.AddFragment(homeFragment);
+            adapter.AddFragment(rootFragment);
             adapter.AddFragment(libraryFragment);
             adapter.AddFragment(accountFragment);
-            //adapter.AddFragment(settingsFragment);
+            //adapter.AddFragment(userLandFragment);
             viewPager.Adapter = adapter;
         }
 
         public string getMyData()
         {
             return Intent.GetStringExtra("user_id");
+        }
+        public override void OnBackPressed()
+        {
+            if(SupportFragmentManager.BackStackEntryCount > 0)
+            {
+                SupportFragmentManager.PopBackStack();
+            }
+            else
+            {
+                base.OnBackPressed();
+            }
+            
         }
     }
 

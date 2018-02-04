@@ -28,8 +28,7 @@ namespace SoilCareAndroid.Fragments
         
         public override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
-            
+            base.OnCreate(savedInstanceState);            
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -46,12 +45,19 @@ namespace SoilCareAndroid.Fragments
             FindViews();
             
             TestData();
-
             listView.ItemClick += ListView_ItemClick;
             buttonAdd.Click += ButtonAdd_Click;
 
             //fab.Click += Fab_Click;
 
+        }
+        private void ReplaceFragment()
+        {
+            global::Android.Support.V4.App.FragmentTransaction transaction = FragmentManager.BeginTransaction();
+            transaction.Replace(Resource.Id.root_frame, new UserLandFragment());
+            transaction.SetTransition(global::Android.Support.V4.App.FragmentTransaction.TransitFragmentOpen);
+            transaction.AddToBackStack(null);
+            transaction.Commit();
         }
 
         private void ButtonAdd_Click(object sender, EventArgs e)
@@ -63,17 +69,21 @@ namespace SoilCareAndroid.Fragments
 
         private void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            if (userId.Equals(""))
-            {
-                Toast.MakeText(this.Activity, userId + "not OK", ToastLength.Long).Show();
-            }
-            else
-            {
-                Toast.MakeText(this.Activity, userId + "OK", ToastLength.Long).Show();
-            }
-            var userland = new Intent(this.Activity, typeof(UserLandActivity));
-            userland.PutExtra("UserLandData", "Data from HomeActivity");
-            StartActivity(userland);
+            // REPLACE FRAGMENT HERE
+            var item = this.list[e.Position];
+            UserLandFragment userLandFragment = new UserLandFragment();
+            Bundle args = new Bundle();
+            args.PutString("Land Name",item.Land_name);
+            args.PutString("Image Path", item.Land_image);
+            userLandFragment.Arguments = args;
+            
+
+
+            global::Android.Support.V4.App.FragmentTransaction transaction = FragmentManager.BeginTransaction();
+            transaction.Replace(Resource.Id.root_frame, userLandFragment);
+            transaction.SetTransition(global::Android.Support.V4.App.FragmentTransaction.TransitFragmentOpen);
+            transaction.AddToBackStack(null);
+            transaction.Commit();
         }
 
         // Get 
@@ -82,7 +92,8 @@ namespace SoilCareAndroid.Fragments
             // Get Data using APIConnection
             list = new List<LandModel>();
             APIConnection connector = new APIConnection();
-            list = connector.GetData<List<LandModel>>(APIConnection.LandsByUserId, userId);            
+            //list = connector.GetData<List<LandModel>>(APIConnection.LandsByUserId, userId);
+            list = connector.GetData<List<LandModel>>(APIConnection.UserLand);
             listView.Adapter = new LandAdapter(list, this.Activity);
 
             GetListViewSize(listView);

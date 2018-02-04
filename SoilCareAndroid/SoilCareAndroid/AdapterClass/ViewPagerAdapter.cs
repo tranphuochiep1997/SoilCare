@@ -16,6 +16,7 @@ namespace SoilCareAndroid.AdapterClass
     public class ViewPagerAdapter : FragmentPagerAdapter
     {
         private List<global::Android.Support.V4.App.Fragment> list;
+
         public ViewPagerAdapter(global::Android.Support.V4.App.FragmentManager fm) : base(fm)
         {
             list = new List<global::Android.Support.V4.App.Fragment>();
@@ -27,6 +28,7 @@ namespace SoilCareAndroid.AdapterClass
         {
             return list[position];
         }
+
         public void AddFragment(global::Android.Support.V4.App.Fragment fragment)
         {
             list.Add(fragment);
