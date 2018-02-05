@@ -7,6 +7,7 @@ using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.OS;
+using Android.Preferences;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
@@ -17,11 +18,15 @@ namespace SoilCareAndroid
     public class initial1Activity : Activity
     {
         System.Timers.Timer timer = null;
-
+        ISharedPreferences sharedPreferences;
+        ISharedPreferencesEditor editor;
+        string user_id;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
+            sharedPreferences =
+                Application.Context.GetSharedPreferences("USER_ID", FileCreationMode.Private);
+            editor = sharedPreferences.Edit();
             SetContentView(Resource.Layout.initial1);
 
             timer = new System.Timers.Timer();
@@ -30,12 +35,28 @@ namespace SoilCareAndroid
             timer.Start();
         }
 
-        void t_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        private void t_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             timer.Stop();
-            StartActivity(typeof(initial2Activity));
+            loadUserID();
+            if (user_id == "") //logged out
+            {
+                StartActivity(typeof(initial2Activity));
+            }
+            else //load logged in user id
+            {
+                Intent mainActivity = new Intent(this, typeof(MainActivity));
+                mainActivity.PutExtra("user_id", user_id);
+                StartActivity(mainActivity);
+            }
             Finish();
         }
-
+        private void loadUserID() //load userid from sharedPreferences
+        {
+            if (sharedPreferences != null)
+            {
+                user_id = sharedPreferences.GetString("user_id", "");
+            }
+        }
     }
 }

@@ -27,6 +27,8 @@ namespace SoilCareAndroid
         private checkTelephone check;
         private string phone;
         private string confirm;
+        ISharedPreferences sharedPreferences;
+        ISharedPreferencesEditor editor;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -34,7 +36,9 @@ namespace SoilCareAndroid
             getcode = FindViewById<Button>(Resource.Id.getcode);
             getphone = FindViewById<EditText>(Resource.Id.getphone);
             getcode.Click += Getcode_Click;
-
+            sharedPreferences = 
+                Application.Context.GetSharedPreferences("USER_ID", FileCreationMode.Private);
+            editor = sharedPreferences.Edit();
         }
         private void alertMes(string title, string mes, string button)
         {
@@ -104,6 +108,8 @@ namespace SoilCareAndroid
                             mainActivity.PutExtra("user_id", check.User_id);
                             StartActivity(mainActivity);
                         }
+                        editor.PutString("user_id", check.User_id);
+                        editor.Apply();
                     }
                     else
                         alertMes("Sorry", "You have input an incorrect code. Try again!", "OK");
