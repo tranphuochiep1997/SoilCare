@@ -42,7 +42,7 @@ namespace SoilCareAndroid.AdapterClass
             view.FindViewById<EditText>(Resource.Id.value).Text = item.Value.ToString();
             view.FindViewById<TextView>(Resource.Id.quantity).Text = item.Quantity;
             view.FindViewById<EditText>(Resource.Id.unitSymbol).Text = item.Unit_symbol;
-            view.FindViewById<EditText>(Resource.Id.description).Text = item.Solution_description;
+            view.FindViewById<TextView>(Resource.Id.description).Text = item.Solution_description;
             return view;
         }
     }
