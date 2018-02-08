@@ -32,6 +32,10 @@ namespace SoilCareAndroid
             {
                 this.OnBackPressed();
             };
+            saveButton.Click += delegate
+            {
+                this.OnBackPressed();
+            };
         }
     }
 }
