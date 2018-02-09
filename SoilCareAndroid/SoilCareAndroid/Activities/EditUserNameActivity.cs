@@ -34,7 +34,6 @@ namespace SoilCareAndroid
 
         private void LeftArrow_Click(object sender, EventArgs e)
         {
-            StartActivity(typeof(MainActivity));
             Finish();
         }
         private void FindViews()

@@ -23,13 +23,14 @@ namespace SoilCareAndroid.Fragments
         private ListView listView;
         private List<LandModel> list;
 
-        //private FloatingActionButton fab;
+        private TextView textView;
+        //LandAdapter adapter;
+
         string userId = "";
-        
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -44,48 +45,64 @@ namespace SoilCareAndroid.Fragments
         {
             base.OnActivityCreated(savedInstanceState);
             FindViews();
-            
-            TestData();
 
+            TestData();
             listView.ItemClick += ListView_ItemClick;
             buttonAdd.Click += ButtonAdd_Click;
-
-            //fab.Click += Fab_Click;
-
         }
 
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
-            var newuserland = new Intent(this.Activity, typeof(NewUserLandActivity));
-            newuserland.PutExtra("NewUserLandData", "Data from HomeActivity");
-            StartActivity(newuserland);
+            AddNewLandFragment addNewLandFragment = new AddNewLandFragment();
+            Bundle args = new Bundle();
+            args.PutString("User ID", userId);
+            addNewLandFragment.Arguments = args;
+            ReplaceFragment(addNewLandFragment);           
         }
+        public void ReplaceFragment(global::Android.Support.V4.App.Fragment fragment)
+        {
+            //AddNewLandFragment addNewLandFragment = new AddNewLandFragment();
 
+            global::Android.Support.V4.App.FragmentTransaction transaction = FragmentManager.BeginTransaction();
+            transaction.Replace(Resource.Id.root_frame, fragment);
+            transaction.SetTransition(global::Android.Support.V4.App.FragmentTransaction.TransitFragmentOpen);
+            transaction.AddToBackStack(null);
+            transaction.Commit();
+        }
         private void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            if (userId.Equals(""))
-            {
-                Toast.MakeText(this.Activity, userId + "not OK", ToastLength.Long).Show();
-            }
-            else
-            {
-                Toast.MakeText(this.Activity, userId + "OK", ToastLength.Long).Show();
-            }
-            var userland = new Intent(this.Activity, typeof(UserLandActivity));
-            userland.PutExtra("UserLandData", "Data from HomeActivity");
-            StartActivity(userland);
-        }
+            // REPLACE FRAGMENT HERE
+            var item = this.list[e.Position];
+            UserLandFragment userLandFragment = new UserLandFragment();
+            Bundle args = new Bundle();
+            args.PutString("Land Name", item.Land_name);
+            args.PutString("Image Path", item.Land_image);
+            userLandFragment.Arguments = args;
 
+            global::Android.Support.V4.App.FragmentTransaction transaction = FragmentManager.BeginTransaction();
+            transaction.Replace(Resource.Id.root_frame, userLandFragment);
+            transaction.SetTransition(global::Android.Support.V4.App.FragmentTransaction.TransitFragmentOpen);
+            transaction.AddToBackStack(null);
+            transaction.Commit();
+        }
         // Get 
         private void TestData()
         {
             // Get Data using APIConnection
             list = new List<LandModel>();
             APIConnection connector = new APIConnection();
-            list = connector.GetData<List<LandModel>>(APIConnection.LandsByUserId, userId);            
-            listView.Adapter = new LandAdapter(list, this.Activity);
-
-            GetListViewSize(listView);
+            list = connector.GetData<List<LandModel>>(APIConnection.LandsByUserId, userId);
+            if(list == null)
+            {
+                listView.Visibility = ViewStates.Gone;
+                textView.Visibility = ViewStates.Visible;
+            }
+            else {
+                listView.Visibility = ViewStates.Visible;
+                textView.Visibility = ViewStates.Gone;
+                listView.Adapter = new LandAdapter(list, this.Activity);
+                GetListViewSize(listView);
+            }           
         }
 
         private void GetListViewSize(ListView myListView)
@@ -108,17 +125,18 @@ namespace SoilCareAndroid.Fragments
             //ViewGroup.LayoutParams params = myListView.getLayoutParams();
             ViewGroup.LayoutParams params2 = myListView.LayoutParameters;
             params2.Height = totalHeight + (myListView.DividerHeight * (myListAdapter.Count) - 1);
-            myListView.LayoutParameters = params2;            
+            myListView.LayoutParameters = params2;
         }
 
         private void FindViews()
         {
             listView = this.View.FindViewById<ListView>(Resource.Id.listViewLandList);
             buttonAdd = this.View.FindViewById<ImageButton>(Resource.Id.imageButtonAdd);
+            textView = this.View.FindViewById<TextView>(Resource.Id.textViewAlert);
             //fab = this.View.FindViewById<FloatingActionButton>(Resource.Id.fab1);
             //fab.AttachToListView(listView);        
         }
 
-   
+
     }
 }

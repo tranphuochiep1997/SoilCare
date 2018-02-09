@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
+    android:layout_height="match_parent"
     android:background="@drawable/backgr"
-    android:focusableInTouchMode="true"
-    android:focusable="true">
+    android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -27,12 +26,12 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:padding="10dp"
-            android:text=" Edit Your Land"
+            android:text="Add My New Land"
             android:textColor="@android:color/white"
             android:textSize="20dp"
             android:textStyle="bold" />
     </LinearLayout>
-    <ScrollView xmlns:tools="http://schemas.android.com/tools"
+    <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
@@ -49,7 +48,7 @@
                 android:layout_marginTop="8dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/icon_image" />
+                android:src="@android:drawable/ic_menu_gallery" />
             <EditText
                 android:id="@+id/editTextNewLandName"
                 android:layout_width="match_parent"

@@ -130,8 +130,12 @@
     <Compile Include="Activities\EditUserNameActivity.cs" />
     <Compile Include="Connection\APIConnection.cs" />
     <Compile Include="Fragments\AccountFragment.cs" />
+    <Compile Include="Fragments\AddNewLandFragment.cs" />
+    <Compile Include="Fragments\EditUserLandFragment.cs" />
+    <Compile Include="Fragments\FunctionFragment.cs" />
     <Compile Include="Fragments\HomeFragment.cs" />
     <Compile Include="Fragments\LibraryFragment.cs" />
+    <Compile Include="Fragments\RootFragment.cs" />
     <Compile Include="Fragments\SettingsFragment.cs" />
     <Compile Include="Fragments\UserLandFragment.cs" />
     <Compile Include="Activities\initial1Activity.cs" />
@@ -236,6 +240,15 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\UserLandFragment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\root_fragment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AddNewLandFragment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\EditUserLandFragment.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
