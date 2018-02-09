@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using SoilCareAndroid.Fragments;
 using SoilCareAndroid.ModelClass;
 
 namespace SoilCareAndroid.AdapterClass
@@ -68,7 +69,6 @@ namespace SoilCareAndroid.AdapterClass
             viewHolder.LandDescription.Text = item.Land_address;
             viewHolder.ImageButton.Click += delegate
             {
-                // ((Activity) mContext).startActivityForResult(intent, REQUEST_FOR_ACTIVITY_CODE);
                 context.StartActivity(typeof(EditUserLandActivity));
             };
 

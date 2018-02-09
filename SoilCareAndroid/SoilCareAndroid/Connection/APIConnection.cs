@@ -52,6 +52,8 @@ namespace SoilCareAndroid.Connection
         //        QUERY FOR LAND
         // Return a list of all lands of a user by his Id
         public static string LandsByUserId = "Users/{id}/Lands";
+        // Post a new land 
+        public static string AddNewLand = "Lands";
 
         // Access Land Table
         public static string Lands = "Lands";
