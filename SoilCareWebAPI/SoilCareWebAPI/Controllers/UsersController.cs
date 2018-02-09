@@ -26,7 +26,7 @@ namespace SoilCareWebAPI.Controllers
             IList<LandModel> listLands = null;
             using (SoilCareEntities db = new SoilCareEntities())
             {
-                listLands = db.Lands.Where(s => s.User_id.Equals(id))
+                listLands = db.Lands.Where(s => s.User_id.Equals(id) && s.Status.ToLower().Equals("active"))
                                     .Select(AutoMapper.Mapper.Map<Land, LandModel>)
                                     .ToList();
             }

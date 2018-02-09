@@ -143,6 +143,7 @@
     <Compile Include="ModelClass\checkTelephone.cs" />
     <Compile Include="ModelClass\PlantInfo.cs" />
     <Compile Include="ModelClass\PlantModel.cs" />
+    <Compile Include="ModelClass\ImgurResponseModel.cs" />
     <Compile Include="ModelClass\SoilModel.cs" />
     <Compile Include="ModelClass\SolutionModel.cs" />
     <Compile Include="ModelClass\GetCode.cs" />
@@ -236,8 +237,8 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\UserLandFragment.axml">
-	   <SubType>Designer</SubType>
-	</AndroidResource>
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\FooterView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
