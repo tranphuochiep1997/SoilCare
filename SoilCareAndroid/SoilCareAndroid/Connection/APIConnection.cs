@@ -1,10 +1,14 @@
-﻿using RestSharp;
+﻿using Android.Graphics;
+using RestSharp;
+using SoilCareAndroid.ModelClass;
 
 namespace SoilCareAndroid.Connection
 {
     public class APIConnection
     {
         private const string apiUrl = "http://soilcarewebapi.azurewebsites.net/api";
+        private const string imgurApi = "https://api.imgur.com/";
+
         private RestClient client;
         public APIConnection()
         {
@@ -96,8 +100,57 @@ namespace SoilCareAndroid.Connection
             request.Resource = requestType;
             request.AddObject(model);
             var response = client.Execute(request);
-            if (response.IsSuccessful) return true;
-            return false;
+            return response.IsSuccessful;
+        }
+
+        // Return access link of image
+        // UserOrLandImage can be "avatar" or "land" to access folder
+        public string PostImage(Bitmap bitmap, string AvatarOrLandImage)
+        {
+            string albumHash;
+            if (AvatarOrLandImage.ToLower().Equals("avatar"))
+            {
+                albumHash = "JqYSF";
+            } else if (AvatarOrLandImage.ToLower().Equals("land"))
+            {
+                albumHash = "ff15H";
+            } else
+            {
+                return "Invalid AvatarOrLandImage";
+            }
+            string imageBase64 = BitmapHelper.BitmapToBase64(bitmap);
+            string accessToken = GenerateImgurAccessToken();
+
+            RestClient client = new RestClient(imgurApi);
+            RestRequest request = new RestRequest("3/image", Method.POST);
+
+            request.AddHeader("Authorization", "Bearer "+accessToken);
+            request.AddParameter("image", imageBase64);
+            request.AddParameter("album", albumHash);
+            request.AddParameter("type", "base64");
+
+            var response = client.Execute<ImgurResponseModel>(request);
+            if (response.Data.success)
+            {
+                return response.Data.data.link;
+            }
+            return "Error when upload image!";
+        }
+        public bool DeleteImage(string oldImageLink)
+        {
+            int lastSlash = oldImageLink.LastIndexOf('/') + 1;
+            int lastDot = oldImageLink.LastIndexOf('.');
+            string imageId = oldImageLink.Substring(lastSlash, lastDot - lastSlash);
+            string accessToken = GenerateImgurAccessToken();
+
+            // Use image Id to get deletehash first
+            RestClient client = new RestClient(imgurApi);
+            RestRequest request = new RestRequest("3/image/{imageHash}", Method.DELETE);
+            request.AddHeader("Authorization", "Bearer " + accessToken);
+            request.AddParameter("imageHash", imageId, ParameterType.UrlSegment);
+            var response = client.Execute(request);
+
+            return response.IsSuccessful;
         }
 
         // Put Data, update 
@@ -108,8 +161,18 @@ namespace SoilCareAndroid.Connection
             request.AddParameter("id", id, ParameterType.UrlSegment);
             request.AddObject(model);
             var response = client.Execute(request);
-            if (response.IsSuccessful) return true;
-            return false;
+            return response.IsSuccessful;
+        }
+        private string GenerateImgurAccessToken()
+        {
+            RestClient client = new RestClient(imgurApi);
+            RestRequest request = new RestRequest("oauth2/token", Method.POST);
+            request.AddParameter("refresh_token", "c6e298c62805b388ba1d0bfdc5752c42f3fad9d8", ParameterType.GetOrPost);
+            request.AddParameter("client_id", "2c2c92711774e09", ParameterType.GetOrPost);
+            request.AddParameter("client_secret", "9dd26dbaaf63d1d6e241e51969639254970a359c", ParameterType.GetOrPost);
+            request.AddParameter("grant_type", "refresh_token", ParameterType.GetOrPost);
+            var response = client.Execute<AccessToken>(request);
+            return response.Data.access_token;
         }
     }
 }

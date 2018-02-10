@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Graphics;
 using System.Net;
+using System.IO;
 
 namespace SoilCareAndroid
 {
@@ -56,6 +57,19 @@ namespace SoilCareAndroid
             }
 
             return imageBitmap;
+        }
+        // convert a bitmap to base64
+        public static string BitmapToBase64(Bitmap bitmap)
+        {
+            Bitmap param = bitmap;
+            string base64;
+            using (MemoryStream stream = new MemoryStream())
+            {
+                param.Compress(Bitmap.CompressFormat.Jpeg, 100, stream);
+                byte[] byteArray = stream.ToArray();
+                base64 = Convert.ToBase64String(byteArray);
+            }
+            return base64;
         }
     }
 }
