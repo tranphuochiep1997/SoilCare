@@ -129,6 +129,7 @@
     <Compile Include="BottomNavigationViewHelper.cs" />
     <Compile Include="Activities\EditUserNameActivity.cs" />
     <Compile Include="Connection\APIConnection.cs" />
+    <Compile Include="Connection\GetDataFirst.cs" />
     <Compile Include="Fragments\AccountFragment.cs" />
     <Compile Include="Fragments\AddNewLandFragment.cs" />
     <Compile Include="Fragments\EditUserLandFragment.cs" />

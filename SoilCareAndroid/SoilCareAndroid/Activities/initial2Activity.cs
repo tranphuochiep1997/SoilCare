@@ -29,6 +29,7 @@ namespace SoilCareAndroid
         private string confirm;
         ISharedPreferences sharedPreferences;
         ISharedPreferencesEditor editor;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -72,6 +73,7 @@ namespace SoilCareAndroid
             }
             return true;
         }
+
         private void Getcode_Click(object sender, EventArgs e)
         {
             if (!switcher)  //for GETCODE button

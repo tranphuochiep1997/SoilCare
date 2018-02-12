@@ -13,6 +13,9 @@ using Android.Views;
 using Android.Support.V4.App;
 using SoilCareAndroid.ModelClass;
 using System.Collections.Generic;
+using Android.Content;
+using Android.Runtime;
+using SoilCareAndroid.Connection;
 
 namespace SoilCareAndroid
 {
@@ -21,17 +24,16 @@ namespace SoilCareAndroid
     public class MainActivity : FragmentActivity
     {
         BottomNavigationView bottomNavigation;
-        ViewPager viewPager;
+        public static ViewPager viewPager;
         RootFragment rootFragment;
         HomeFragment homeFragment;
         LibraryFragment libraryFragment;
         AccountFragment accountFragment;
-        UserLandFragment userLandFragment;
+        AddNewLandFragment userLandFragment;
 
         private checkTelephone check;
 
         //SettingsFragment settingsFragment;
-
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -45,12 +47,15 @@ namespace SoilCareAndroid
             viewPager.PageSelected += ViewPager_PageSelected;
             SetUpViewPager(viewPager);
             //sendData();
+            
         }
 
         private void ViewPager_PageSelected(object sender, ViewPager.PageSelectedEventArgs e)
         {
-            var item = bottomNavigation.Menu.GetItem(e.Position);
-            bottomNavigation.SelectedItemId = item.ItemId;
+            if(e.Position < 2) {
+                var item = bottomNavigation.Menu.GetItem(e.Position);
+                bottomNavigation.SelectedItemId = item.ItemId;
+            }            
         }
 
         private void BottomNavigation_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
@@ -65,14 +70,22 @@ namespace SoilCareAndroid
             homeFragment = new HomeFragment();
             libraryFragment = new LibraryFragment();
             accountFragment = new AccountFragment();
-            userLandFragment = new UserLandFragment();
+            userLandFragment = new AddNewLandFragment();
+
             // settingsFragment = new SettingsFragment();
 
-            adapter.AddFragment(rootFragment);
-            adapter.AddFragment(libraryFragment);
-            adapter.AddFragment(accountFragment);
-            //adapter.AddFragment(userLandFragment);
+            adapter.AddFragment(homeFragment); //0
+            adapter.AddFragment(libraryFragment);//1
+            adapter.AddFragment(accountFragment);//2
+            adapter.AddFragment(userLandFragment);//3
+            adapter.AddFragment(new EditUserLandFragment());//4
+            adapter.AddFragment(new UserLandFragment());//5
+
             viewPager.Adapter = adapter;
+        }
+        protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
         }
 
         public string getMyData()

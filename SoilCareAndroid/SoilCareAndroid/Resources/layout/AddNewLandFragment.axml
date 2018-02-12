@@ -40,15 +40,15 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <ImageButton
-                android:id="@+id/imageButtonNewUserLand"
+                android:id="@+id/imageViewNewUserLand"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="200dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="8dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
-                android:src="@android:drawable/ic_menu_gallery" />
+                android:src="@drawable/icon_image" />
             <EditText
                 android:id="@+id/editTextNewLandName"
                 android:layout_width="match_parent"

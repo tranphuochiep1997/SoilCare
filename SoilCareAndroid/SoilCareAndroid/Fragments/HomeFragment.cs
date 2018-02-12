@@ -22,11 +22,15 @@ namespace SoilCareAndroid.Fragments
         private ImageButton buttonAdd;
         private ListView listView;
         private List<LandModel> list;
+        LandAdapter adapter;
 
         private TextView textView;
         //LandAdapter adapter;
-
+        Bundle args = new Bundle();
         string userId = "";
+
+        ISharedPreferences sharedPreferences;
+        ISharedPreferencesEditor editor;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -38,6 +42,13 @@ namespace SoilCareAndroid.Fragments
             View view = inflater.Inflate(Resource.Layout.HomeFragment, container, false);
             MainActivity main = (MainActivity)this.Activity;
             userId = main.getMyData();
+
+            sharedPreferences =
+                Application.Context.GetSharedPreferences("USER_ID", FileCreationMode.Private);
+            editor = sharedPreferences.Edit();
+            editor.PutString("USER_ID", userId);
+            editor.Commit();
+
             return view;
         }
 
@@ -45,64 +56,65 @@ namespace SoilCareAndroid.Fragments
         {
             base.OnActivityCreated(savedInstanceState);
             FindViews();
-
             TestData();
             listView.ItemClick += ListView_ItemClick;
+            listView.ItemLongClick += ListView_ItemLongClick;
             buttonAdd.Click += ButtonAdd_Click;
+            args.PutString("User ID", userId);           
         }
 
+        private void ListView_ItemLongClick(object sender, AdapterView.ItemLongClickEventArgs e)
+        {
+            EditUserLandFragment editUserLandFragment = new EditUserLandFragment();
+            var item = this.list[e.Position];
+            int index = e.Position;
+            editor.PutInt("Index", index);
+            editor.Commit();
+            MainActivity.viewPager.SetCurrentItem(4, true);
+
+        }
+       
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
-            AddNewLandFragment addNewLandFragment = new AddNewLandFragment();
-            Bundle args = new Bundle();
-            args.PutString("User ID", userId);
-            addNewLandFragment.Arguments = args;
-            ReplaceFragment(addNewLandFragment);           
+            MainActivity.viewPager.SetCurrentItem(3, true);
         }
-        public void ReplaceFragment(global::Android.Support.V4.App.Fragment fragment)
-        {
-            //AddNewLandFragment addNewLandFragment = new AddNewLandFragment();
 
-            global::Android.Support.V4.App.FragmentTransaction transaction = FragmentManager.BeginTransaction();
-            transaction.Replace(Resource.Id.root_frame, fragment);
-            transaction.SetTransition(global::Android.Support.V4.App.FragmentTransaction.TransitFragmentOpen);
-            transaction.AddToBackStack(null);
-            transaction.Commit();
-        }
         private void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             // REPLACE FRAGMENT HERE
             var item = this.list[e.Position];
             UserLandFragment userLandFragment = new UserLandFragment();
-            Bundle args = new Bundle();
-            args.PutString("Land Name", item.Land_name);
-            args.PutString("Image Path", item.Land_image);
-            userLandFragment.Arguments = args;
+            editor.PutString("LAND NAME", item.Land_name);
+            editor.PutString("IMAGE", item.Land_image);
+            editor.Commit();
+            MainActivity.viewPager.SetCurrentItem(5, true);
 
-            global::Android.Support.V4.App.FragmentTransaction transaction = FragmentManager.BeginTransaction();
-            transaction.Replace(Resource.Id.root_frame, userLandFragment);
-            transaction.SetTransition(global::Android.Support.V4.App.FragmentTransaction.TransitFragmentOpen);
-            transaction.AddToBackStack(null);
-            transaction.Commit();
         }
         // Get 
         private void TestData()
         {
             // Get Data using APIConnection
+
             list = new List<LandModel>();
             APIConnection connector = new APIConnection();
             list = connector.GetData<List<LandModel>>(APIConnection.LandsByUserId, userId);
-            if(list == null)
+
+            adapter = new LandAdapter(list, this.Activity);
+            //Activity.RunOnUiThread(() => { adapter.refreshEvents(list); });
+            listView.Adapter = adapter;
+            adapter.NotifyDataSetChanged();
+            GetListViewSize(listView);
+
+            if (list == null)
             {
                 listView.Visibility = ViewStates.Gone;
                 textView.Visibility = ViewStates.Visible;
             }
-            else {
+            else
+            {
                 listView.Visibility = ViewStates.Visible;
-                textView.Visibility = ViewStates.Gone;
-                listView.Adapter = new LandAdapter(list, this.Activity);
-                GetListViewSize(listView);
-            }           
+                textView.Visibility = ViewStates.Gone;              
+            }
         }
 
         private void GetListViewSize(ListView myListView)

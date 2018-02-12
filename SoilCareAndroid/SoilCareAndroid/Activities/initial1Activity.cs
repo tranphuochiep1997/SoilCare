@@ -11,6 +11,8 @@ using Android.Preferences;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using SoilCareAndroid.Connection;
+using SoilCareAndroid.ModelClass;
 
 namespace SoilCareAndroid
 {

@@ -25,8 +25,11 @@ namespace SoilCareAndroid.Fragments
         ListView listView;
         private List<PlantInfo> list;
         private LibraryAdapter adapter;
+        string userId = "";
         string landName = "";
         string imagePath = "";
+
+        ISharedPreferences sharedPreferences;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -36,11 +39,13 @@ namespace SoilCareAndroid.Fragments
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View result = inflater.Inflate(Resource.Layout.UserLandFragment, container, false);
-            if (Arguments != null)
-            {
-                landName = Arguments.GetString("Land Name");
-                imagePath = Arguments.GetString("Image Path");
-            }
+
+            sharedPreferences =
+                Application.Context.GetSharedPreferences("USER_ID", FileCreationMode.Private);
+            userId = sharedPreferences.GetString("USER_ID", null);
+            landName = sharedPreferences.GetString("LAND NAME", null);
+            imagePath = sharedPreferences.GetString("IMAGE", null);
+
             return result;
         }
 
@@ -68,11 +73,7 @@ namespace SoilCareAndroid.Fragments
 
         private void ImageButton_Click(object sender, EventArgs e)
         {
-            global::Android.Support.V4.App.FragmentTransaction transaction = FragmentManager.BeginTransaction();
-            transaction.Replace(Resource.Id.root_frame, new HomeFragment());
-            transaction.SetTransition(global::Android.Support.V4.App.FragmentTransaction.TransitFragmentOpen);
-            transaction.AddToBackStack(null);
-            transaction.Commit();
+            MainActivity.viewPager.SetCurrentItem(0, true);
         }
 
         private void FindViews()

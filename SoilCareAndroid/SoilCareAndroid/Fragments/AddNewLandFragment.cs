@@ -15,10 +15,13 @@ using Android.Widget;
 using System.IO;
 using SoilCareAndroid.Connection;
 using SoilCareAndroid.ModelClass;
+using Uri = Android.Net.Uri;
 using Java.IO;
+using Android.Content.PM;
 
 namespace SoilCareAndroid.Fragments
 {
+
     public class AddNewLandFragment : global::Android.Support.V4.App.Fragment
     {
         ImageButton imageButton;
@@ -28,7 +31,12 @@ namespace SoilCareAndroid.Fragments
         Button btCancel;
         ImageButton leftArrow;
         string userId = "";
-        private static readonly int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 123;
+        String link = "";
+        private static readonly int REQUEST_IMAGE_CAPTURE = 123;
+
+        ISharedPreferences sharedPreferences;
+        ISharedPreferencesEditor editor;
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);           
@@ -38,10 +46,11 @@ namespace SoilCareAndroid.Fragments
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = inflater.Inflate(Resource.Layout.AddNewLandFragment, container, false);
-            if(Arguments != null)
-            {
-                userId = Arguments.GetString("User ID");
-            }
+
+            sharedPreferences =
+                Application.Context.GetSharedPreferences("USER_ID", FileCreationMode.Private);
+            userId = sharedPreferences.GetString("USER_ID", null);
+
             return view;            
         }
         public override void OnActivityCreated(Bundle savedInstanceState)
@@ -49,24 +58,42 @@ namespace SoilCareAndroid.Fragments
             base.OnActivityCreated(savedInstanceState);
             FindViews();
 
-            editTextName.RequestFocus();
             leftArrow.Click += LeftArrow_Click;
             btSave.Click += BtSave_Click;
             btCancel.Click += BtCancel_Click;
-            imageButton.Click += ImageButton_Click;
+            //imageButton.Click += ImageButton_Click;
+            if (IsThereAnAppToTakePictures())
+            {
+                CreateDirectoryForPictures();
+                imageButton.Click += TakeAPicture;
+            }
+
         }
         public override void OnActivityResult(int requestCode, int resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
-                    Bitmap bitmap = (Bitmap)data.Extras.Get("data");
-                    imageButton.SetImageBitmap(bitmap);              
-        }
+            Intent medianScanIntent = new Intent(Intent.ActionMediaScannerScanFile);
+            Uri contenUri = Uri.FromFile(App._file);
+            medianScanIntent.SetData(contenUri);
+            Activity.SendBroadcast(medianScanIntent);
+            int height = Resources.DisplayMetrics.HeightPixels;
+            int width = imageButton.Height;
+            App.bitmap = App._file.Path.LoadAndResizeBitmap(width, height);
+            if(App.bitmap != null) {                 
+                imageButton.SetImageBitmap(App.bitmap);
+                APIConnection connector = new APIConnection();
+                link = connector.PostImage(App.bitmap, "land");
+                App.bitmap = null;
+            }
+            GC.Collect();
+                                    
+        }        
 
         private void ImageButton_Click(object sender, EventArgs e)
         {
             Toast.MakeText(this.Activity, "Hello", ToastLength.Short).Show();
             Intent intent = new Intent(MediaStore.ActionImageCapture);
-            Activity.StartActivityForResult(intent, 0);
+            this.StartActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
         }
 
         private void BtCancel_Click(object sender, EventArgs e)
@@ -88,7 +115,7 @@ namespace SoilCareAndroid.Fragments
                 {
                     Land_name = name,
                     Land_address = des,
-                    Land_image = "https://static.cfmobi.vn/upload/news/20170421/crossfire-legends:-che-do-zombie-trong-casual-1492763662486.jpg",
+                    Land_image = link,
                     User_id = userId,
                     Land_area = 30.0
                 });
@@ -97,7 +124,7 @@ namespace SoilCareAndroid.Fragments
             else
             {             
                 AlertDialog.Builder alert = new AlertDialog.Builder(Context);
-                alert.SetTitle("Warning FBI !!!");
+                alert.SetTitle("FBI Warning!!!");
                 alert.SetMessage("Are you 18+ years old! - Land Name could not be empty");
                 alert.SetNegativeButton("Tớ hiểu rồi, Thanks", delegate { alert.Dispose(); });
                 Dialog dialog = alert.Create();
@@ -108,21 +135,50 @@ namespace SoilCareAndroid.Fragments
 
         private void LeftArrow_Click(object sender, EventArgs e)
         {
-            global::Android.Support.V4.App.FragmentTransaction transaction = FragmentManager.BeginTransaction();
-            transaction.Replace(Resource.Id.root_frame, new HomeFragment());
-            transaction.SetTransition(global::Android.Support.V4.App.FragmentTransaction.TransitFragmentOpen);
-            transaction.AddToBackStack(null);
-            transaction.Commit();
+            MainActivity.viewPager.SetCurrentItem(0, true);
         }
 
         private void FindViews()
         {
             leftArrow = this.View.FindViewById<ImageButton>(Resource.Id.imageButtonLeftArrow);
-            imageButton = this.View.FindViewById<ImageButton>(Resource.Id.imageButtonNewUserLand);
+            imageButton = this.View.FindViewById<ImageButton>(Resource.Id.imageViewNewUserLand);
             editTextName = this.View.FindViewById<EditText>(Resource.Id.editTextNewLandName);
             editTextDes = this.View.FindViewById<EditText>(Resource.Id.editTextNewLandLocation);
             btSave = this.View.FindViewById<Button>(Resource.Id.buttonSave);
             btCancel = this.View.FindViewById<Button>(Resource.Id.buttonCancle);
         }
+        private void TakeAPicture(object sender, EventArgs eventArgs)
+        {
+            Intent intent = new Intent(MediaStore.ActionImageCapture);
+            App._file = new Java.IO.File(App._dir, String.Format("myPhoto_{0}.jpg", Guid.NewGuid()));
+            intent.PutExtra(MediaStore.ExtraOutput, Uri.FromFile(App._file));
+            StartActivityForResult(intent, 0);
+
+            Toast.MakeText(this.Activity, App._file + "", ToastLength.Short).Show();
+        }
+        private void CreateDirectoryForPictures()
+        {
+            App._dir = new Java.IO.File(
+                Android.OS.Environment.GetExternalStoragePublicDirectory(
+                    Android.OS.Environment.DirectoryPictures), "CameraAppDemo");
+            if (!App._dir.Exists())
+            {
+                App._dir.Mkdirs();
+            }
+        }
+
+        private bool IsThereAnAppToTakePictures()
+        {
+            Intent intent = new Intent(MediaStore.ActionImageCapture);
+            IList<ResolveInfo> availableActivities =
+                Activity.PackageManager.QueryIntentActivities(intent, PackageInfoFlags.MatchDefaultOnly);
+            return availableActivities != null && availableActivities.Count > 0;
+        }
+    }
+    public static class App
+    {
+        public static Java.IO.File _file;
+        public static Java.IO.File _dir;
+        public static Bitmap bitmap;
     }
 }

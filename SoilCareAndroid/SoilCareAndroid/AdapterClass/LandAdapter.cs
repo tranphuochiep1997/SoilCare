@@ -67,12 +67,19 @@ namespace SoilCareAndroid.AdapterClass
             viewHolder.ImageView.SetImageBitmap(bitmapImage);
             viewHolder.LandName.Text = item.Land_name;
             viewHolder.LandDescription.Text = item.Land_address;
-            viewHolder.ImageButton.Click += delegate
-            {
-                context.StartActivity(typeof(EditUserLandActivity));
-            };
+            viewHolder.ImageButton.Visibility = ViewStates.Gone;
+            //viewHolder.ImageButton.Click += delegate
+            //{
+            //    context.StartActivity(typeof(EditUserLandActivity));
+            //};
 
             return convertView;
+        }
+        public void refreshEvents(List<LandModel> items)
+        {
+            this.items.Clear();
+            this.items.AddRange(items);
+            NotifyDataSetChanged();
         }
     }
 }
