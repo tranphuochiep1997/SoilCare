@@ -25,13 +25,11 @@ namespace SoilCareAndroid
     {
         BottomNavigationView bottomNavigation;
         public static ViewPager viewPager;
-        RootFragment rootFragment;
         HomeFragment homeFragment;
         LibraryFragment libraryFragment;
         AccountFragment accountFragment;
         AddNewLandFragment userLandFragment;
 
-        private checkTelephone check;
 
         //SettingsFragment settingsFragment;
 
@@ -66,13 +64,10 @@ namespace SoilCareAndroid
         private void SetUpViewPager(ViewPager viewPager)
         {
             ViewPagerAdapter adapter = new ViewPagerAdapter(SupportFragmentManager);
-            rootFragment = new RootFragment();
             homeFragment = new HomeFragment();
             libraryFragment = new LibraryFragment();
             accountFragment = new AccountFragment();
             userLandFragment = new AddNewLandFragment();
-
-            // settingsFragment = new SettingsFragment();
 
             adapter.AddFragment(homeFragment); //0
             adapter.AddFragment(libraryFragment);//1
